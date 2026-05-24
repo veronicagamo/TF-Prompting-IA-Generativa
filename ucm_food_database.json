@@ -1,0 +1,8588 @@
+[
+  {
+    "code": "010101",
+    "name": "Arroz",
+    "kcal": 364.0,
+    "proteins": 6.7,
+    "carbs": 81.6,
+    "fats": 0.9,
+    "fiber": 1.4
+  },
+  {
+    "code": "010102",
+    "name": "Arroz blanco de cocción rápida",
+    "kcal": 349.0,
+    "proteins": 6.9,
+    "carbs": 78.2,
+    "fats": 0.6,
+    "fiber": 1.4
+  },
+  {
+    "code": "010103",
+    "name": "Arroz integral",
+    "kcal": 350.0,
+    "proteins": 7.3,
+    "carbs": 74.1,
+    "fats": 2.2,
+    "fiber": 2.2
+  },
+  {
+    "code": "010104",
+    "name": "Arroz salvaje",
+    "kcal": 356.0,
+    "proteins": 14.7,
+    "carbs": 68.7,
+    "fats": 1.1,
+    "fiber": 6.2
+  },
+  {
+    "code": "010105",
+    "name": "Avena",
+    "kcal": 353.0,
+    "proteins": 11.7,
+    "carbs": 55.7,
+    "fats": 7.1,
+    "fiber": 9.7
+  },
+  {
+    "code": "010106",
+    "name": "Bulgur",
+    "kcal": 344.0,
+    "proteins": 12.3,
+    "carbs": 64.5,
+    "fats": 1.3,
+    "fiber": 12.5
+  },
+  {
+    "code": "010107",
+    "name": "Cebada",
+    "kcal": 330.0,
+    "proteins": 9.9,
+    "carbs": 62.1,
+    "fats": 1.2,
+    "fiber": 15.6
+  },
+  {
+    "code": "010108",
+    "name": "Centeno",
+    "kcal": 372.0,
+    "proteins": 14.8,
+    "carbs": 65.2,
+    "fats": 2.5,
+    "fiber": 14.6
+  },
+  {
+    "code": "010109",
+    "name": "Fécula de maíz",
+    "kcal": 356.0,
+    "proteins": 0.41,
+    "carbs": 88.0,
+    "fats": 0.08,
+    "fiber": 0.6
+  },
+  {
+    "code": "010110",
+    "name": "Germen de trigo",
+    "kcal": 355.0,
+    "proteins": 28.6,
+    "carbs": 30.6,
+    "fats": 9.2,
+    "fiber": 17.7
+  },
+  {
+    "code": "010111",
+    "name": "Gofio canario, tostado",
+    "kcal": 356.0,
+    "proteins": 10.1,
+    "carbs": 64.8,
+    "fats": 2.7,
+    "fiber": 16.2
+  },
+  {
+    "code": "010112",
+    "name": "Harina de arroz",
+    "kcal": 349.0,
+    "proteins": 7.6,
+    "carbs": 78.0,
+    "fats": 0.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "010113",
+    "name": "Harina de centeno",
+    "kcal": 326.0,
+    "proteins": 10.0,
+    "carbs": 59.7,
+    "fats": 1.9,
+    "fiber": 15.0
+  },
+  {
+    "code": "010114",
+    "name": "Harina de maíz",
+    "kcal": 342.0,
+    "proteins": 8.3,
+    "carbs": 66.3,
+    "fats": 2.8,
+    "fiber": 9.4
+  },
+  {
+    "code": "010115",
+    "name": "Harina de trigo",
+    "kcal": 341.0,
+    "proteins": 9.9,
+    "carbs": 70.6,
+    "fats": 1.2,
+    "fiber": 4.3
+  },
+  {
+    "code": "010116",
+    "name": "Harina integral de trigo",
+    "kcal": 322.0,
+    "proteins": 12.7,
+    "carbs": 58.3,
+    "fats": 2.2,
+    "fiber": 9.0
+  },
+  {
+    "code": "010117",
+    "name": "Maíz en grano hervido en lata",
+    "kcal": 102.0,
+    "proteins": 3.3,
+    "carbs": 18.2,
+    "fats": 1.3,
+    "fiber": 2.3
+  },
+  {
+    "code": "010118",
+    "name": "Maíz en mazorca crudo",
+    "kcal": 346.0,
+    "proteins": 8.6,
+    "carbs": 64.7,
+    "fats": 3.8,
+    "fiber": 9.2
+  },
+  {
+    "code": "010119",
+    "name": "Maíz en mazorca hervido",
+    "kcal": 110.0,
+    "proteins": 3.4,
+    "carbs": 18.6,
+    "fats": 1.5,
+    "fiber": 4.2
+  },
+  {
+    "code": "010120",
+    "name": "Mijo",
+    "kcal": 356.0,
+    "proteins": 11.0,
+    "carbs": 64.4,
+    "fats": 4.2,
+    "fiber": 8.5
+  },
+  {
+    "code": "010121",
+    "name": "Polenta cocinada",
+    "kcal": 61.8,
+    "proteins": 1.4,
+    "carbs": 13.2,
+    "fats": 0.31,
+    "fiber": 0.29
+  },
+  {
+    "code": "010122",
+    "name": "Polenta, harina",
+    "kcal": 350.0,
+    "proteins": 7.9,
+    "carbs": 74.0,
+    "fats": 1.8,
+    "fiber": 3.2
+  },
+  {
+    "code": "010123",
+    "name": "Quinoa",
+    "kcal": 354.0,
+    "proteins": 14.1,
+    "carbs": 57.2,
+    "fats": 6.1,
+    "fiber": 7.0
+  },
+  {
+    "code": "010124",
+    "name": "Salvado de avena",
+    "kcal": 319.0,
+    "proteins": 12.3,
+    "carbs": 33.8,
+    "fats": 7.4,
+    "fiber": 34.1
+  },
+  {
+    "code": "010125",
+    "name": "Salvado de trigo",
+    "kcal": 274.0,
+    "proteins": 15.6,
+    "carbs": 21.7,
+    "fats": 4.3,
+    "fiber": 42.8
+  },
+  {
+    "code": "010126",
+    "name": "Sémola de trigo",
+    "kcal": 351.0,
+    "proteins": 12.7,
+    "carbs": 69.0,
+    "fats": 1.1,
+    "fiber": 7.2
+  },
+  {
+    "code": "010201",
+    "name": "Barrita de cereales con frutas rojas",
+    "kcal": 392.0,
+    "proteins": 8.0,
+    "carbs": 78.0,
+    "fats": 5.0,
+    "fiber": 1.5
+  },
+  {
+    "code": "010202",
+    "name": "Barrita de cereales con melocotón y albaricoque",
+    "kcal": 403.0,
+    "proteins": 7.0,
+    "carbs": 77.0,
+    "fats": 7.0,
+    "fiber": 2.0
+  },
+  {
+    "code": "010203",
+    "name": "Barrita de cereales con pepitas de chocolate",
+    "kcal": 350.0,
+    "proteins": 9.0,
+    "carbs": 62.0,
+    "fats": 7.0,
+    "fiber": 1.5
+  },
+  {
+    "code": "010204",
+    "name": "Barrita de cereales integrales",
+    "kcal": 393.0,
+    "proteins": 8.0,
+    "carbs": 76.0,
+    "fats": 6.0,
+    "fiber": 1.5
+  },
+  {
+    "code": "010205",
+    "name": "Barrita de fibra y chocolate",
+    "kcal": 414.0,
+    "proteins": 7.0,
+    "carbs": 51.0,
+    "fats": 16.0,
+    "fiber": 19.0
+  },
+  {
+    "code": "010206",
+    "name": "Bizcocho de fruta y fibra",
+    "kcal": 383.0,
+    "proteins": 4.0,
+    "carbs": 58.0,
+    "fats": 13.0,
+    "fiber": 9.0
+  },
+  {
+    "code": "010209",
+    "name": "Cd con base de arroz",
+    "kcal": 388.0,
+    "proteins": 7.0,
+    "carbs": 86.0,
+    "fats": 1.5,
+    "fiber": 1.0
+  },
+  {
+    "code": "010210",
+    "name": "Cd con base de arroz y chocolate",
+    "kcal": 388.0,
+    "proteins": 5.0,
+    "carbs": 85.0,
+    "fats": 2.5,
+    "fiber": 2.5
+  },
+  {
+    "code": "010211",
+    "name": "Cd con base de arroz y trigo integral",
+    "kcal": 375.0,
+    "proteins": 16.0,
+    "carbs": 74.0,
+    "fats": 1.0,
+    "fiber": 3.0
+  },
+  {
+    "code": "010212",
+    "name": "Cd con base de arroz, trigo integral, frutas rojas",
+    "kcal": 390.0,
+    "proteins": 14.0,
+    "carbs": 79.5,
+    "fats": 1.0,
+    "fiber": 3.5
+  },
+  {
+    "code": "010213",
+    "name": "Cd con base de avena",
+    "kcal": 349.0,
+    "proteins": 13.8,
+    "carbs": 54.4,
+    "fats": 7.2,
+    "fiber": 5.6
+  },
+  {
+    "code": "010214",
+    "name": "Cd con base de avena integral tostada y miel",
+    "kcal": 388.0,
+    "proteins": 8.6,
+    "carbs": 75.0,
+    "fats": 4.9,
+    "fiber": 4.9
+  },
+  {
+    "code": "010215",
+    "name": "Cd con base de maíz",
+    "kcal": 376.0,
+    "proteins": 8.0,
+    "carbs": 83.0,
+    "fats": 0.8,
+    "fiber": 2.5
+  },
+  {
+    "code": "010216",
+    "name": "Cd con base de maíz azucarados",
+    "kcal": 361.0,
+    "proteins": 4.5,
+    "carbs": 83.7,
+    "fats": 0.6,
+    "fiber": 1.5
+  },
+  {
+    "code": "010219",
+    "name": "Cd con base de trigo y chocolate",
+    "kcal": 364.0,
+    "proteins": 8.0,
+    "carbs": 75.0,
+    "fats": 2.5,
+    "fiber": 4.5
+  },
+  {
+    "code": "010220",
+    "name": "Cd con base de trigo y frutas",
+    "kcal": 348.0,
+    "proteins": 10.0,
+    "carbs": 65.0,
+    "fats": 2.0,
+    "fiber": 15.0
+  },
+  {
+    "code": "010221",
+    "name": "Cd con base de trigo y miel",
+    "kcal": 387.0,
+    "proteins": 7.0,
+    "carbs": 84.0,
+    "fats": 1.7,
+    "fiber": 4.0
+  },
+  {
+    "code": "010222",
+    "name": "Cd de trigo integral relleno de pasas",
+    "kcal": 358.0,
+    "proteins": 9.0,
+    "carbs": 71.5,
+    "fats": 2.0,
+    "fiber": 9.0
+  },
+  {
+    "code": "010223",
+    "name": "Cd rellenos de chocolate",
+    "kcal": 436.0,
+    "proteins": 7.5,
+    "carbs": 66.6,
+    "fats": 14.0,
+    "fiber": 7.0
+  },
+  {
+    "code": "010224",
+    "name": "Cd salvado de trigo completo",
+    "kcal": 338.0,
+    "proteins": 13.0,
+    "carbs": 48.0,
+    "fats": 4.0,
+    "fiber": 29.0
+  },
+  {
+    "code": "010225",
+    "name": "Cd variados con miel",
+    "kcal": 379.0,
+    "proteins": 5.5,
+    "carbs": 80.7,
+    "fats": 3.0,
+    "fiber": 3.4
+  },
+  {
+    "code": "010226",
+    "name": "Cd variados integrales con miel",
+    "kcal": 382.0,
+    "proteins": 8.0,
+    "carbs": 77.0,
+    "fats": 3.1,
+    "fiber": 7.0
+  },
+  {
+    "code": "010207",
+    "name": "Cereales (almohadillas ricas en fibra)",
+    "kcal": 408.0,
+    "proteins": 7.5,
+    "carbs": 63.0,
+    "fats": 14.0,
+    "fiber": 7.0
+  },
+  {
+    "code": "010208",
+    "name": "Cereales (copos ricos en fibra)",
+    "kcal": 356.0,
+    "proteins": 10.0,
+    "carbs": 67.0,
+    "fats": 2.0,
+    "fiber": 15.0
+  },
+  {
+    "code": "010227",
+    "name": "Cereales en polvo solubles tipo “Eko”",
+    "kcal": 343.0,
+    "proteins": 5.7,
+    "carbs": 73.7,
+    "fats": 0.42,
+    "fiber": 10.9
+  },
+  {
+    "code": "010228",
+    "name": "Cereales malteados en polvo",
+    "kcal": 343.0,
+    "proteins": 5.7,
+    "carbs": 73.7,
+    "fats": 0.4,
+    "fiber": 10.9
+  },
+  {
+    "code": "010229",
+    "name": "Malta",
+    "kcal": 365.0,
+    "proteins": 11.2,
+    "carbs": 73.1,
+    "fats": 2.1,
+    "fiber": 4.2
+  },
+  {
+    "code": "010230",
+    "name": "Muesli",
+    "kcal": 395.0,
+    "proteins": 9.0,
+    "carbs": 61.0,
+    "fats": 11.0,
+    "fiber": 8.0
+  },
+  {
+    "code": "010231",
+    "name": "Snacks bajos en calorías de chocolate",
+    "kcal": 332.0,
+    "proteins": 9.0,
+    "carbs": 50.0,
+    "fats": 10.0,
+    "fiber": 3.0
+  },
+  {
+    "code": "010232",
+    "name": "Tortita de arroz inflado",
+    "kcal": 371.0,
+    "proteins": 8.5,
+    "carbs": 75.0,
+    "fats": 3.5,
+    "fiber": 2.7
+  },
+  {
+    "code": "010233",
+    "name": "Tortita de arroz integral",
+    "kcal": 394.0,
+    "proteins": 8.6,
+    "carbs": 80.3,
+    "fats": 3.2,
+    "fiber": 5.0
+  },
+  {
+    "code": "010234",
+    "name": "Tortita de arroz integral tipo1",
+    "kcal": 369.0,
+    "proteins": 7.5,
+    "carbs": 76.5,
+    "fats": 2.5,
+    "fiber": 5.0
+  },
+  {
+    "code": "010235",
+    "name": "Tortita de maíz",
+    "kcal": 384.0,
+    "proteins": 8.1,
+    "carbs": 81.5,
+    "fats": 2.4,
+    "fiber": 1.9
+  },
+  {
+    "code": "010301",
+    "name": "Colines",
+    "kcal": 414.0,
+    "proteins": 11.2,
+    "carbs": 77.7,
+    "fats": 6.2,
+    "fiber": 1.0
+  },
+  {
+    "code": "010302",
+    "name": "Masa de hojaldre congelada",
+    "kcal": 544.0,
+    "proteins": 7.4,
+    "carbs": 41.3,
+    "fats": 38.5,
+    "fiber": 1.5
+  },
+  {
+    "code": "010303",
+    "name": "Masa quebrada",
+    "kcal": 372.0,
+    "proteins": 6.1,
+    "carbs": 39.3,
+    "fats": 20.9,
+    "fiber": 0.9
+  },
+  {
+    "code": "010304",
+    "name": "Pan blanco",
+    "kcal": 243.0,
+    "proteins": 8.3,
+    "carbs": 47.0,
+    "fats": 1.6,
+    "fiber": 3.5
+  },
+  {
+    "code": "010305",
+    "name": "Pan blanco sin sal",
+    "kcal": 265.0,
+    "proteins": 8.0,
+    "carbs": 53.9,
+    "fats": 1.1,
+    "fiber": 3.5
+  },
+  {
+    "code": "010306",
+    "name": "Pan blanco tipo baguette",
+    "kcal": 273.0,
+    "proteins": 8.0,
+    "carbs": 55.9,
+    "fats": 1.2,
+    "fiber": 3.5
+  },
+  {
+    "code": "010307",
+    "name": "Pan blanco tostado",
+    "kcal": 389.0,
+    "proteins": 11.5,
+    "carbs": 73.4,
+    "fats": 4.6,
+    "fiber": 3.9
+  },
+  {
+    "code": "010308",
+    "name": "Pan blanco tostado sin sal",
+    "kcal": 389.0,
+    "proteins": 11.5,
+    "carbs": 73.4,
+    "fats": 3.9,
+    "fiber": 5.2
+  },
+  {
+    "code": "010309",
+    "name": "Pan de avena",
+    "kcal": 275.0,
+    "proteins": 8.4,
+    "carbs": 48.5,
+    "fats": 4.4,
+    "fiber": 4.0
+  },
+  {
+    "code": "010310",
+    "name": "Pan de cebada",
+    "kcal": 248.0,
+    "proteins": 6.4,
+    "carbs": 43.5,
+    "fats": 4.5,
+    "fiber": 4.0
+  },
+  {
+    "code": "010311",
+    "name": "Pan de centeno",
+    "kcal": 245.0,
+    "proteins": 8.5,
+    "carbs": 42.5,
+    "fats": 3.3,
+    "fiber": 5.8
+  },
+  {
+    "code": "010312",
+    "name": "Pan de molde",
+    "kcal": 350.0,
+    "proteins": 9.3,
+    "carbs": 46.9,
+    "fats": 13.6,
+    "fiber": 1.5
+  },
+  {
+    "code": "010313",
+    "name": "Pan de molde integral",
+    "kcal": 239.0,
+    "proteins": 10.0,
+    "carbs": 40.0,
+    "fats": 3.0,
+    "fiber": 6.0
+  },
+  {
+    "code": "010314",
+    "name": "Pan de pasas",
+    "kcal": 269.0,
+    "proteins": 8.3,
+    "carbs": 49.6,
+    "fats": 3.0,
+    "fiber": 2.8
+  },
+  {
+    "code": "010315",
+    "name": "Pan de perrito",
+    "kcal": 271.0,
+    "proteins": 7.5,
+    "carbs": 47.5,
+    "fats": 4.7,
+    "fiber": 4.1
+  },
+  {
+    "code": "010316",
+    "name": "Pan de pita",
+    "kcal": 274.0,
+    "proteins": 9.1,
+    "carbs": 55.7,
+    "fats": 1.2,
+    "fiber": 2.2
+  },
+  {
+    "code": "010317",
+    "name": "Pan de trigo y centeno",
+    "kcal": 243.0,
+    "proteins": 6.7,
+    "carbs": 49.0,
+    "fats": 1.0,
+    "fiber": 5.5
+  },
+  {
+    "code": "010318",
+    "name": "Pan de Viena",
+    "kcal": 268.0,
+    "proteins": 10.8,
+    "carbs": 49.7,
+    "fats": 2.4,
+    "fiber": 2.2
+  },
+  {
+    "code": "010319",
+    "name": "Pan fajitas",
+    "kcal": 315.0,
+    "proteins": 8.6,
+    "carbs": 53.0,
+    "fats": 6.4,
+    "fiber": 5.4
+  },
+  {
+    "code": "010320",
+    "name": "Pan integral",
+    "kcal": 259.0,
+    "proteins": 10.9,
+    "carbs": 44.0,
+    "fats": 3.0,
+    "fiber": 6.0
+  },
+  {
+    "code": "010321",
+    "name": "Pan integral tostado",
+    "kcal": 385.0,
+    "proteins": 13.0,
+    "carbs": 62.0,
+    "fats": 7.0,
+    "fiber": 11.0
+  },
+  {
+    "code": "010322",
+    "name": "Pan sin gluten",
+    "kcal": 242.0,
+    "proteins": 4.3,
+    "carbs": 42.3,
+    "fats": 5.2,
+    "fiber": 4.3
+  },
+  {
+    "code": "010323",
+    "name": "Pan tipo hamburguesa",
+    "kcal": 271.0,
+    "proteins": 7.5,
+    "carbs": 47.5,
+    "fats": 4.7,
+    "fiber": 4.1
+  },
+  {
+    "code": "010324",
+    "name": "Pan tipo picatoste con omega",
+    "kcal": 1.0,
+    "proteins": 0.0,
+    "carbs": 10.2,
+    "fats": 6.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "010325",
+    "name": "Panecillos hechos con aceite de oliva",
+    "kcal": 305.0,
+    "proteins": 8.0,
+    "carbs": 56.6,
+    "fats": 4.5,
+    "fiber": 3.2
+  },
+  {
+    "code": "010326",
+    "name": "Picatostes",
+    "kcal": 371.0,
+    "proteins": 11.0,
+    "carbs": 75.6,
+    "fats": 2.0,
+    "fiber": 3.5
+  },
+  {
+    "code": "010401",
+    "name": "Cuscús",
+    "kcal": 377.0,
+    "proteins": 12.8,
+    "carbs": 77.4,
+    "fats": 0.64,
+    "fiber": 5.0
+  },
+  {
+    "code": "010402",
+    "name": "Pasta",
+    "kcal": 359.0,
+    "proteins": 12.8,
+    "carbs": 70.9,
+    "fats": 1.6,
+    "fiber": 5.0
+  },
+  {
+    "code": "010403",
+    "name": "Pasta al huevo",
+    "kcal": 374.0,
+    "proteins": 12.4,
+    "carbs": 69.9,
+    "fats": 4.2,
+    "fiber": 3.4
+  },
+  {
+    "code": "010404",
+    "name": "Pasta de colores",
+    "kcal": 352.0,
+    "proteins": 13.1,
+    "carbs": 70.6,
+    "fats": 1.0,
+    "fiber": 4.3
+  },
+  {
+    "code": "010405",
+    "name": "Pasta fresca cocida",
+    "kcal": 130.0,
+    "proteins": 5.2,
+    "carbs": 24.9,
+    "fats": 1.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "010406",
+    "name": "Pasta integral",
+    "kcal": 352.0,
+    "proteins": 13.1,
+    "carbs": 63.7,
+    "fats": 2.9,
+    "fiber": 9.3
+  },
+  {
+    "code": "010407",
+    "name": "Pasta rellena de carne hervida",
+    "kcal": 104.0,
+    "proteins": 4.7,
+    "carbs": 12.7,
+    "fats": 3.4,
+    "fiber": 1.8
+  },
+  {
+    "code": "010408",
+    "name": "Pasta rellena de queso hervida",
+    "kcal": 151.0,
+    "proteins": 9.5,
+    "carbs": 16.3,
+    "fats": 5.1,
+    "fiber": 0.9
+  },
+  {
+    "code": "020101",
+    "name": "Altramuz seco",
+    "kcal": 394.0,
+    "proteins": 36.2,
+    "carbs": 40.4,
+    "fats": 9.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "020102",
+    "name": "Garbanzo",
+    "kcal": 341.0,
+    "proteins": 20.8,
+    "carbs": 44.3,
+    "fats": 5.5,
+    "fiber": 15.5
+  },
+  {
+    "code": "020103",
+    "name": "Guisante seco",
+    "kcal": 302.0,
+    "proteins": 22.9,
+    "carbs": 41.2,
+    "fats": 1.4,
+    "fiber": 16.7
+  },
+  {
+    "code": "020104",
+    "name": "Haba seca",
+    "kcal": 307.0,
+    "proteins": 26.1,
+    "carbs": 33.3,
+    "fats": 2.1,
+    "fiber": 25.0
+  },
+  {
+    "code": "020105",
+    "name": "Harina de algarrobo",
+    "kcal": 300.0,
+    "proteins": 4.6,
+    "carbs": 49.1,
+    "fats": 0.65,
+    "fiber": 39.8
+  },
+  {
+    "code": "020106",
+    "name": "Judía blanca",
+    "kcal": 284.0,
+    "proteins": 21.1,
+    "carbs": 34.7,
+    "fats": 1.6,
+    "fiber": 23.2
+  },
+  {
+    "code": "020107",
+    "name": "Judía pinta",
+    "kcal": 292.0,
+    "proteins": 23.6,
+    "carbs": 35.1,
+    "fats": 0.83,
+    "fiber": 24.9
+  },
+  {
+    "code": "020108",
+    "name": "Lenteja",
+    "kcal": 305.0,
+    "proteins": 23.2,
+    "carbs": 40.6,
+    "fats": 1.7,
+    "fiber": 17.0
+  },
+  {
+    "code": "020109",
+    "name": "Soja",
+    "kcal": 373.0,
+    "proteins": 34.7,
+    "carbs": 6.3,
+    "fats": 18.3,
+    "fiber": 22.0
+  },
+  {
+    "code": "020201",
+    "name": "Cocido madrileño en conserva",
+    "kcal": 139.0,
+    "proteins": 6.9,
+    "carbs": 9.6,
+    "fats": 7.8,
+    "fiber": 1.5
+  },
+  {
+    "code": "020202",
+    "name": "Garbanzo en conserva",
+    "kcal": 120.0,
+    "proteins": 7.2,
+    "carbs": 14.1,
+    "fats": 2.9,
+    "fiber": 4.1
+  },
+  {
+    "code": "020203",
+    "name": "Judía blanca en conserva",
+    "kcal": 101.0,
+    "proteins": 6.7,
+    "carbs": 15.7,
+    "fats": 0.3,
+    "fiber": 4.4
+  },
+  {
+    "code": "020204",
+    "name": "Judía pinta en conserva",
+    "kcal": 84.2,
+    "proteins": 8.4,
+    "carbs": 9.9,
+    "fats": 0.2,
+    "fiber": 4.6
+  },
+  {
+    "code": "020205",
+    "name": "Lenteja en conserva",
+    "kcal": 109.0,
+    "proteins": 8.8,
+    "carbs": 14.9,
+    "fats": 0.7,
+    "fiber": 3.8
+  },
+  {
+    "code": "020301",
+    "name": "Batido fermentado de soja",
+    "kcal": 82.4,
+    "proteins": 5.0,
+    "carbs": 3.9,
+    "fats": 5.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "020302",
+    "name": "Bebida de soja",
+    "kcal": 54.8,
+    "proteins": 3.2,
+    "carbs": 5.8,
+    "fats": 1.8,
+    "fiber": 1.3
+  },
+  {
+    "code": "020303",
+    "name": "Brote de soja",
+    "kcal": 54.6,
+    "proteins": 5.5,
+    "carbs": 4.7,
+    "fats": 1.0,
+    "fiber": 2.4
+  },
+  {
+    "code": "020304",
+    "name": "Fideos de soja",
+    "kcal": 340.0,
+    "proteins": 0.09,
+    "carbs": 83.2,
+    "fats": 0.07,
+    "fiber": 3.3
+  },
+  {
+    "code": "020305",
+    "name": "Hamburguesa vegetal",
+    "kcal": 192.0,
+    "proteins": 15.7,
+    "carbs": 15.7,
+    "fats": 6.3,
+    "fiber": 4.9
+  },
+  {
+    "code": "020306",
+    "name": "Harina de soja",
+    "kcal": 475.0,
+    "proteins": 36.8,
+    "carbs": 23.5,
+    "fats": 23.5,
+    "fiber": 11.2
+  },
+  {
+    "code": "020307",
+    "name": "Lecitina de soja",
+    "kcal": 501.0,
+    "proteins": 0.0,
+    "carbs": 5.9,
+    "fats": 53.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "020308",
+    "name": "Lentejas, brotes",
+    "kcal": 129.0,
+    "proteins": 9.0,
+    "carbs": 22.1,
+    "fats": 0.55,
+    "fiber": 0.0
+  },
+  {
+    "code": "020309",
+    "name": "Miso",
+    "kcal": 218.0,
+    "proteins": 11.7,
+    "carbs": 26.5,
+    "fats": 6.0,
+    "fiber": 5.4
+  },
+  {
+    "code": "020310",
+    "name": "Salchicha vegetal",
+    "kcal": 283.0,
+    "proteins": 18.5,
+    "carbs": 9.8,
+    "fats": 18.2,
+    "fiber": 2.8
+  },
+  {
+    "code": "020311",
+    "name": "Tempeh",
+    "kcal": 104.0,
+    "proteins": 18.0,
+    "carbs": 3.5,
+    "fats": 1.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "020312",
+    "name": "Tofu",
+    "kcal": 89.4,
+    "proteins": 8.1,
+    "carbs": 3.3,
+    "fats": 4.8,
+    "fiber": 0.3
+  },
+  {
+    "code": "030101",
+    "name": "Acedera",
+    "kcal": 32.9,
+    "proteins": 2.0,
+    "carbs": 3.2,
+    "fats": 0.7,
+    "fiber": 2.9
+  },
+  {
+    "code": "030102",
+    "name": "Acelga",
+    "kcal": 29.8,
+    "proteins": 1.9,
+    "carbs": 4.5,
+    "fats": 0.2,
+    "fiber": 1.2
+  },
+  {
+    "code": "030103",
+    "name": "Ajo",
+    "kcal": 119.0,
+    "proteins": 4.3,
+    "carbs": 24.3,
+    "fats": 0.23,
+    "fiber": 1.2
+  },
+  {
+    "code": "030104",
+    "name": "Alcachofa",
+    "kcal": 43.9,
+    "proteins": 2.4,
+    "carbs": 2.9,
+    "fats": 0.12,
+    "fiber": 10.8
+  },
+  {
+    "code": "030105",
+    "name": "Apio",
+    "kcal": 19.4,
+    "proteins": 1.2,
+    "carbs": 2.5,
+    "fats": 0.2,
+    "fiber": 1.4
+  },
+  {
+    "code": "030106",
+    "name": "Berenjena",
+    "kcal": 21.4,
+    "proteins": 1.3,
+    "carbs": 2.4,
+    "fats": 0.18,
+    "fiber": 2.5
+  },
+  {
+    "code": "030107",
+    "name": "Berro",
+    "kcal": 20.1,
+    "proteins": 1.6,
+    "carbs": 2.0,
+    "fats": 0.3,
+    "fiber": 1.5
+  },
+  {
+    "code": "030108",
+    "name": "Borraja",
+    "kcal": 25.9,
+    "proteins": 1.8,
+    "carbs": 3.1,
+    "fats": 0.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "030109",
+    "name": "Brécol",
+    "kcal": 33.0,
+    "proteins": 3.6,
+    "carbs": 2.7,
+    "fats": 0.2,
+    "fiber": 3.0
+  },
+  {
+    "code": "030110",
+    "name": "Brotes de bambú fresco",
+    "kcal": 38.3,
+    "proteins": 2.6,
+    "carbs": 5.2,
+    "fats": 0.3,
+    "fiber": 2.2
+  },
+  {
+    "code": "030111",
+    "name": "Calabacín",
+    "kcal": 23.3,
+    "proteins": 1.9,
+    "carbs": 2.0,
+    "fats": 0.5,
+    "fiber": 1.6
+  },
+  {
+    "code": "030112",
+    "name": "Calabaza",
+    "kcal": 28.4,
+    "proteins": 1.1,
+    "carbs": 4.6,
+    "fats": 0.13,
+    "fiber": 2.2
+  },
+  {
+    "code": "030113",
+    "name": "Canónigos",
+    "kcal": 16.6,
+    "proteins": 1.8,
+    "carbs": 0.7,
+    "fats": 0.4,
+    "fiber": 1.5
+  },
+  {
+    "code": "030114",
+    "name": "Cardo",
+    "kcal": 16.9,
+    "proteins": 0.8,
+    "carbs": 2.2,
+    "fats": 0.1,
+    "fiber": 2.0
+  },
+  {
+    "code": "030115",
+    "name": "Cebolla",
+    "kcal": 31.9,
+    "proteins": 1.2,
+    "carbs": 5.3,
+    "fats": 0.25,
+    "fiber": 1.8
+  },
+  {
+    "code": "030116",
+    "name": "Chile rojo",
+    "kcal": 37.0,
+    "proteins": 1.0,
+    "carbs": 6.4,
+    "fats": 0.4,
+    "fiber": 1.9
+  },
+  {
+    "code": "030117",
+    "name": "Chile verde",
+    "kcal": 20.1,
+    "proteins": 0.8,
+    "carbs": 2.6,
+    "fats": 0.3,
+    "fiber": 1.9
+  },
+  {
+    "code": "030118",
+    "name": "Chirivía",
+    "kcal": 70.1,
+    "proteins": 1.8,
+    "carbs": 11.1,
+    "fats": 1.1,
+    "fiber": 4.3
+  },
+  {
+    "code": "030119",
+    "name": "Col",
+    "kcal": 30.2,
+    "proteins": 1.4,
+    "carbs": 4.2,
+    "fats": 0.2,
+    "fiber": 3.0
+  },
+  {
+    "code": "030120",
+    "name": "Col de Bruselas",
+    "kcal": 42.7,
+    "proteins": 4.4,
+    "carbs": 3.3,
+    "fats": 0.34,
+    "fiber": 4.4
+  },
+  {
+    "code": "030121",
+    "name": "Col rizada",
+    "kcal": 43.7,
+    "proteins": 4.3,
+    "carbs": 2.5,
+    "fats": 0.9,
+    "fiber": 4.2
+  },
+  {
+    "code": "030122",
+    "name": "Coliflor",
+    "kcal": 27.5,
+    "proteins": 2.4,
+    "carbs": 2.4,
+    "fats": 0.28,
+    "fiber": 2.9
+  },
+  {
+    "code": "030123",
+    "name": "Endivia",
+    "kcal": 23.6,
+    "proteins": 1.1,
+    "carbs": 3.6,
+    "fats": 0.24,
+    "fiber": 1.3
+  },
+  {
+    "code": "030124",
+    "name": "Escarola",
+    "kcal": 17.4,
+    "proteins": 1.6,
+    "carbs": 1.0,
+    "fats": 0.2,
+    "fiber": 2.6
+  },
+  {
+    "code": "030125",
+    "name": "Esparrago verde",
+    "kcal": 21.2,
+    "proteins": 2.3,
+    "carbs": 2.0,
+    "fats": 0.16,
+    "fiber": 1.3
+  },
+  {
+    "code": "030126",
+    "name": "Espinaca",
+    "kcal": 20.7,
+    "proteins": 2.6,
+    "carbs": 0.61,
+    "fats": 0.3,
+    "fiber": 2.6
+  },
+  {
+    "code": "030127",
+    "name": "Grelo",
+    "kcal": 20.8,
+    "proteins": 2.7,
+    "carbs": 0.1,
+    "fats": 0.2,
+    "fiber": 3.9
+  },
+  {
+    "code": "030128",
+    "name": "Guisante verde",
+    "kcal": 90.7,
+    "proteins": 6.9,
+    "carbs": 11.3,
+    "fats": 0.9,
+    "fiber": 4.9
+  },
+  {
+    "code": "030129",
+    "name": "Haba fresca",
+    "kcal": 50.4,
+    "proteins": 5.4,
+    "carbs": 4.2,
+    "fats": 0.2,
+    "fiber": 5.1
+  },
+  {
+    "code": "030130",
+    "name": "Judía verde",
+    "kcal": 36.4,
+    "proteins": 2.4,
+    "carbs": 4.2,
+    "fats": 0.58,
+    "fiber": 2.4
+  },
+  {
+    "code": "030131",
+    "name": "Lechuga",
+    "kcal": 19.6,
+    "proteins": 1.4,
+    "carbs": 1.4,
+    "fats": 0.6,
+    "fiber": 1.5
+  },
+  {
+    "code": "030132",
+    "name": "Lombarda",
+    "kcal": 26.6,
+    "proteins": 1.5,
+    "carbs": 3.5,
+    "fats": 0.18,
+    "fiber": 2.5
+  },
+  {
+    "code": "030133",
+    "name": "Nopal",
+    "kcal": 23.6,
+    "proteins": 1.3,
+    "carbs": 3.3,
+    "fats": 0.09,
+    "fiber": 2.2
+  },
+  {
+    "code": "030134",
+    "name": "Pepino",
+    "kcal": 13.3,
+    "proteins": 0.63,
+    "carbs": 1.9,
+    "fats": 0.2,
+    "fiber": 0.7
+  },
+  {
+    "code": "030135",
+    "name": "Pimiento rojo",
+    "kcal": 33.1,
+    "proteins": 1.3,
+    "carbs": 4.2,
+    "fats": 0.9,
+    "fiber": 1.5
+  },
+  {
+    "code": "030136",
+    "name": "Pimiento verde",
+    "kcal": 19.7,
+    "proteins": 0.63,
+    "carbs": 1.6,
+    "fats": 0.8,
+    "fiber": 1.8
+  },
+  {
+    "code": "030137",
+    "name": "Puerro",
+    "kcal": 29.2,
+    "proteins": 2.2,
+    "carbs": 3.3,
+    "fats": 0.29,
+    "fiber": 2.3
+  },
+  {
+    "code": "030138",
+    "name": "Repollo",
+    "kcal": 32.1,
+    "proteins": 1.7,
+    "carbs": 4.1,
+    "fats": 0.45,
+    "fiber": 2.4
+  },
+  {
+    "code": "030139",
+    "name": "Rúcula",
+    "kcal": 34.3,
+    "proteins": 2.6,
+    "carbs": 3.7,
+    "fats": 0.66,
+    "fiber": 1.6
+  },
+  {
+    "code": "030140",
+    "name": "Tomate",
+    "kcal": 22.2,
+    "proteins": 0.88,
+    "carbs": 3.5,
+    "fats": 0.21,
+    "fiber": 1.4
+  },
+  {
+    "code": "030141",
+    "name": "Tomate, Cherry",
+    "kcal": 33.0,
+    "proteins": 0.8,
+    "carbs": 5.0,
+    "fats": 0.8,
+    "fiber": 1.3
+  },
+  {
+    "code": "030201",
+    "name": "Alcachofa congelada",
+    "kcal": 37.7,
+    "proteins": 2.6,
+    "carbs": 3.9,
+    "fats": 0.43,
+    "fiber": 3.9
+  },
+  {
+    "code": "030202",
+    "name": "Espinaca congelada",
+    "kcal": 32.4,
+    "proteins": 3.1,
+    "carbs": 1.2,
+    "fats": 1.0,
+    "fiber": 3.1
+  },
+  {
+    "code": "030203",
+    "name": "Guisante congelado",
+    "kcal": 74.0,
+    "proteins": 6.0,
+    "carbs": 9.5,
+    "fats": 0.4,
+    "fiber": 4.2
+  },
+  {
+    "code": "030204",
+    "name": "Judía verde congelada",
+    "kcal": 36.5,
+    "proteins": 1.9,
+    "carbs": 3.6,
+    "fats": 0.9,
+    "fiber": 3.2
+  },
+  {
+    "code": "030205",
+    "name": "Menestra congelada",
+    "kcal": 63.9,
+    "proteins": 3.3,
+    "carbs": 9.5,
+    "fats": 0.52,
+    "fiber": 4.0
+  },
+  {
+    "code": "030301",
+    "name": "Acelga en conserva",
+    "kcal": 15.3,
+    "proteins": 1.8,
+    "carbs": 1.2,
+    "fats": 0.08,
+    "fiber": 1.3
+  },
+  {
+    "code": "030302",
+    "name": "Alcachofa en conserva",
+    "kcal": 36.6,
+    "proteins": 2.9,
+    "carbs": 1.2,
+    "fats": 0.16,
+    "fiber": 9.4
+  },
+  {
+    "code": "030303",
+    "name": "Apio en conserva",
+    "kcal": 32.3,
+    "proteins": 0.5,
+    "carbs": 5.9,
+    "fats": 0.3,
+    "fiber": 2.0
+  },
+  {
+    "code": "030304",
+    "name": "Brotes de bambú en conserva",
+    "kcal": 26.0,
+    "proteins": 1.7,
+    "carbs": 3.2,
+    "fats": 0.4,
+    "fiber": 1.4
+  },
+  {
+    "code": "030305",
+    "name": "Cardo en conserva",
+    "kcal": 15.8,
+    "proteins": 0.76,
+    "carbs": 2.1,
+    "fats": 0.11,
+    "fiber": 1.7
+  },
+  {
+    "code": "030306",
+    "name": "Chucrut en conserva",
+    "kcal": 22.5,
+    "proteins": 1.5,
+    "carbs": 2.4,
+    "fats": 0.3,
+    "fiber": 2.1
+  },
+  {
+    "code": "030307",
+    "name": "Esparrago de lata",
+    "kcal": 18.8,
+    "proteins": 1.9,
+    "carbs": 1.5,
+    "fats": 0.31,
+    "fiber": 1.2
+  },
+  {
+    "code": "030308",
+    "name": "Espinaca en conserva",
+    "kcal": 27.8,
+    "proteins": 3.1,
+    "carbs": 2.3,
+    "fats": 0.4,
+    "fiber": 1.3
+  },
+  {
+    "code": "030309",
+    "name": "Guisante en conserva",
+    "kcal": 88.9,
+    "proteins": 5.3,
+    "carbs": 12.4,
+    "fats": 0.9,
+    "fiber": 5.0
+  },
+  {
+    "code": "030310",
+    "name": "Judía verde en conserva",
+    "kcal": 15.1,
+    "proteins": 1.2,
+    "carbs": 1.6,
+    "fats": 0.1,
+    "fiber": 1.5
+  },
+  {
+    "code": "030311",
+    "name": "Menestra en conserva",
+    "kcal": 48.3,
+    "proteins": 2.0,
+    "carbs": 8.5,
+    "fats": 0.32,
+    "fiber": 1.7
+  },
+  {
+    "code": "030312",
+    "name": "Palmito en conserva",
+    "kcal": 43.2,
+    "proteins": 2.8,
+    "carbs": 8.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "030313",
+    "name": "Pimiento del piquillo en conserva",
+    "kcal": 32.2,
+    "proteins": 1.2,
+    "carbs": 5.2,
+    "fats": 0.4,
+    "fiber": 1.5
+  },
+  {
+    "code": "030314",
+    "name": "Pimiento morrón en conserva",
+    "kcal": 29.4,
+    "proteins": 1.2,
+    "carbs": 4.5,
+    "fats": 0.4,
+    "fiber": 1.5
+  },
+  {
+    "code": "030315",
+    "name": "Pimiento rojo asado en conserva",
+    "kcal": 33.0,
+    "proteins": 1.2,
+    "carbs": 5.4,
+    "fats": 0.4,
+    "fiber": 1.5
+  },
+  {
+    "code": "030316",
+    "name": "Puerro en conserva",
+    "kcal": 38.1,
+    "proteins": 1.2,
+    "carbs": 5.4,
+    "fats": 0.7,
+    "fiber": 2.7
+  },
+  {
+    "code": "030318",
+    "name": "Tomate frito en conserva",
+    "kcal": 78.3,
+    "proteins": 0.82,
+    "carbs": 9.9,
+    "fats": 3.5,
+    "fiber": 1.8
+  },
+  {
+    "code": "030319",
+    "name": "Tomate pelado enlatado",
+    "kcal": 30.6,
+    "proteins": 1.1,
+    "carbs": 6.0,
+    "fats": 0.19,
+    "fiber": 0.66
+  },
+  {
+    "code": "030320",
+    "name": "Tomate triturado",
+    "kcal": 31.1,
+    "proteins": 0.8,
+    "carbs": 5.8,
+    "fats": 0.1,
+    "fiber": 1.9
+  },
+  {
+    "code": "030401",
+    "name": "Zumo de aloe vera",
+    "kcal": 15.0,
+    "proteins": 0.0,
+    "carbs": 3.8,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "030402",
+    "name": "Zumo de tomate natural",
+    "kcal": 16.7,
+    "proteins": 0.76,
+    "carbs": 3.0,
+    "fats": 0.05,
+    "fiber": 0.6
+  },
+  {
+    "code": "030403",
+    "name": "Zumo de zanahoria natural",
+    "kcal": 24.3,
+    "proteins": 0.63,
+    "carbs": 4.8,
+    "fats": 0.15,
+    "fiber": 0.62
+  },
+  {
+    "code": "030501",
+    "name": "Boniato",
+    "kcal": 114.0,
+    "proteins": 1.6,
+    "carbs": 24.1,
+    "fats": 0.6,
+    "fiber": 3.1
+  },
+  {
+    "code": "030502",
+    "name": "Fécula de patata",
+    "kcal": 375.0,
+    "proteins": 6.9,
+    "carbs": 83.1,
+    "fats": 0.34,
+    "fiber": 5.9
+  },
+  {
+    "code": "030503",
+    "name": "Harina de tapioca",
+    "kcal": 382.0,
+    "proteins": 0.5,
+    "carbs": 94.3,
+    "fats": 0.2,
+    "fiber": 0.4
+  },
+  {
+    "code": "030504",
+    "name": "Nabo",
+    "kcal": 31.8,
+    "proteins": 1.0,
+    "carbs": 4.7,
+    "fats": 0.22,
+    "fiber": 3.5
+  },
+  {
+    "code": "030505",
+    "name": "Patata nueva",
+    "kcal": 73.6,
+    "proteins": 2.3,
+    "carbs": 14.8,
+    "fats": 0.11,
+    "fiber": 2.1
+  },
+  {
+    "code": "030506",
+    "name": "Patata vieja",
+    "kcal": 78.7,
+    "proteins": 2.2,
+    "carbs": 16.1,
+    "fats": 0.21,
+    "fiber": 1.8
+  },
+  {
+    "code": "030507",
+    "name": "Rábano",
+    "kcal": 17.3,
+    "proteins": 1.1,
+    "carbs": 2.1,
+    "fats": 0.14,
+    "fiber": 1.6
+  },
+  {
+    "code": "030508",
+    "name": "Remolacha",
+    "kcal": 46.1,
+    "proteins": 1.6,
+    "carbs": 8.4,
+    "fats": 0.1,
+    "fiber": 2.6
+  },
+  {
+    "code": "030509",
+    "name": "Tapioca",
+    "kcal": 345.0,
+    "proteins": 0.58,
+    "carbs": 84.9,
+    "fats": 0.2,
+    "fiber": 0.4
+  },
+  {
+    "code": "030510",
+    "name": "Yuca, mandioca, casava",
+    "kcal": 164.0,
+    "proteins": 1.4,
+    "carbs": 38.1,
+    "fats": 0.3,
+    "fiber": 1.8
+  },
+  {
+    "code": "030511",
+    "name": "Zanahoria",
+    "kcal": 39.8,
+    "proteins": 1.3,
+    "carbs": 6.9,
+    "fats": 0.2,
+    "fiber": 2.6
+  },
+  {
+    "code": "030601",
+    "name": "Remolacha en conserva",
+    "kcal": 39.1,
+    "proteins": 2.3,
+    "carbs": 6.4,
+    "fats": 0.1,
+    "fiber": 1.7
+  },
+  {
+    "code": "030602",
+    "name": "Zanahoria en conserva",
+    "kcal": 26.8,
+    "proteins": 0.8,
+    "carbs": 4.2,
+    "fats": 0.2,
+    "fiber": 2.5
+  },
+  {
+    "code": "030701",
+    "name": "Champiñón",
+    "kcal": 34.0,
+    "proteins": 4.3,
+    "carbs": 0.54,
+    "fats": 1.2,
+    "fiber": 1.9
+  },
+  {
+    "code": "030702",
+    "name": "Níscalo",
+    "kcal": 23.8,
+    "proteins": 1.6,
+    "carbs": 0.2,
+    "fats": 0.8,
+    "fiber": 4.7
+  },
+  {
+    "code": "030703",
+    "name": "Trufa cruda",
+    "kcal": 126.0,
+    "proteins": 9.0,
+    "carbs": 13.0,
+    "fats": 0.5,
+    "fiber": 16.5
+  },
+  {
+    "code": "030801",
+    "name": "Champiñón en conserva",
+    "kcal": 21.4,
+    "proteins": 3.4,
+    "carbs": 0.07,
+    "fats": 0.5,
+    "fiber": 1.5
+  },
+  {
+    "code": "030802",
+    "name": "Hongos desecados, shiitake",
+    "kcal": 344.0,
+    "proteins": 9.6,
+    "carbs": 68.4,
+    "fats": 0.99,
+    "fiber": 11.5
+  },
+  {
+    "code": "030901",
+    "name": "Alga agar cruda",
+    "kcal": 29.0,
+    "proteins": 0.54,
+    "carbs": 6.4,
+    "fats": 0.03,
+    "fiber": 0.5
+  },
+  {
+    "code": "030902",
+    "name": "Alga agar desecada",
+    "kcal": 336.0,
+    "proteins": 6.2,
+    "carbs": 73.2,
+    "fats": 0.3,
+    "fiber": 7.7
+  },
+  {
+    "code": "030903",
+    "name": "Alga espirulina desecada",
+    "kcal": 391.0,
+    "proteins": 58.2,
+    "carbs": 20.3,
+    "fats": 7.7,
+    "fiber": 3.6
+  },
+  {
+    "code": "030904",
+    "name": "Alga Kelp cruda",
+    "kcal": 47.6,
+    "proteins": 1.7,
+    "carbs": 8.3,
+    "fats": 0.56,
+    "fiber": 1.3
+  },
+  {
+    "code": "030905",
+    "name": "Alga Kelp desecada",
+    "kcal": 246.0,
+    "proteins": 7.9,
+    "carbs": 49.7,
+    "fats": 0.6,
+    "fiber": 5.3
+  },
+  {
+    "code": "030906",
+    "name": "Alga Laver cruda",
+    "kcal": 45.5,
+    "proteins": 5.8,
+    "carbs": 4.8,
+    "fats": 0.28,
+    "fiber": 0.3
+  },
+  {
+    "code": "030907",
+    "name": "Alga Laver desecada",
+    "kcal": 225.0,
+    "proteins": 30.7,
+    "carbs": 0.0,
+    "fats": 1.5,
+    "fiber": 44.4
+  },
+  {
+    "code": "030908",
+    "name": "Alga musgo de Irlanda cruda",
+    "kcal": 54.0,
+    "proteins": 1.5,
+    "carbs": 11.0,
+    "fats": 0.16,
+    "fiber": 1.3
+  },
+  {
+    "code": "030909",
+    "name": "Alga Spirulina cruda",
+    "kcal": 37.1,
+    "proteins": 5.9,
+    "carbs": 2.4,
+    "fats": 0.39,
+    "fiber": 0.4
+  },
+  {
+    "code": "030910",
+    "name": "Alga Wakame cruda",
+    "kcal": 53.6,
+    "proteins": 3.0,
+    "carbs": 8.7,
+    "fats": 0.64,
+    "fiber": 0.5
+  },
+  {
+    "code": "030911",
+    "name": "Alga Wakame desecada",
+    "kcal": 165.0,
+    "proteins": 12.4,
+    "carbs": 0.0,
+    "fats": 2.4,
+    "fiber": 47.1
+  },
+  {
+    "code": "040101",
+    "name": "Aguacate",
+    "kcal": 233.0,
+    "proteins": 1.9,
+    "carbs": 0.4,
+    "fats": 23.5,
+    "fiber": 6.3
+  },
+  {
+    "code": "040102",
+    "name": "Albaricoque",
+    "kcal": 41.4,
+    "proteins": 0.88,
+    "carbs": 8.5,
+    "fats": 0.1,
+    "fiber": 1.5
+  },
+  {
+    "code": "040103",
+    "name": "Arándano",
+    "kcal": 42.1,
+    "proteins": 0.63,
+    "carbs": 6.1,
+    "fats": 0.6,
+    "fiber": 4.9
+  },
+  {
+    "code": "040104",
+    "name": "Caqui",
+    "kcal": 74.2,
+    "proteins": 0.63,
+    "carbs": 16.0,
+    "fats": 0.3,
+    "fiber": 2.5
+  },
+  {
+    "code": "040105",
+    "name": "Carambola",
+    "kcal": 31.0,
+    "proteins": 0.5,
+    "carbs": 6.3,
+    "fats": 0.0,
+    "fiber": 1.7
+  },
+  {
+    "code": "040106",
+    "name": "Cereza",
+    "kcal": 62.1,
+    "proteins": 0.88,
+    "carbs": 13.3,
+    "fats": 0.31,
+    "fiber": 1.3
+  },
+  {
+    "code": "040107",
+    "name": "Chirimoya",
+    "kcal": 72.7,
+    "proteins": 1.3,
+    "carbs": 14.1,
+    "fats": 0.7,
+    "fiber": 2.4
+  },
+  {
+    "code": "040108",
+    "name": "Ciruela",
+    "kcal": 48.1,
+    "proteins": 0.63,
+    "carbs": 10.2,
+    "fats": 0.17,
+    "fiber": 1.6
+  },
+  {
+    "code": "040109",
+    "name": "Coco fresco",
+    "kcal": 384.0,
+    "proteins": 4.6,
+    "carbs": 4.8,
+    "fats": 36.5,
+    "fiber": 9.0
+  },
+  {
+    "code": "040110",
+    "name": "Frambuesa",
+    "kcal": 36.9,
+    "proteins": 1.3,
+    "carbs": 4.9,
+    "fats": 0.3,
+    "fiber": 4.7
+  },
+  {
+    "code": "040111",
+    "name": "Fresa y fresón",
+    "kcal": 32.2,
+    "proteins": 0.81,
+    "carbs": 5.5,
+    "fats": 0.4,
+    "fiber": 1.7
+  },
+  {
+    "code": "040112",
+    "name": "Granada",
+    "kcal": 77.2,
+    "proteins": 0.69,
+    "carbs": 16.1,
+    "fats": 0.6,
+    "fiber": 2.3
+  },
+  {
+    "code": "040113",
+    "name": "Grosella negra",
+    "kcal": 45.2,
+    "proteins": 1.3,
+    "carbs": 6.1,
+    "fats": 0.22,
+    "fiber": 6.8
+  },
+  {
+    "code": "040114",
+    "name": "Grosella roja",
+    "kcal": 32.4,
+    "proteins": 1.1,
+    "carbs": 4.8,
+    "fats": 0.2,
+    "fiber": 3.5
+  },
+  {
+    "code": "040115",
+    "name": "Guayaba",
+    "kcal": 41.6,
+    "proteins": 0.88,
+    "carbs": 5.8,
+    "fats": 0.5,
+    "fiber": 5.2
+  },
+  {
+    "code": "040116",
+    "name": "Higo",
+    "kcal": 65.3,
+    "proteins": 1.3,
+    "carbs": 12.9,
+    "fats": 0.5,
+    "fiber": 2.0
+  },
+  {
+    "code": "040117",
+    "name": "Kiwi",
+    "kcal": 51.8,
+    "proteins": 1.0,
+    "carbs": 9.1,
+    "fats": 0.8,
+    "fiber": 2.1
+  },
+  {
+    "code": "040118",
+    "name": "Lima",
+    "kcal": 17.0,
+    "proteins": 0.5,
+    "carbs": 1.9,
+    "fats": 0.2,
+    "fiber": 2.8
+  },
+  {
+    "code": "040119",
+    "name": "Limón",
+    "kcal": 27.7,
+    "proteins": 0.69,
+    "carbs": 3.2,
+    "fats": 0.3,
+    "fiber": 4.7
+  },
+  {
+    "code": "040120",
+    "name": "Litchi",
+    "kcal": 76.7,
+    "proteins": 0.9,
+    "carbs": 16.8,
+    "fats": 0.3,
+    "fiber": 1.6
+  },
+  {
+    "code": "040121",
+    "name": "Mandarina",
+    "kcal": 44.7,
+    "proteins": 0.63,
+    "carbs": 9.2,
+    "fats": 0.2,
+    "fiber": 1.8
+  },
+  {
+    "code": "040122",
+    "name": "Mango",
+    "kcal": 61.2,
+    "proteins": 0.63,
+    "carbs": 12.8,
+    "fats": 0.45,
+    "fiber": 1.7
+  },
+  {
+    "code": "040123",
+    "name": "Manzana",
+    "kcal": 54.1,
+    "proteins": 0.31,
+    "carbs": 11.4,
+    "fats": 0.36,
+    "fiber": 2.0
+  },
+  {
+    "code": "040124",
+    "name": "Maracuyá",
+    "kcal": 54.2,
+    "proteins": 2.4,
+    "carbs": 9.5,
+    "fats": 0.4,
+    "fiber": 1.5
+  },
+  {
+    "code": "040125",
+    "name": "Melocotón",
+    "kcal": 50.8,
+    "proteins": 1.0,
+    "carbs": 10.3,
+    "fats": 0.2,
+    "fiber": 1.9
+  },
+  {
+    "code": "040126",
+    "name": "Melón",
+    "kcal": 55.5,
+    "proteins": 0.88,
+    "carbs": 12.4,
+    "fats": 0.1,
+    "fiber": 0.73
+  },
+  {
+    "code": "040127",
+    "name": "Membrillo",
+    "kcal": 47.3,
+    "proteins": 0.44,
+    "carbs": 7.3,
+    "fats": 0.5,
+    "fiber": 5.9
+  },
+  {
+    "code": "040128",
+    "name": "Mora",
+    "kcal": 45.0,
+    "proteins": 1.2,
+    "carbs": 6.2,
+    "fats": 1.0,
+    "fiber": 3.2
+  },
+  {
+    "code": "040129",
+    "name": "Naranja",
+    "kcal": 45.5,
+    "proteins": 0.87,
+    "carbs": 8.9,
+    "fats": 0.2,
+    "fiber": 2.3
+  },
+  {
+    "code": "040130",
+    "name": "Nectarina",
+    "kcal": 49.7,
+    "proteins": 0.9,
+    "carbs": 10.2,
+    "fats": 0.1,
+    "fiber": 2.2
+  },
+  {
+    "code": "040131",
+    "name": "Níspero",
+    "kcal": 42.6,
+    "proteins": 0.56,
+    "carbs": 8.6,
+    "fats": 0.2,
+    "fiber": 2.1
+  },
+  {
+    "code": "040132",
+    "name": "Papaya",
+    "kcal": 35.0,
+    "proteins": 0.5,
+    "carbs": 7.1,
+    "fats": 0.09,
+    "fiber": 1.9
+  },
+  {
+    "code": "040133",
+    "name": "Pera",
+    "kcal": 49.4,
+    "proteins": 0.43,
+    "carbs": 10.6,
+    "fats": 0.1,
+    "fiber": 2.2
+  },
+  {
+    "code": "040134",
+    "name": "Piña",
+    "kcal": 50.8,
+    "proteins": 0.44,
+    "carbs": 10.4,
+    "fats": 0.4,
+    "fiber": 1.9
+  },
+  {
+    "code": "040135",
+    "name": "Plátano",
+    "kcal": 95.2,
+    "proteins": 1.1,
+    "carbs": 20.8,
+    "fats": 0.27,
+    "fiber": 2.6
+  },
+  {
+    "code": "040136",
+    "name": "Plátano macho o hartón",
+    "kcal": 141.0,
+    "proteins": 1.3,
+    "carbs": 31.9,
+    "fats": 0.37,
+    "fiber": 2.3
+  },
+  {
+    "code": "040137",
+    "name": "Pomelo",
+    "kcal": 36.7,
+    "proteins": 0.63,
+    "carbs": 7.4,
+    "fats": 0.15,
+    "fiber": 1.6
+  },
+  {
+    "code": "040138",
+    "name": "Sandia",
+    "kcal": 28.4,
+    "proteins": 0.63,
+    "carbs": 5.6,
+    "fats": 0.3,
+    "fiber": 0.4
+  },
+  {
+    "code": "040139",
+    "name": "Tamarindo, pulpa",
+    "kcal": 277.0,
+    "proteins": 2.8,
+    "carbs": 62.5,
+    "fats": 0.6,
+    "fiber": 5.1
+  },
+  {
+    "code": "040140",
+    "name": "Uva blanca",
+    "kcal": 70.3,
+    "proteins": 0.72,
+    "carbs": 16.1,
+    "fats": 0.16,
+    "fiber": 0.8
+  },
+  {
+    "code": "040141",
+    "name": "Uva negra",
+    "kcal": 67.1,
+    "proteins": 0.72,
+    "carbs": 15.5,
+    "fats": 0.16,
+    "fiber": 0.4
+  },
+  {
+    "code": "040201",
+    "name": "Albaricoque seco (orejones)",
+    "kcal": 283.0,
+    "proteins": 3.4,
+    "carbs": 62.6,
+    "fats": 0.51,
+    "fiber": 7.3
+  },
+  {
+    "code": "040202",
+    "name": "Ciruela seca",
+    "kcal": 219.0,
+    "proteins": 2.2,
+    "carbs": 42.4,
+    "fats": 0.52,
+    "fiber": 17.8
+  },
+  {
+    "code": "040203",
+    "name": "Coco rallado",
+    "kcal": 633.0,
+    "proteins": 5.6,
+    "carbs": 6.4,
+    "fats": 62.0,
+    "fiber": 13.7
+  },
+  {
+    "code": "040204",
+    "name": "Dátil",
+    "kcal": 289.0,
+    "proteins": 1.9,
+    "carbs": 65.1,
+    "fats": 0.45,
+    "fiber": 8.7
+  },
+  {
+    "code": "040205",
+    "name": "Higo seco",
+    "kcal": 272.0,
+    "proteins": 3.6,
+    "carbs": 55.1,
+    "fats": 1.3,
+    "fiber": 12.9
+  },
+  {
+    "code": "040206",
+    "name": "Melocotón seco (orejones)",
+    "kcal": 257.0,
+    "proteins": 3.0,
+    "carbs": 53.2,
+    "fats": 0.76,
+    "fiber": 12.8
+  },
+  {
+    "code": "040207",
+    "name": "Pasa",
+    "kcal": 305.0,
+    "proteins": 2.5,
+    "carbs": 69.3,
+    "fats": 0.5,
+    "fiber": 6.5
+  },
+  {
+    "code": "040301",
+    "name": "Almendra con cascara",
+    "kcal": 610.0,
+    "proteins": 18.7,
+    "carbs": 5.4,
+    "fats": 54.1,
+    "fiber": 13.5
+  },
+  {
+    "code": "040302",
+    "name": "Almendra frita salada sin cascara",
+    "kcal": 618.0,
+    "proteins": 19.0,
+    "carbs": 3.8,
+    "fats": 55.2,
+    "fiber": 15.0
+  },
+  {
+    "code": "040303",
+    "name": "Almendra sin cascara",
+    "kcal": 610.0,
+    "proteins": 18.7,
+    "carbs": 5.4,
+    "fats": 54.1,
+    "fiber": 13.5
+  },
+  {
+    "code": "040304",
+    "name": "Almendra tostada sin cascara",
+    "kcal": 633.0,
+    "proteins": 22.9,
+    "carbs": 9.7,
+    "fats": 52.9,
+    "fiber": 13.4
+  },
+  {
+    "code": "040305",
+    "name": "Anacardo",
+    "kcal": 578.0,
+    "proteins": 17.5,
+    "carbs": 30.5,
+    "fats": 42.2,
+    "fiber": 2.9
+  },
+  {
+    "code": "040306",
+    "name": "Avellana con cascara",
+    "kcal": 661.0,
+    "proteins": 12.0,
+    "carbs": 10.5,
+    "fats": 61.6,
+    "fiber": 8.2
+  },
+  {
+    "code": "040307",
+    "name": "Avellana sin cascara",
+    "kcal": 661.0,
+    "proteins": 12.0,
+    "carbs": 10.5,
+    "fats": 61.6,
+    "fiber": 8.2
+  },
+  {
+    "code": "040308",
+    "name": "Cacahuete con cascara",
+    "kcal": 563.0,
+    "proteins": 25.2,
+    "carbs": 7.9,
+    "fats": 46.0,
+    "fiber": 8.1
+  },
+  {
+    "code": "040309",
+    "name": "Cacahuete frito salado sin cascara",
+    "kcal": 627.0,
+    "proteins": 24.5,
+    "carbs": 8.9,
+    "fats": 53.0,
+    "fiber": 8.4
+  },
+  {
+    "code": "040310",
+    "name": "Cacahuete sin cascara",
+    "kcal": 563.0,
+    "proteins": 25.2,
+    "carbs": 7.9,
+    "fats": 46.0,
+    "fiber": 8.1
+  },
+  {
+    "code": "040311",
+    "name": "Cacahuete tostado y salado sin cascara",
+    "kcal": 615.0,
+    "proteins": 23.9,
+    "carbs": 14.0,
+    "fats": 49.7,
+    "fiber": 8.0
+  },
+  {
+    "code": "040312",
+    "name": "Castaña",
+    "kcal": 190.0,
+    "proteins": 2.7,
+    "carbs": 36.5,
+    "fats": 2.2,
+    "fiber": 6.7
+  },
+  {
+    "code": "040313",
+    "name": "Castaña asada",
+    "kcal": 237.0,
+    "proteins": 4.0,
+    "carbs": 39.7,
+    "fats": 5.3,
+    "fiber": 7.1
+  },
+  {
+    "code": "040314",
+    "name": "Chufa",
+    "kcal": 443.0,
+    "proteins": 6.1,
+    "carbs": 42.5,
+    "fats": 23.7,
+    "fiber": 17.4
+  },
+  {
+    "code": "040315",
+    "name": "Nueces de macadamia sin cascara",
+    "kcal": 744.0,
+    "proteins": 7.9,
+    "carbs": 4.8,
+    "fats": 75.8,
+    "fiber": 5.3
+  },
+  {
+    "code": "040316",
+    "name": "Nueces pecanas sin cascara",
+    "kcal": 732.0,
+    "proteins": 9.3,
+    "carbs": 2.9,
+    "fats": 73.8,
+    "fiber": 9.5
+  },
+  {
+    "code": "040317",
+    "name": "Nuez con cascara",
+    "kcal": 649.0,
+    "proteins": 14.4,
+    "carbs": 4.4,
+    "fats": 62.5,
+    "fiber": 5.8
+  },
+  {
+    "code": "040318",
+    "name": "Nuez sin cascara",
+    "kcal": 649.0,
+    "proteins": 14.4,
+    "carbs": 4.4,
+    "fats": 62.5,
+    "fiber": 5.8
+  },
+  {
+    "code": "040319",
+    "name": "Piñón con cascara",
+    "kcal": 706.0,
+    "proteins": 14.0,
+    "carbs": 3.9,
+    "fats": 68.6,
+    "fiber": 8.5
+  },
+  {
+    "code": "040320",
+    "name": "Piñón sin cascara",
+    "kcal": 706.0,
+    "proteins": 14.0,
+    "carbs": 3.9,
+    "fats": 68.6,
+    "fiber": 8.5
+  },
+  {
+    "code": "040321",
+    "name": "Pipa de girasol pelada con sal",
+    "kcal": 640.0,
+    "proteins": 17.3,
+    "carbs": 9.1,
+    "fats": 56.8,
+    "fiber": 11.5
+  },
+  {
+    "code": "040322",
+    "name": "Pipa de girasol pelada sin sal",
+    "kcal": 652.0,
+    "proteins": 17.3,
+    "carbs": 12.2,
+    "fats": 56.8,
+    "fiber": 11.5
+  },
+  {
+    "code": "040323",
+    "name": "Pipa de girasol sin sal",
+    "kcal": 569.0,
+    "proteins": 19.8,
+    "carbs": 12.3,
+    "fats": 47.5,
+    "fiber": 6.3
+  },
+  {
+    "code": "040324",
+    "name": "Pipas de calabaza sin cascara tostadas sin sal",
+    "kcal": 635.0,
+    "proteins": 29.9,
+    "carbs": 14.7,
+    "fats": 49.1,
+    "fiber": 6.5
+  },
+  {
+    "code": "040325",
+    "name": "Pistacho",
+    "kcal": 603.0,
+    "proteins": 17.7,
+    "carbs": 11.6,
+    "fats": 51.6,
+    "fiber": 10.6
+  },
+  {
+    "code": "040326",
+    "name": "Pistacho tostado salado",
+    "kcal": 613.0,
+    "proteins": 18.0,
+    "carbs": 12.5,
+    "fats": 52.7,
+    "fiber": 8.5
+  },
+  {
+    "code": "040327",
+    "name": "Semilla de lino",
+    "kcal": 514.0,
+    "proteins": 18.3,
+    "carbs": 1.6,
+    "fats": 42.2,
+    "fiber": 27.3
+  },
+  {
+    "code": "040328",
+    "name": "Semilla de sésamo",
+    "kcal": 605.0,
+    "proteins": 17.7,
+    "carbs": 15.8,
+    "fats": 49.7,
+    "fiber": 11.8
+  },
+  {
+    "code": "040329",
+    "name": "Tahine",
+    "kcal": 642.0,
+    "proteins": 17.4,
+    "carbs": 21.5,
+    "fats": 53.0,
+    "fiber": 4.7
+  },
+  {
+    "code": "040401",
+    "name": "Compota de manzana",
+    "kcal": 81.3,
+    "proteins": 0.2,
+    "carbs": 19.1,
+    "fats": 0.1,
+    "fiber": 1.6
+  },
+  {
+    "code": "040402",
+    "name": "Crema de almendras",
+    "kcal": 341.0,
+    "proteins": 4.6,
+    "carbs": 50.7,
+    "fats": 13.2,
+    "fiber": 0.5
+  },
+  {
+    "code": "040403",
+    "name": "Crema de cacahuete",
+    "kcal": 619.0,
+    "proteins": 30.1,
+    "carbs": 13.6,
+    "fats": 47.8,
+    "fiber": 7.0
+  },
+  {
+    "code": "040404",
+    "name": "Dulce de membrillo y pastas de frutas",
+    "kcal": 259.0,
+    "proteins": 1.0,
+    "carbs": 62.2,
+    "fats": 0.0,
+    "fiber": 3.2
+  },
+  {
+    "code": "040405",
+    "name": "Lichi en conserva",
+    "kcal": 117.0,
+    "proteins": 0.9,
+    "carbs": 27.0,
+    "fats": 0.3,
+    "fiber": 1.3
+  },
+  {
+    "code": "040406",
+    "name": "Macedonia de frutas en almíbar",
+    "kcal": 68.6,
+    "proteins": 0.62,
+    "carbs": 15.8,
+    "fats": 0.1,
+    "fiber": 1.0
+  },
+  {
+    "code": "040407",
+    "name": "Macedonia de frutas en su jugo",
+    "kcal": 63.1,
+    "proteins": 0.7,
+    "carbs": 14.5,
+    "fats": 0.03,
+    "fiber": 1.0
+  },
+  {
+    "code": "040408",
+    "name": "Melocotón en almíbar",
+    "kcal": 58.6,
+    "proteins": 0.38,
+    "carbs": 14.2,
+    "fats": 0.03,
+    "fiber": 0.0
+  },
+  {
+    "code": "040409",
+    "name": "Mermelada de albaricoque y melocotón",
+    "kcal": 258.0,
+    "proteins": 0.32,
+    "carbs": 63.2,
+    "fats": 0.2,
+    "fiber": 1.2
+  },
+  {
+    "code": "040411",
+    "name": "Mermelada de cereza",
+    "kcal": 251.0,
+    "proteins": 0.38,
+    "carbs": 60.9,
+    "fats": 0.16,
+    "fiber": 0.55
+  },
+  {
+    "code": "040412",
+    "name": "Mermelada de ciruela",
+    "kcal": 251.0,
+    "proteins": 0.31,
+    "carbs": 59.6,
+    "fats": 0.63,
+    "fiber": 2.6
+  },
+  {
+    "code": "040413",
+    "name": "Mermelada de frambuesa",
+    "kcal": 251.0,
+    "proteins": 0.45,
+    "carbs": 60.9,
+    "fats": 0.3,
+    "fiber": 1.2
+  },
+  {
+    "code": "040414",
+    "name": "Mermelada de fresa",
+    "kcal": 255.0,
+    "proteins": 0.31,
+    "carbs": 62.6,
+    "fats": 0.2,
+    "fiber": 0.8
+  },
+  {
+    "code": "040415",
+    "name": "Mermelada de fresa baja en calorías",
+    "kcal": 33.0,
+    "proteins": 0.7,
+    "carbs": 6.4,
+    "fats": 0.0,
+    "fiber": 2.3
+  },
+  {
+    "code": "040416",
+    "name": "Mermelada de mora",
+    "kcal": 239.0,
+    "proteins": 0.5,
+    "carbs": 58.7,
+    "fats": 0.0,
+    "fiber": 1.1
+  },
+  {
+    "code": "040417",
+    "name": "Mermelada de naranja",
+    "kcal": 234.0,
+    "proteins": 0.38,
+    "carbs": 58.0,
+    "fats": 0.0,
+    "fiber": 0.2
+  },
+  {
+    "code": "040418",
+    "name": "Mermelada de tomate",
+    "kcal": 197.0,
+    "proteins": 0.56,
+    "carbs": 48.0,
+    "fats": 0.14,
+    "fiber": 0.61
+  },
+  {
+    "code": "040419",
+    "name": "Pera en almíbar",
+    "kcal": 62.9,
+    "proteins": 0.25,
+    "carbs": 14.5,
+    "fats": 0.1,
+    "fiber": 1.5
+  },
+  {
+    "code": "040420",
+    "name": "Piña en almíbar",
+    "kcal": 65.8,
+    "proteins": 0.38,
+    "carbs": 15.4,
+    "fats": 0.11,
+    "fiber": 0.82
+  },
+  {
+    "code": "040421",
+    "name": "Piña en su jugo",
+    "kcal": 42.9,
+    "proteins": 0.4,
+    "carbs": 9.7,
+    "fats": 0.099,
+    "fiber": 0.8
+  },
+  {
+    "code": "040501",
+    "name": "Zumo de limón natural",
+    "kcal": 33.1,
+    "proteins": 0.4,
+    "carbs": 6.1,
+    "fats": 0.29,
+    "fiber": 0.4
+  },
+  {
+    "code": "040502",
+    "name": "Zumo de naranja",
+    "kcal": 43.6,
+    "proteins": 0.69,
+    "carbs": 9.4,
+    "fats": 0.2,
+    "fiber": 0.7
+  },
+  {
+    "code": "050101",
+    "name": "Leche concentrada",
+    "kcal": 132.0,
+    "proteins": 6.5,
+    "carbs": 9.3,
+    "fats": 7.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "050102",
+    "name": "Leche condensada azucarada",
+    "kcal": 336.0,
+    "proteins": 8.5,
+    "carbs": 52.8,
+    "fats": 10.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "050103",
+    "name": "Leche condensada desnatada con azúcar",
+    "kcal": 282.0,
+    "proteins": 10.0,
+    "carbs": 60.0,
+    "fats": 0.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "050104",
+    "name": "Leche de cabra",
+    "kcal": 66.7,
+    "proteins": 3.7,
+    "carbs": 4.2,
+    "fats": 3.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "050105",
+    "name": "Leche de oveja",
+    "kcal": 96.7,
+    "proteins": 5.3,
+    "carbs": 4.7,
+    "fats": 6.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "050106",
+    "name": "Leche de vaca desnatada",
+    "kcal": 37.0,
+    "proteins": 3.9,
+    "carbs": 4.9,
+    "fats": 0.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "050107",
+    "name": "Leche de vaca entera",
+    "kcal": 65.4,
+    "proteins": 3.1,
+    "carbs": 4.7,
+    "fats": 3.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "050108",
+    "name": "Leche de vaca semidesnatada",
+    "kcal": 47.6,
+    "proteins": 3.5,
+    "carbs": 4.8,
+    "fats": 1.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "050109",
+    "name": "Leche desnatada sin lactosa",
+    "kcal": 36.6,
+    "proteins": 3.9,
+    "carbs": 4.8,
+    "fats": 0.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "050110",
+    "name": "Leche en polvo desnatada",
+    "kcal": 352.0,
+    "proteins": 36.1,
+    "carbs": 50.4,
+    "fats": 0.64,
+    "fiber": 0.0
+  },
+  {
+    "code": "050111",
+    "name": "Leche en polvo entera",
+    "kcal": 477.0,
+    "proteins": 25.2,
+    "carbs": 35.1,
+    "fats": 26.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "050112",
+    "name": "Leche en polvo semidesnatada",
+    "kcal": 442.0,
+    "proteins": 29.8,
+    "carbs": 43.9,
+    "fats": 16.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "050113",
+    "name": "Leche entera sin lactosa",
+    "kcal": 65.4,
+    "proteins": 3.1,
+    "carbs": 4.7,
+    "fats": 3.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "050114",
+    "name": "Leche evaporada entera",
+    "kcal": 151.0,
+    "proteins": 8.4,
+    "carbs": 8.1,
+    "fats": 9.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "050115",
+    "name": "Leche materna calostro",
+    "kcal": 53.5,
+    "proteins": 2.6,
+    "carbs": 4.9,
+    "fats": 2.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "050116",
+    "name": "Leche materna madura",
+    "kcal": 68.8,
+    "proteins": 1.2,
+    "carbs": 7.0,
+    "fats": 4.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "050117",
+    "name": "Leche materna transicional",
+    "kcal": 66.5,
+    "proteins": 1.7,
+    "carbs": 6.6,
+    "fats": 3.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "050118",
+    "name": "Leche merengada",
+    "kcal": 83.6,
+    "proteins": 3.0,
+    "carbs": 10.7,
+    "fats": 3.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "050119",
+    "name": "Leche semidesnatada sin lactosa",
+    "kcal": 47.6,
+    "proteins": 3.5,
+    "carbs": 4.8,
+    "fats": 1.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "050201",
+    "name": "Kéfir",
+    "kcal": 63.9,
+    "proteins": 3.3,
+    "carbs": 4.8,
+    "fats": 3.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "050202",
+    "name": "Leche fermentada con lactobacillus acidophilus",
+    "kcal": 98.5,
+    "proteins": 3.1,
+    "carbs": 14.1,
+    "fats": 3.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "050203",
+    "name": "Leche fermentada con lactobacillus casei",
+    "kcal": 88.3,
+    "proteins": 3.0,
+    "carbs": 11.7,
+    "fats": 3.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "050205",
+    "name": "Leche fermentada tipo bio con frutas",
+    "kcal": 84.9,
+    "proteins": 4.0,
+    "carbs": 13.4,
+    "fats": 1.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "050206",
+    "name": "Leche fermentada tipo bio desnatado con frutas",
+    "kcal": 53.0,
+    "proteins": 4.7,
+    "carbs": 8.5,
+    "fats": 0.021,
+    "fiber": 0.0
+  },
+  {
+    "code": "050207",
+    "name": "Leche fermentada tipo bio desnatado natural",
+    "kcal": 42.7,
+    "proteins": 4.9,
+    "carbs": 5.1,
+    "fats": 0.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "050208",
+    "name": "Leche fermentada tipo bio natural",
+    "kcal": 62.6,
+    "proteins": 3.6,
+    "carbs": 4.4,
+    "fats": 3.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "050209",
+    "name": "Yogur de soja",
+    "kcal": 90.0,
+    "proteins": 2.4,
+    "carbs": 17.1,
+    "fats": 1.2,
+    "fiber": 0.6
+  },
+  {
+    "code": "050210",
+    "name": "Yogur desnatado con cereales",
+    "kcal": 56.5,
+    "proteins": 4.6,
+    "carbs": 6.9,
+    "fats": 1.1,
+    "fiber": 0.3
+  },
+  {
+    "code": "050211",
+    "name": "Yogur desnatado con fruta",
+    "kcal": 71.6,
+    "proteins": 3.8,
+    "carbs": 13.1,
+    "fats": 0.2,
+    "fiber": 1.1
+  },
+  {
+    "code": "050212",
+    "name": "Yogur desnatado de sabores",
+    "kcal": 90.1,
+    "proteins": 3.8,
+    "carbs": 16.7,
+    "fats": 0.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "050213",
+    "name": "Yogur desnatado natural",
+    "kcal": 45.3,
+    "proteins": 4.3,
+    "carbs": 6.3,
+    "fats": 0.32,
+    "fiber": 0.0
+  },
+  {
+    "code": "050214",
+    "name": "Yogur desnatado natural azucarado",
+    "kcal": 75.9,
+    "proteins": 4.5,
+    "carbs": 13.8,
+    "fats": 0.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "050215",
+    "name": "Yogur desnatado natural edulcorado",
+    "kcal": 40.5,
+    "proteins": 4.3,
+    "carbs": 5.1,
+    "fats": 0.32,
+    "fiber": 0.0
+  },
+  {
+    "code": "050216",
+    "name": "Yogur entero con cereales",
+    "kcal": 89.6,
+    "proteins": 3.9,
+    "carbs": 9.1,
+    "fats": 3.8,
+    "fiber": 1.8
+  },
+  {
+    "code": "050217",
+    "name": "Yogur entero con fruta",
+    "kcal": 94.9,
+    "proteins": 3.8,
+    "carbs": 14.3,
+    "fats": 2.3,
+    "fiber": 0.9
+  },
+  {
+    "code": "050218",
+    "name": "Yogur entero de sabores",
+    "kcal": 115.0,
+    "proteins": 5.4,
+    "carbs": 15.6,
+    "fats": 3.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "050219",
+    "name": "Yogur entero natural azucarado",
+    "kcal": 85.9,
+    "proteins": 3.5,
+    "carbs": 13.7,
+    "fats": 1.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "050220",
+    "name": "Yogur liquido con pulpa de fruta",
+    "kcal": 81.9,
+    "proteins": 2.8,
+    "carbs": 14.3,
+    "fats": 1.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "050221",
+    "name": "Yogur liquido de sabores",
+    "kcal": 75.4,
+    "proteins": 2.9,
+    "carbs": 12.8,
+    "fats": 1.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "050222",
+    "name": "Yogur liquido natural azucarado",
+    "kcal": 69.2,
+    "proteins": 3.0,
+    "carbs": 11.6,
+    "fats": 1.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "050223",
+    "name": "Yogur natural entero",
+    "kcal": 61.4,
+    "proteins": 4.0,
+    "carbs": 5.5,
+    "fats": 2.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "050224",
+    "name": "Yogur sin lactosa natural azucarado",
+    "kcal": 70.7,
+    "proteins": 3.5,
+    "carbs": 9.9,
+    "fats": 1.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "050225",
+    "name": "Yogur tipo griego",
+    "kcal": 139.0,
+    "proteins": 6.4,
+    "carbs": 5.4,
+    "fats": 10.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "050301",
+    "name": "Queso azul",
+    "kcal": 353.0,
+    "proteins": 21.1,
+    "carbs": 0.0,
+    "fats": 29.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "050302",
+    "name": "Queso Brie",
+    "kcal": 342.0,
+    "proteins": 22.6,
+    "carbs": 0.1,
+    "fats": 27.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "050303",
+    "name": "Queso Camembert",
+    "kcal": 285.0,
+    "proteins": 21.0,
+    "carbs": 0.1,
+    "fats": 22.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "050304",
+    "name": "Queso Cheddar",
+    "kcal": 393.0,
+    "proteins": 25.4,
+    "carbs": 0.36,
+    "fats": 32.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "050305",
+    "name": "Queso de Arzua",
+    "kcal": 339.0,
+    "proteins": 19.4,
+    "carbs": 0.0,
+    "fats": 29.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "050306",
+    "name": "Queso de bola",
+    "kcal": 329.0,
+    "proteins": 25.5,
+    "carbs": 0.8,
+    "fats": 24.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "050307",
+    "name": "Queso de Burgos",
+    "kcal": 200.0,
+    "proteins": 14.0,
+    "carbs": 2.5,
+    "fats": 14.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "050308",
+    "name": "Queso de cabra curado",
+    "kcal": 467.0,
+    "proteins": 27.6,
+    "carbs": 0.0,
+    "fats": 39.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "050309",
+    "name": "Queso de cabra semicurado",
+    "kcal": 327.0,
+    "proteins": 18.3,
+    "carbs": 0.1,
+    "fats": 28.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "050310",
+    "name": "Queso de cabra tierno",
+    "kcal": 208.0,
+    "proteins": 11.1,
+    "carbs": 1.2,
+    "fats": 17.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "050311",
+    "name": "Queso de Cabrales",
+    "kcal": 392.0,
+    "proteins": 21.5,
+    "carbs": 0.0,
+    "fats": 34.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "050312",
+    "name": "Queso Edam",
+    "kcal": 356.0,
+    "proteins": 25.0,
+    "carbs": 1.4,
+    "fats": 27.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "050313",
+    "name": "Queso Emmental",
+    "kcal": 397.0,
+    "proteins": 29.0,
+    "carbs": 0.0,
+    "fats": 31.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "050314",
+    "name": "Queso en lonchas",
+    "kcal": 327.0,
+    "proteins": 25.1,
+    "carbs": 2.2,
+    "fats": 24.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "050315",
+    "name": "Queso en porciones",
+    "kcal": 376.0,
+    "proteins": 15.6,
+    "carbs": 5.4,
+    "fats": 32.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "050316",
+    "name": "Queso en porciones descremado",
+    "kcal": 162.0,
+    "proteins": 10.0,
+    "carbs": 6.5,
+    "fats": 10.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "050317",
+    "name": "Queso gallego",
+    "kcal": 352.0,
+    "proteins": 23.0,
+    "carbs": 2.0,
+    "fats": 28.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "050318",
+    "name": "Queso Gorgonzola",
+    "kcal": 361.0,
+    "proteins": 19.4,
+    "carbs": 0.62,
+    "fats": 31.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "050319",
+    "name": "Queso Gouda",
+    "kcal": 331.0,
+    "proteins": 25.5,
+    "carbs": 0.0,
+    "fats": 25.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "050320",
+    "name": "Queso Gruyere",
+    "kcal": 397.0,
+    "proteins": 26.9,
+    "carbs": 0.0,
+    "fats": 32.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "050321",
+    "name": "Queso Havarti",
+    "kcal": 413.0,
+    "proteins": 20.0,
+    "carbs": 0.0,
+    "fats": 37.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "050322",
+    "name": "Queso Idiazabal",
+    "kcal": 443.0,
+    "proteins": 23.3,
+    "carbs": 0.0,
+    "fats": 38.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "050323",
+    "name": "Queso Mahón",
+    "kcal": 411.0,
+    "proteins": 26.9,
+    "carbs": 0.0,
+    "fats": 33.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "050324",
+    "name": "Queso manchego curado",
+    "kcal": 476.0,
+    "proteins": 38.0,
+    "carbs": 0.51,
+    "fats": 35.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "050325",
+    "name": "Queso manchego fresco",
+    "kcal": 333.0,
+    "proteins": 26.0,
+    "carbs": 0.0,
+    "fats": 25.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "050326",
+    "name": "Queso manchego semicurado",
+    "kcal": 391.0,
+    "proteins": 28.8,
+    "carbs": 0.5,
+    "fats": 30.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "050327",
+    "name": "Queso Mozzarella",
+    "kcal": 233.0,
+    "proteins": 19.9,
+    "carbs": 2.2,
+    "fats": 16.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "050328",
+    "name": "Queso Parmesano",
+    "kcal": 375.0,
+    "proteins": 35.6,
+    "carbs": 0.06,
+    "fats": 25.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "050329",
+    "name": "Queso quark 20%mg",
+    "kcal": 71.3,
+    "proteins": 7.8,
+    "carbs": 3.5,
+    "fats": 2.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "050330",
+    "name": "Queso quark descremado",
+    "kcal": 67.9,
+    "proteins": 13.2,
+    "carbs": 3.2,
+    "fats": 0.25,
+    "fiber": 0.0
+  },
+  {
+    "code": "050331",
+    "name": "Queso raclette",
+    "kcal": 369.0,
+    "proteins": 25.0,
+    "carbs": 0.69,
+    "fats": 29.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "050332",
+    "name": "Queso ricotta",
+    "kcal": 156.0,
+    "proteins": 11.5,
+    "carbs": 3.8,
+    "fats": 10.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "050333",
+    "name": "Queso Roncal",
+    "kcal": 448.0,
+    "proteins": 24.7,
+    "carbs": 0.0,
+    "fats": 38.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "050334",
+    "name": "Queso Roquefort",
+    "kcal": 369.0,
+    "proteins": 21.5,
+    "carbs": 2.0,
+    "fats": 30.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "050335",
+    "name": "Queso San Simón",
+    "kcal": 382.0,
+    "proteins": 24.2,
+    "carbs": 0.0,
+    "fats": 31.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "050336",
+    "name": "Queso tetilla",
+    "kcal": 399.0,
+    "proteins": 22.0,
+    "carbs": 0.0,
+    "fats": 34.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "050337",
+    "name": "Queso tipo manchego en aceite",
+    "kcal": 471.0,
+    "proteins": 26.5,
+    "carbs": 0.0,
+    "fats": 40.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "050338",
+    "name": "Queso tipo petit de chocolate",
+    "kcal": 182.0,
+    "proteins": 4.3,
+    "carbs": 26.9,
+    "fats": 6.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "050339",
+    "name": "Queso tipo petit de sabores",
+    "kcal": 122.0,
+    "proteins": 7.5,
+    "carbs": 14.0,
+    "fats": 4.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "050340",
+    "name": "Queso tipo petit natural azucarado",
+    "kcal": 120.0,
+    "proteins": 7.3,
+    "carbs": 13.7,
+    "fats": 4.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "050341",
+    "name": "Queso Torta del Casar",
+    "kcal": 399.0,
+    "proteins": 26.3,
+    "carbs": 0.0,
+    "fats": 32.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "050342",
+    "name": "Queso zamorano",
+    "kcal": 439.0,
+    "proteins": 25.3,
+    "carbs": 0.0,
+    "fats": 37.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "050343",
+    "name": "Requesón",
+    "kcal": 101.0,
+    "proteins": 12.3,
+    "carbs": 3.3,
+    "fats": 4.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "050401",
+    "name": "Arroz con leche",
+    "kcal": 121.0,
+    "proteins": 3.3,
+    "carbs": 23.9,
+    "fats": 1.3,
+    "fiber": 0.1
+  },
+  {
+    "code": "050402",
+    "name": "Copa de chocolate y nata",
+    "kcal": 182.0,
+    "proteins": 3.2,
+    "carbs": 21.2,
+    "fats": 9.3,
+    "fiber": 0.12
+  },
+  {
+    "code": "050403",
+    "name": "Crema de chocolate",
+    "kcal": 199.0,
+    "proteins": 3.6,
+    "carbs": 21.2,
+    "fats": 10.7,
+    "fiber": 1.8
+  },
+  {
+    "code": "050404",
+    "name": "Cuajada",
+    "kcal": 86.7,
+    "proteins": 4.5,
+    "carbs": 6.6,
+    "fats": 4.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "050405",
+    "name": "Flan de huevo",
+    "kcal": 143.0,
+    "proteins": 5.0,
+    "carbs": 20.4,
+    "fats": 4.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "050406",
+    "name": "Flan de vainilla",
+    "kcal": 122.0,
+    "proteins": 3.0,
+    "carbs": 23.9,
+    "fats": 1.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "050407",
+    "name": "Flan instantáneo en polvo",
+    "kcal": 366.0,
+    "proteins": 0.0,
+    "carbs": 91.6,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "050408",
+    "name": "Helado cremoso",
+    "kcal": 177.0,
+    "proteins": 4.0,
+    "carbs": 21.0,
+    "fats": 8.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "050409",
+    "name": "Helado de chocolate",
+    "kcal": 191.0,
+    "proteins": 3.8,
+    "carbs": 18.5,
+    "fats": 11.0,
+    "fiber": 1.2
+  },
+  {
+    "code": "050410",
+    "name": "Helado de fresa",
+    "kcal": 186.0,
+    "proteins": 3.2,
+    "carbs": 24.0,
+    "fats": 8.4,
+    "fiber": 0.9
+  },
+  {
+    "code": "050411",
+    "name": "Helado de nata",
+    "kcal": 199.0,
+    "proteins": 3.9,
+    "carbs": 21.5,
+    "fats": 10.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "050412",
+    "name": "Mousse de chocolate",
+    "kcal": 150.0,
+    "proteins": 4.0,
+    "carbs": 18.9,
+    "fats": 6.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "050413",
+    "name": "Natillas",
+    "kcal": 103.0,
+    "proteins": 3.7,
+    "carbs": 15.5,
+    "fats": 2.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "050414",
+    "name": "Natillas de chocolate",
+    "kcal": 133.0,
+    "proteins": 4.2,
+    "carbs": 19.8,
+    "fats": 4.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "050415",
+    "name": "Yogur helado",
+    "kcal": 131.0,
+    "proteins": 3.0,
+    "carbs": 21.6,
+    "fats": 3.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "050501",
+    "name": "Batido de cacao",
+    "kcal": 84.0,
+    "proteins": 2.7,
+    "carbs": 9.8,
+    "fats": 3.6,
+    "fiber": 0.8
+  },
+  {
+    "code": "050502",
+    "name": "Batido de fresa",
+    "kcal": 65.8,
+    "proteins": 2.8,
+    "carbs": 11.0,
+    "fats": 1.0,
+    "fiber": 0.8
+  },
+  {
+    "code": "050503",
+    "name": "Batido de vainilla",
+    "kcal": 63.4,
+    "proteins": 2.9,
+    "carbs": 10.3,
+    "fats": 1.0,
+    "fiber": 0.8
+  },
+  {
+    "code": "050504",
+    "name": "Bebida comercial de zumo y leche",
+    "kcal": 51.7,
+    "proteins": 0.7,
+    "carbs": 12.0,
+    "fats": 0.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "050601",
+    "name": "Nata liquida para cocinar",
+    "kcal": 125.0,
+    "proteins": 3.1,
+    "carbs": 4.5,
+    "fats": 10.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "050602",
+    "name": "Nata liquida para montar",
+    "kcal": 307.0,
+    "proteins": 2.4,
+    "carbs": 3.1,
+    "fats": 31.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "050603",
+    "name": "Nata montada",
+    "kcal": 308.0,
+    "proteins": 2.4,
+    "carbs": 3.3,
+    "fats": 31.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "060101",
+    "name": "Añojo de 2ª y 3ª",
+    "kcal": 212.0,
+    "proteins": 20.7,
+    "carbs": 0.0,
+    "fats": 14.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "060102",
+    "name": "Añojo lomo",
+    "kcal": 256.0,
+    "proteins": 15.4,
+    "carbs": 0.0,
+    "fats": 21.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060103",
+    "name": "Carne de vaca 2ªy3ª",
+    "kcal": 234.0,
+    "proteins": 22.0,
+    "carbs": 0.0,
+    "fats": 16.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "060104",
+    "name": "Carne de vaca grasa",
+    "kcal": 200.0,
+    "proteins": 18.6,
+    "carbs": 0.0,
+    "fats": 14.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "060105",
+    "name": "Carne de vaca magra",
+    "kcal": 120.0,
+    "proteins": 20.3,
+    "carbs": 0.0,
+    "fats": 4.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "060106",
+    "name": "Carne semigrasa de vaca",
+    "kcal": 160.0,
+    "proteins": 19.1,
+    "carbs": 0.0,
+    "fats": 9.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "060107",
+    "name": "Chuleta de ternera",
+    "kcal": 107.0,
+    "proteins": 20.9,
+    "carbs": 0.0,
+    "fats": 2.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060108",
+    "name": "Kebab, ternera",
+    "kcal": 216.0,
+    "proteins": 18.9,
+    "carbs": 2.2,
+    "fats": 14.6,
+    "fiber": 0.33
+  },
+  {
+    "code": "060109",
+    "name": "Lomo de ternera",
+    "kcal": 120.0,
+    "proteins": 16.6,
+    "carbs": 0.0,
+    "fats": 6.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "060110",
+    "name": "Rabo de toro",
+    "kcal": 242.0,
+    "proteins": 18.6,
+    "carbs": 0.0,
+    "fats": 18.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060111",
+    "name": "Solomillo añojo",
+    "kcal": 102.0,
+    "proteins": 15.1,
+    "carbs": 0.0,
+    "fats": 4.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060112",
+    "name": "Solomillo de buey",
+    "kcal": 104.0,
+    "proteins": 18.2,
+    "carbs": 0.0,
+    "fats": 3.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "060113",
+    "name": "Solomillo de ternera",
+    "kcal": 103.0,
+    "proteins": 20.2,
+    "carbs": 0.0,
+    "fats": 2.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "060114",
+    "name": "Solomillo de vaca",
+    "kcal": 272.0,
+    "proteins": 16.6,
+    "carbs": 0.0,
+    "fats": 22.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "060115",
+    "name": "Ternera de 2ª y 3ª",
+    "kcal": 131.0,
+    "proteins": 18.6,
+    "carbs": 0.0,
+    "fats": 6.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "060116",
+    "name": "Ternera magra",
+    "kcal": 131.0,
+    "proteins": 20.7,
+    "carbs": 0.0,
+    "fats": 5.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "060117",
+    "name": "Ternera semigrasa",
+    "kcal": 205.0,
+    "proteins": 20.6,
+    "carbs": 0.0,
+    "fats": 13.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060201",
+    "name": "Bacon",
+    "kcal": 682.0,
+    "proteins": 14.6,
+    "carbs": 0.0,
+    "fats": 69.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "060202",
+    "name": "Carne de cerdo semigrasa",
+    "kcal": 219.0,
+    "proteins": 17.5,
+    "carbs": 0.0,
+    "fats": 16.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "060203",
+    "name": "Cerdo magro",
+    "kcal": 156.0,
+    "proteins": 22.0,
+    "carbs": 0.0,
+    "fats": 7.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060204",
+    "name": "Chuleta de cerdo",
+    "kcal": 352.0,
+    "proteins": 21.7,
+    "carbs": 0.0,
+    "fats": 29.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "060205",
+    "name": "Costilla de cerdo",
+    "kcal": 281.0,
+    "proteins": 17.1,
+    "carbs": 0.0,
+    "fats": 23.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060206",
+    "name": "Lomo de cerdo",
+    "kcal": 305.0,
+    "proteins": 16.3,
+    "carbs": 0.0,
+    "fats": 26.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060207",
+    "name": "Manita de cerdo",
+    "kcal": 291.0,
+    "proteins": 16.0,
+    "carbs": 0.5,
+    "fats": 25.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "060208",
+    "name": "Paletilla de cerdo",
+    "kcal": 349.0,
+    "proteins": 21.5,
+    "carbs": 0.0,
+    "fats": 29.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "060209",
+    "name": "Panceta",
+    "kcal": 471.0,
+    "proteins": 12.5,
+    "carbs": 0.5,
+    "fats": 46.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060210",
+    "name": "Solomillo de cerdo",
+    "kcal": 158.0,
+    "proteins": 22.3,
+    "carbs": 0.0,
+    "fats": 7.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060211",
+    "name": "Tocino",
+    "kcal": 655.0,
+    "proteins": 4.1,
+    "carbs": 0.0,
+    "fats": 71.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "060301",
+    "name": "Chuleta de cordero",
+    "kcal": 250.0,
+    "proteins": 16.2,
+    "carbs": 0.0,
+    "fats": 20.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060302",
+    "name": "Paleta de cordero",
+    "kcal": 151.0,
+    "proteins": 11.1,
+    "carbs": 0.0,
+    "fats": 11.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "060303",
+    "name": "Pierna de cordero",
+    "kcal": 178.0,
+    "proteins": 17.9,
+    "carbs": 0.0,
+    "fats": 11.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "060401",
+    "name": "Ala de pollo",
+    "kcal": 217.0,
+    "proteins": 18.3,
+    "carbs": 0.0,
+    "fats": 16.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "060402",
+    "name": "Capón asado",
+    "kcal": 221.0,
+    "proteins": 29.0,
+    "carbs": 0.0,
+    "fats": 11.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "060403",
+    "name": "Codorniz",
+    "kcal": 110.0,
+    "proteins": 22.4,
+    "carbs": 0.0,
+    "fats": 2.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "060404",
+    "name": "Faisán entero",
+    "kcal": 155.0,
+    "proteins": 23.8,
+    "carbs": 0.0,
+    "fats": 6.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060405",
+    "name": "Gallina entera",
+    "kcal": 232.0,
+    "proteins": 17.3,
+    "carbs": 0.0,
+    "fats": 18.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "060406",
+    "name": "Muslo de pavo",
+    "kcal": 114.0,
+    "proteins": 20.5,
+    "carbs": 0.0,
+    "fats": 3.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060407",
+    "name": "Muslo de pollo",
+    "kcal": 183.0,
+    "proteins": 20.6,
+    "carbs": 0.0,
+    "fats": 11.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "060408",
+    "name": "Oca deshuesada sin piel",
+    "kcal": 155.0,
+    "proteins": 22.8,
+    "carbs": 0.0,
+    "fats": 7.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "060409",
+    "name": "Oca entera",
+    "kcal": 366.0,
+    "proteins": 15.9,
+    "carbs": 0.0,
+    "fats": 33.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060410",
+    "name": "Paloma",
+    "kcal": 288.0,
+    "proteins": 18.5,
+    "carbs": 0.0,
+    "fats": 23.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "060411",
+    "name": "Pato entero",
+    "kcal": 227.0,
+    "proteins": 18.1,
+    "carbs": 0.0,
+    "fats": 17.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "060412",
+    "name": "Pavo",
+    "kcal": 157.0,
+    "proteins": 20.2,
+    "carbs": 0.0,
+    "fats": 8.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "060413",
+    "name": "Pechuga de pavo",
+    "kcal": 105.0,
+    "proteins": 24.1,
+    "carbs": 0.0,
+    "fats": 0.99,
+    "fiber": 0.0
+  },
+  {
+    "code": "060414",
+    "name": "Pechuga de pollo",
+    "kcal": 145.0,
+    "proteins": 22.2,
+    "carbs": 0.0,
+    "fats": 6.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "060415",
+    "name": "Pollo entero",
+    "kcal": 166.0,
+    "proteins": 19.9,
+    "carbs": 0.0,
+    "fats": 9.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060416",
+    "name": "Solomillo de avestruz",
+    "kcal": 114.0,
+    "proteins": 21.7,
+    "carbs": 0.0,
+    "fats": 3.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "060501",
+    "name": "Callos de ternera",
+    "kcal": 134.0,
+    "proteins": 14.8,
+    "carbs": 0.0,
+    "fats": 8.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "060502",
+    "name": "Corazón de cerdo",
+    "kcal": 114.0,
+    "proteins": 17.3,
+    "carbs": 1.3,
+    "fats": 4.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "060503",
+    "name": "Corazón de cordero",
+    "kcal": 118.0,
+    "proteins": 16.5,
+    "carbs": 0.21,
+    "fats": 5.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "060504",
+    "name": "Corazón de pollo",
+    "kcal": 149.0,
+    "proteins": 15.6,
+    "carbs": 0.71,
+    "fats": 9.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "060505",
+    "name": "Corazón de vaca",
+    "kcal": 104.0,
+    "proteins": 17.0,
+    "carbs": 0.0,
+    "fats": 4.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "060506",
+    "name": "Hígado de cerdo",
+    "kcal": 131.0,
+    "proteins": 20.7,
+    "carbs": 0.93,
+    "fats": 4.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "060507",
+    "name": "Hígado de cordero",
+    "kcal": 137.0,
+    "proteins": 20.7,
+    "carbs": 2.2,
+    "fats": 5.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "060508",
+    "name": "Hígado de pollo",
+    "kcal": 136.0,
+    "proteins": 22.1,
+    "carbs": 1.2,
+    "fats": 4.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "060509",
+    "name": "Hígado de ternera",
+    "kcal": 136.0,
+    "proteins": 19.4,
+    "carbs": 4.2,
+    "fats": 4.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060510",
+    "name": "Hígado de vaca",
+    "kcal": 130.0,
+    "proteins": 19.5,
+    "carbs": 5.3,
+    "fats": 3.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "060511",
+    "name": "Lengua de buey",
+    "kcal": 224.0,
+    "proteins": 16.0,
+    "carbs": 3.7,
+    "fats": 16.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "060512",
+    "name": "Lengua de cerdo",
+    "kcal": 157.0,
+    "proteins": 16.0,
+    "carbs": 0.0,
+    "fats": 10.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "060513",
+    "name": "Lengua de cordero",
+    "kcal": 193.0,
+    "proteins": 15.3,
+    "carbs": 0.0,
+    "fats": 14.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060514",
+    "name": "Lengua de ternera",
+    "kcal": 148.0,
+    "proteins": 17.8,
+    "carbs": 0.0,
+    "fats": 8.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "060515",
+    "name": "Lengua de vaca",
+    "kcal": 219.0,
+    "proteins": 14.9,
+    "carbs": 3.7,
+    "fats": 16.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "060516",
+    "name": "Molleja de cordero",
+    "kcal": 131.0,
+    "proteins": 15.3,
+    "carbs": 0.0,
+    "fats": 7.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "060517",
+    "name": "Molleja de ternera",
+    "kcal": 303.0,
+    "proteins": 11.5,
+    "carbs": 0.0,
+    "fats": 28.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060518",
+    "name": "Pulmón de cerdo",
+    "kcal": 80.7,
+    "proteins": 14.1,
+    "carbs": 0.0,
+    "fats": 2.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "060519",
+    "name": "Pulmón de cordero",
+    "kcal": 90.2,
+    "proteins": 16.7,
+    "carbs": 0.0,
+    "fats": 2.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060520",
+    "name": "Pulmón de ternera",
+    "kcal": 87.3,
+    "proteins": 16.2,
+    "carbs": 0.0,
+    "fats": 2.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "060521",
+    "name": "Riñón de cerdo",
+    "kcal": 102.0,
+    "proteins": 16.9,
+    "carbs": 0.0,
+    "fats": 3.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "060522",
+    "name": "Riñón de cordero",
+    "kcal": 90.3,
+    "proteins": 16.5,
+    "carbs": 0.0,
+    "fats": 2.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "060523",
+    "name": "Riñón de ternera",
+    "kcal": 131.0,
+    "proteins": 16.7,
+    "carbs": 0.0,
+    "fats": 7.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "060524",
+    "name": "Sangre de cerdo",
+    "kcal": 76.0,
+    "proteins": 18.5,
+    "carbs": 0.06,
+    "fats": 0.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "060525",
+    "name": "Seso de cerdo",
+    "kcal": 123.0,
+    "proteins": 10.6,
+    "carbs": 0.0,
+    "fats": 9.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "060526",
+    "name": "Seso de cordero",
+    "kcal": 133.0,
+    "proteins": 10.0,
+    "carbs": 0.0,
+    "fats": 10.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "060527",
+    "name": "Seso de ternera",
+    "kcal": 109.0,
+    "proteins": 10.1,
+    "carbs": 0.0,
+    "fats": 7.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060601",
+    "name": "Butifarra",
+    "kcal": 238.0,
+    "proteins": 10.0,
+    "carbs": 5.5,
+    "fats": 19.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060602",
+    "name": "Cabeza de jabalí",
+    "kcal": 534.0,
+    "proteins": 19.4,
+    "carbs": 0.2,
+    "fats": 50.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060603",
+    "name": "Chistorra",
+    "kcal": 519.0,
+    "proteins": 15.3,
+    "carbs": 0.9,
+    "fats": 50.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "060604",
+    "name": "Chopped de cerdo",
+    "kcal": 293.0,
+    "proteins": 14.4,
+    "carbs": 3.1,
+    "fats": 24.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "060605",
+    "name": "Chorizo",
+    "kcal": 356.0,
+    "proteins": 21.2,
+    "carbs": 1.9,
+    "fats": 29.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "060606",
+    "name": "Foie gras",
+    "kcal": 324.0,
+    "proteins": 11.9,
+    "carbs": 2.7,
+    "fats": 29.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "060607",
+    "name": "Fuet",
+    "kcal": 438.0,
+    "proteins": 19.3,
+    "carbs": 1.4,
+    "fats": 39.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "060608",
+    "name": "Jamón cocido",
+    "kcal": 213.0,
+    "proteins": 19.1,
+    "carbs": 9.9,
+    "fats": 10.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "060609",
+    "name": "Jamón cocido enlatado",
+    "kcal": 120.0,
+    "proteins": 18.4,
+    "carbs": 0.0,
+    "fats": 5.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "060610",
+    "name": "Jamón ibérico",
+    "kcal": 375.0,
+    "proteins": 43.2,
+    "carbs": 0.1,
+    "fats": 22.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "060611",
+    "name": "Jamón serrano",
+    "kcal": 136.0,
+    "proteins": 21.4,
+    "carbs": 0.0,
+    "fats": 5.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060612",
+    "name": "Lomo embuchado",
+    "kcal": 308.0,
+    "proteins": 32.0,
+    "carbs": 0.0,
+    "fats": 20.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "060613",
+    "name": "Longaniza",
+    "kcal": 348.0,
+    "proteins": 25.0,
+    "carbs": 0.0,
+    "fats": 27.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "060614",
+    "name": "Morcilla de arroz",
+    "kcal": 256.0,
+    "proteins": 6.9,
+    "carbs": 16.7,
+    "fats": 17.7,
+    "fiber": 1.3
+  },
+  {
+    "code": "060615",
+    "name": "Mortadela",
+    "kcal": 266.0,
+    "proteins": 11.9,
+    "carbs": 1.3,
+    "fats": 23.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "060616",
+    "name": "Pechuga de pavo embutido",
+    "kcal": 81.5,
+    "proteins": 15.2,
+    "carbs": 3.7,
+    "fats": 0.65,
+    "fiber": 0.0
+  },
+  {
+    "code": "060617",
+    "name": "Salami",
+    "kcal": 444.0,
+    "proteins": 21.0,
+    "carbs": 1.7,
+    "fats": 39.2,
+    "fiber": 0.1
+  },
+  {
+    "code": "060618",
+    "name": "Salchicha fresca",
+    "kcal": 309.0,
+    "proteins": 13.1,
+    "carbs": 0.9,
+    "fats": 28.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "060619",
+    "name": "Salchicha tipo Frankfurt",
+    "kcal": 243.0,
+    "proteins": 13.1,
+    "carbs": 1.4,
+    "fats": 20.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "060620",
+    "name": "Salchichón",
+    "kcal": 438.0,
+    "proteins": 19.3,
+    "carbs": 1.4,
+    "fats": 39.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "060621",
+    "name": "Sobrasada",
+    "kcal": 595.0,
+    "proteins": 13.0,
+    "carbs": 0.0,
+    "fats": 60.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "060701",
+    "name": "Cabrito",
+    "kcal": 122.0,
+    "proteins": 19.2,
+    "carbs": 0.0,
+    "fats": 5.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "060702",
+    "name": "Carne de caballo",
+    "kcal": 108.0,
+    "proteins": 20.6,
+    "carbs": 0.4,
+    "fats": 2.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "060703",
+    "name": "Carne de conejo grasa",
+    "kcal": 204.0,
+    "proteins": 18.1,
+    "carbs": 0.4,
+    "fats": 14.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "060704",
+    "name": "Carne de conejo, grasa y magra",
+    "kcal": 138.0,
+    "proteins": 22.1,
+    "carbs": 0.5,
+    "fats": 5.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "060705",
+    "name": "Carne de jabalí",
+    "kcal": 162.0,
+    "proteins": 19.5,
+    "carbs": 0.0,
+    "fats": 9.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "060706",
+    "name": "Conejo",
+    "kcal": 88.4,
+    "proteins": 10.4,
+    "carbs": 0.0,
+    "fats": 5.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "060707",
+    "name": "Liebre",
+    "kcal": 113.0,
+    "proteins": 21.6,
+    "carbs": 0.0,
+    "fats": 3.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "060708",
+    "name": "Lomo de conejo",
+    "kcal": 102.0,
+    "proteins": 23.7,
+    "carbs": 0.6,
+    "fats": 0.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "060709",
+    "name": "Pierna de conejo",
+    "kcal": 137.0,
+    "proteins": 21.0,
+    "carbs": 0.0,
+    "fats": 5.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "060710",
+    "name": "Venado magro deshuesado",
+    "kcal": 103.0,
+    "proteins": 22.2,
+    "carbs": 0.0,
+    "fats": 1.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "070101",
+    "name": "Abadejo",
+    "kcal": 74.0,
+    "proteins": 16.7,
+    "carbs": 0.0,
+    "fats": 0.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "070102",
+    "name": "Bacaladilla",
+    "kcal": 84.4,
+    "proteins": 17.5,
+    "carbs": 0.0,
+    "fats": 1.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "070103",
+    "name": "Bacalao fresco",
+    "kcal": 79.8,
+    "proteins": 17.7,
+    "carbs": 0.0,
+    "fats": 1.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "070104",
+    "name": "Besugo",
+    "kcal": 88.6,
+    "proteins": 18.1,
+    "carbs": 0.0,
+    "fats": 1.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "070105",
+    "name": "Breca",
+    "kcal": 74.6,
+    "proteins": 15.4,
+    "carbs": 1.0,
+    "fats": 1.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "070106",
+    "name": "Cabracho",
+    "kcal": 91.3,
+    "proteins": 19.0,
+    "carbs": 0.0,
+    "fats": 1.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "070107",
+    "name": "Cazón",
+    "kcal": 82.9,
+    "proteins": 18.7,
+    "carbs": 0.0,
+    "fats": 0.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "070108",
+    "name": "Dorada",
+    "kcal": 230.0,
+    "proteins": 18.1,
+    "carbs": 1.3,
+    "fats": 16.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "070109",
+    "name": "Gallo",
+    "kcal": 81.5,
+    "proteins": 16.1,
+    "carbs": 0.0,
+    "fats": 1.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "070110",
+    "name": "Lenguado",
+    "kcal": 83.7,
+    "proteins": 17.5,
+    "carbs": 0.5,
+    "fats": 1.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "070111",
+    "name": "Lubina",
+    "kcal": 97.9,
+    "proteins": 19.3,
+    "carbs": 0.0,
+    "fats": 2.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "070112",
+    "name": "Merluza",
+    "kcal": 63.8,
+    "proteins": 11.9,
+    "carbs": 0.0,
+    "fats": 1.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "070113",
+    "name": "Mero",
+    "kcal": 70.3,
+    "proteins": 16.0,
+    "carbs": 0.0,
+    "fats": 0.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "070114",
+    "name": "Mújol",
+    "kcal": 124.0,
+    "proteins": 20.4,
+    "carbs": 0.8,
+    "fats": 4.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "070115",
+    "name": "Panga",
+    "kcal": 65.6,
+    "proteins": 13.4,
+    "carbs": 0.3,
+    "fats": 1.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "070116",
+    "name": "Perca",
+    "kcal": 88.8,
+    "proteins": 18.6,
+    "carbs": 0.0,
+    "fats": 1.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "070117",
+    "name": "Pescadilla",
+    "kcal": 74.0,
+    "proteins": 16.7,
+    "carbs": 0.0,
+    "fats": 0.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "070118",
+    "name": "Platija",
+    "kcal": 85.9,
+    "proteins": 17.2,
+    "carbs": 0.0,
+    "fats": 1.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "070119",
+    "name": "Rape",
+    "kcal": 65.6,
+    "proteins": 14.9,
+    "carbs": 0.0,
+    "fats": 0.67,
+    "fiber": 0.0
+  },
+  {
+    "code": "070120",
+    "name": "Raya",
+    "kcal": 97.3,
+    "proteins": 20.6,
+    "carbs": 0.8,
+    "fats": 1.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "070121",
+    "name": "Rodaballo",
+    "kcal": 82.1,
+    "proteins": 16.7,
+    "carbs": 0.0,
+    "fats": 1.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "070122",
+    "name": "Rosada",
+    "kcal": 70.5,
+    "proteins": 16.5,
+    "carbs": 0.0,
+    "fats": 0.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "070201",
+    "name": "Anguila",
+    "kcal": 281.0,
+    "proteins": 15.0,
+    "carbs": 0.0,
+    "fats": 24.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "070202",
+    "name": "Angula",
+    "kcal": 205.0,
+    "proteins": 16.3,
+    "carbs": 0.0,
+    "fats": 15.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "070203",
+    "name": "Arenque",
+    "kcal": 233.0,
+    "proteins": 18.2,
+    "carbs": 0.0,
+    "fats": 17.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "070204",
+    "name": "Atún",
+    "kcal": 226.0,
+    "proteins": 21.5,
+    "carbs": 0.0,
+    "fats": 15.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "070205",
+    "name": "Bonito",
+    "kcal": 153.0,
+    "proteins": 24.7,
+    "carbs": 0.0,
+    "fats": 6.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "070206",
+    "name": "Boquerón",
+    "kcal": 142.0,
+    "proteins": 21.5,
+    "carbs": 0.5,
+    "fats": 6.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "070207",
+    "name": "Caballa",
+    "kcal": 182.0,
+    "proteins": 18.7,
+    "carbs": 0.0,
+    "fats": 11.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "070208",
+    "name": "Carpa",
+    "kcal": 114.0,
+    "proteins": 18.0,
+    "carbs": 0.0,
+    "fats": 4.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "070209",
+    "name": "Congrio",
+    "kcal": 123.0,
+    "proteins": 19.0,
+    "carbs": 1.4,
+    "fats": 4.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "070210",
+    "name": "Jurel",
+    "kcal": 118.0,
+    "proteins": 19.8,
+    "carbs": 0.8,
+    "fats": 3.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "070211",
+    "name": "Palometa",
+    "kcal": 125.0,
+    "proteins": 20.0,
+    "carbs": 0.0,
+    "fats": 5.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "070212",
+    "name": "Pescaditos",
+    "kcal": 79.8,
+    "proteins": 11.4,
+    "carbs": 1.8,
+    "fats": 3.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "070213",
+    "name": "Pez espada",
+    "kcal": 117.0,
+    "proteins": 19.4,
+    "carbs": 0.0,
+    "fats": 4.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "070214",
+    "name": "Salmon",
+    "kcal": 191.0,
+    "proteins": 20.6,
+    "carbs": 0.0,
+    "fats": 12.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "070215",
+    "name": "Salmonete",
+    "kcal": 109.0,
+    "proteins": 18.7,
+    "carbs": 0.0,
+    "fats": 3.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "070216",
+    "name": "Sardina",
+    "kcal": 157.0,
+    "proteins": 18.0,
+    "carbs": 0.0,
+    "fats": 9.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "070217",
+    "name": "Sargo",
+    "kcal": 104.0,
+    "proteins": 15.0,
+    "carbs": 1.0,
+    "fats": 4.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "070218",
+    "name": "Trucha",
+    "kcal": 136.0,
+    "proteins": 18.8,
+    "carbs": 0.0,
+    "fats": 6.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "070301",
+    "name": "Merluza congelada",
+    "kcal": 81.2,
+    "proteins": 15.8,
+    "carbs": 0.0,
+    "fats": 2.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "070302",
+    "name": "Pescadilla congelada",
+    "kcal": 54.6,
+    "proteins": 11.8,
+    "carbs": 0.0,
+    "fats": 0.82,
+    "fiber": 0.0
+  },
+  {
+    "code": "070401",
+    "name": "Anchoa en aceite",
+    "kcal": 253.0,
+    "proteins": 28.6,
+    "carbs": 0.37,
+    "fats": 15.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "070402",
+    "name": "Atún al natural",
+    "kcal": 99.4,
+    "proteins": 23.5,
+    "carbs": 0.0,
+    "fats": 0.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "070403",
+    "name": "Atún en aceite",
+    "kcal": 208.0,
+    "proteins": 24.8,
+    "carbs": 0.0,
+    "fats": 12.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "070404",
+    "name": "Atún en escabeche",
+    "kcal": 99.4,
+    "proteins": 23.5,
+    "carbs": 0.0,
+    "fats": 0.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "070405",
+    "name": "Bonito en aceite",
+    "kcal": 203.0,
+    "proteins": 24.9,
+    "carbs": 0.0,
+    "fats": 11.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "070406",
+    "name": "Bonito en aceite de soja",
+    "kcal": 207.0,
+    "proteins": 32.2,
+    "carbs": 0.0,
+    "fats": 8.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "070407",
+    "name": "Caballa en aceite",
+    "kcal": 217.0,
+    "proteins": 22.5,
+    "carbs": 0.6,
+    "fats": 13.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "070408",
+    "name": "Melva en aceite de oliva",
+    "kcal": 184.0,
+    "proteins": 27.5,
+    "carbs": 2.0,
+    "fats": 7.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "070409",
+    "name": "Sardina con salsa de tomate",
+    "kcal": 174.0,
+    "proteins": 13.8,
+    "carbs": 1.9,
+    "fats": 12.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "070410",
+    "name": "Sardina en aceite",
+    "kcal": 218.0,
+    "proteins": 23.9,
+    "carbs": 0.0,
+    "fats": 13.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "070411",
+    "name": "Sardina en escabeche",
+    "kcal": 131.0,
+    "proteins": 15.0,
+    "carbs": 0.8,
+    "fats": 7.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "070412",
+    "name": "Sardinilla en aceite",
+    "kcal": 218.0,
+    "proteins": 23.9,
+    "carbs": 0.0,
+    "fats": 13.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "070501",
+    "name": "Salmon ahumado",
+    "kcal": 140.0,
+    "proteins": 25.4,
+    "carbs": 0.0,
+    "fats": 4.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "070601",
+    "name": "Almeja",
+    "kcal": 76.6,
+    "proteins": 15.4,
+    "carbs": 1.5,
+    "fats": 1.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "070602",
+    "name": "Berberecho",
+    "kcal": 82.6,
+    "proteins": 16.9,
+    "carbs": 1.5,
+    "fats": 1.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "070603",
+    "name": "Bogavante",
+    "kcal": 83.5,
+    "proteins": 15.9,
+    "carbs": 0.7,
+    "fats": 1.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "070604",
+    "name": "Calamar",
+    "kcal": 80.6,
+    "proteins": 16.3,
+    "carbs": 0.7,
+    "fats": 1.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "070605",
+    "name": "Cangrejo y similares",
+    "kcal": 124.0,
+    "proteins": 19.5,
+    "carbs": 0.0,
+    "fats": 5.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "070606",
+    "name": "Centollo",
+    "kcal": 127.0,
+    "proteins": 20.1,
+    "carbs": 0.0,
+    "fats": 5.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "070607",
+    "name": "Chipirón",
+    "kcal": 80.6,
+    "proteins": 16.3,
+    "carbs": 0.7,
+    "fats": 1.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "070608",
+    "name": "Cigala",
+    "kcal": 85.4,
+    "proteins": 17.7,
+    "carbs": 0.5,
+    "fats": 1.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "070609",
+    "name": "Gamba roja",
+    "kcal": 94.2,
+    "proteins": 18.0,
+    "carbs": 1.5,
+    "fats": 1.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "070610",
+    "name": "Langosta",
+    "kcal": 83.9,
+    "proteins": 17.2,
+    "carbs": 1.3,
+    "fats": 1.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "070611",
+    "name": "Langostino",
+    "kcal": 110.0,
+    "proteins": 24.3,
+    "carbs": 1.5,
+    "fats": 0.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "070612",
+    "name": "Mejillón",
+    "kcal": 72.4,
+    "proteins": 10.2,
+    "carbs": 3.4,
+    "fats": 2.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "070613",
+    "name": "Ostra",
+    "kcal": 66.0,
+    "proteins": 9.0,
+    "carbs": 4.8,
+    "fats": 1.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "070614",
+    "name": "Percebe",
+    "kcal": 66.4,
+    "proteins": 15.7,
+    "carbs": 0.0,
+    "fats": 0.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "070615",
+    "name": "Pulpo",
+    "kcal": 89.8,
+    "proteins": 17.9,
+    "carbs": 1.4,
+    "fats": 1.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "070616",
+    "name": "Quisquilla",
+    "kcal": 81.8,
+    "proteins": 17.6,
+    "carbs": 1.5,
+    "fats": 0.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "070617",
+    "name": "Sepia",
+    "kcal": 75.3,
+    "proteins": 16.1,
+    "carbs": 0.7,
+    "fats": 0.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "070618",
+    "name": "Vieira",
+    "kcal": 81.7,
+    "proteins": 15.6,
+    "carbs": 2.8,
+    "fats": 0.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "070619",
+    "name": "Zamburiña",
+    "kcal": 76.6,
+    "proteins": 15.4,
+    "carbs": 1.5,
+    "fats": 1.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "070701",
+    "name": "Bacalao salado",
+    "kcal": 322.0,
+    "proteins": 75.0,
+    "carbs": 0.0,
+    "fats": 2.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "070801",
+    "name": "Almeja en conserva",
+    "kcal": 79.2,
+    "proteins": 17.4,
+    "carbs": 1.5,
+    "fats": 0.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "070802",
+    "name": "Berberecho en conserva",
+    "kcal": 79.2,
+    "proteins": 17.4,
+    "carbs": 1.5,
+    "fats": 0.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "070803",
+    "name": "Bonito en escabeche",
+    "kcal": 171.0,
+    "proteins": 15.0,
+    "carbs": 0.8,
+    "fats": 12.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "070804",
+    "name": "Caballa ahumada",
+    "kcal": 250.0,
+    "proteins": 20.5,
+    "carbs": 0.0,
+    "fats": 18.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "070805",
+    "name": "Caballa en escabeche",
+    "kcal": 171.0,
+    "proteins": 15.0,
+    "carbs": 0.8,
+    "fats": 12.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "070806",
+    "name": "Calamar en salsa americana",
+    "kcal": 195.0,
+    "proteins": 13.1,
+    "carbs": 1.5,
+    "fats": 15.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "070807",
+    "name": "Calamar en su tinta",
+    "kcal": 117.0,
+    "proteins": 13.3,
+    "carbs": 6.3,
+    "fats": 4.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "070808",
+    "name": "Mejillón en conserva al natural",
+    "kcal": 82.1,
+    "proteins": 12.0,
+    "carbs": 2.0,
+    "fats": 2.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "070809",
+    "name": "Mejillón en escabeche",
+    "kcal": 77.7,
+    "proteins": 11.8,
+    "carbs": 2.0,
+    "fats": 2.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "070810",
+    "name": "Navaja en conserva",
+    "kcal": 89.2,
+    "proteins": 20.0,
+    "carbs": 0.05,
+    "fats": 1.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "070811",
+    "name": "Sardina ahumada o salada",
+    "kcal": 202.0,
+    "proteins": 21.0,
+    "carbs": 0.0,
+    "fats": 13.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "070901",
+    "name": "Anca de rana",
+    "kcal": 68.3,
+    "proteins": 16.4,
+    "carbs": 0.0,
+    "fats": 0.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "070902",
+    "name": "Caracol",
+    "kcal": 85.8,
+    "proteins": 16.3,
+    "carbs": 2.0,
+    "fats": 1.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "070903",
+    "name": "Caviar",
+    "kcal": 252.0,
+    "proteins": 26.1,
+    "carbs": 1.9,
+    "fats": 15.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "070904",
+    "name": "Gulas salteadas en conserva",
+    "kcal": 255.0,
+    "proteins": 8.9,
+    "carbs": 7.2,
+    "fats": 21.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "070905",
+    "name": "Huevas frescas",
+    "kcal": 119.0,
+    "proteins": 24.3,
+    "carbs": 1.5,
+    "fats": 1.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "070906",
+    "name": "Palito de cangrejo",
+    "kcal": 82.9,
+    "proteins": 12.6,
+    "carbs": 6.1,
+    "fats": 0.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "080101",
+    "name": "Clara de huevo",
+    "kcal": 49.0,
+    "proteins": 11.1,
+    "carbs": 0.7,
+    "fats": 0.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "080102",
+    "name": "Huevo de codorniz",
+    "kcal": 155.0,
+    "proteins": 13.1,
+    "carbs": 0.41,
+    "fats": 11.2,
+    "fiber": 0.0
+  },
+  {
+    "code": "080103",
+    "name": "Huevo de gallina",
+    "kcal": 162.0,
+    "proteins": 12.7,
+    "carbs": 0.68,
+    "fats": 12.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "080104",
+    "name": "Huevo de pato",
+    "kcal": 184.0,
+    "proteins": 13.0,
+    "carbs": 0.7,
+    "fats": 14.4,
+    "fiber": 0.0
+  },
+  {
+    "code": "080105",
+    "name": "Yema de huevo",
+    "kcal": 353.0,
+    "proteins": 16.1,
+    "carbs": 0.3,
+    "fats": 31.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "090101",
+    "name": "Azúcar blanco",
+    "kcal": 399.0,
+    "proteins": 0.0,
+    "carbs": 99.8,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "090102",
+    "name": "Azúcar moreno",
+    "kcal": 390.0,
+    "proteins": 0.0,
+    "carbs": 97.6,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "090103",
+    "name": "Fructosa",
+    "kcal": 399.0,
+    "proteins": 0.0,
+    "carbs": 99.8,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "090104",
+    "name": "Granadina, jarabe",
+    "kcal": 268.0,
+    "proteins": 0.0,
+    "carbs": 66.9,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "090105",
+    "name": "Jalea real",
+    "kcal": 261.0,
+    "proteins": 0.2,
+    "carbs": 65.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "090106",
+    "name": "Jarabe",
+    "kcal": 297.0,
+    "proteins": 0.1,
+    "carbs": 74.1,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "090107",
+    "name": "Miel",
+    "kcal": 302.0,
+    "proteins": 0.38,
+    "carbs": 75.1,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "090201",
+    "name": "Barra de chocolate tipo “Mars”",
+    "kcal": 431.0,
+    "proteins": 5.6,
+    "carbs": 60.2,
+    "fats": 18.5,
+    "fiber": 0.6
+  },
+  {
+    "code": "090202",
+    "name": "Barrita de chocolate con galleta",
+    "kcal": 501.0,
+    "proteins": 6.5,
+    "carbs": 63.0,
+    "fats": 24.5,
+    "fiber": 1.3
+  },
+  {
+    "code": "090203",
+    "name": "Bombón",
+    "kcal": 476.0,
+    "proteins": 4.8,
+    "carbs": 66.0,
+    "fats": 21.2,
+    "fiber": 0.8
+  },
+  {
+    "code": "090204",
+    "name": "Cacao en polvo 0 azúcar",
+    "kcal": 387.0,
+    "proteins": 22.4,
+    "carbs": 11.6,
+    "fats": 20.6,
+    "fiber": 29.5
+  },
+  {
+    "code": "090205",
+    "name": "Cacao en polvo azucarado",
+    "kcal": 391.0,
+    "proteins": 5.9,
+    "carbs": 81.0,
+    "fats": 4.0,
+    "fiber": 3.5
+  },
+  {
+    "code": "090206",
+    "name": "Cacao en polvo bajo en calorías",
+    "kcal": 358.0,
+    "proteins": 16.1,
+    "carbs": 63.4,
+    "fats": 3.0,
+    "fiber": 6.4
+  },
+  {
+    "code": "090207",
+    "name": "Chocolate blanco",
+    "kcal": 547.0,
+    "proteins": 8.0,
+    "carbs": 58.8,
+    "fats": 30.9,
+    "fiber": 0.8
+  },
+  {
+    "code": "090208",
+    "name": "Chocolate con leche",
+    "kcal": 538.0,
+    "proteins": 9.2,
+    "carbs": 54.1,
+    "fats": 31.5,
+    "fiber": 0.8
+  },
+  {
+    "code": "090209",
+    "name": "Chocolate con leche y almendra",
+    "kcal": 558.0,
+    "proteins": 8.7,
+    "carbs": 51.5,
+    "fats": 34.9,
+    "fiber": 1.4
+  },
+  {
+    "code": "090210",
+    "name": "Chocolate en polvo a la taza",
+    "kcal": 405.0,
+    "proteins": 5.5,
+    "carbs": 79.4,
+    "fats": 6.0,
+    "fiber": 5.8
+  },
+  {
+    "code": "090211",
+    "name": "Chocolate puro",
+    "kcal": 509.0,
+    "proteins": 5.3,
+    "carbs": 47.0,
+    "fats": 30.0,
+    "fiber": 15.0
+  },
+  {
+    "code": "090212",
+    "name": "Crema de cacao y avellanas",
+    "kcal": 555.0,
+    "proteins": 6.2,
+    "carbs": 57.8,
+    "fats": 33.0,
+    "fiber": 1.1
+  },
+  {
+    "code": "090213",
+    "name": "Trufa de chocolate",
+    "kcal": 514.0,
+    "proteins": 6.2,
+    "carbs": 44.9,
+    "fats": 33.8,
+    "fiber": 2.5
+  },
+  {
+    "code": "090301",
+    "name": "Cacahuete cubierto de chocolate",
+    "kcal": 513.0,
+    "proteins": 9.4,
+    "carbs": 60.5,
+    "fats": 25.4,
+    "fiber": 2.7
+  },
+  {
+    "code": "090302",
+    "name": "Dulce de leche",
+    "kcal": 321.0,
+    "proteins": 5.2,
+    "carbs": 62.0,
+    "fats": 5.6,
+    "fiber": 0.7
+  },
+  {
+    "code": "090303",
+    "name": "Mazapán",
+    "kcal": 503.0,
+    "proteins": 8.0,
+    "carbs": 58.7,
+    "fats": 24.9,
+    "fiber": 6.0
+  },
+  {
+    "code": "090304",
+    "name": "Merengue",
+    "kcal": 416.0,
+    "proteins": 0.0,
+    "carbs": 91.6,
+    "fats": 1.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "090305",
+    "name": "Peladilla",
+    "kcal": 469.0,
+    "proteins": 10.0,
+    "carbs": 65.8,
+    "fats": 17.9,
+    "fiber": 2.5
+  },
+  {
+    "code": "090306",
+    "name": "Polvorón de almendra",
+    "kcal": 479.0,
+    "proteins": 5.5,
+    "carbs": 59.3,
+    "fats": 23.8,
+    "fiber": 2.8
+  },
+  {
+    "code": "090307",
+    "name": "Turrón de Alicante",
+    "kcal": 516.0,
+    "proteins": 13.0,
+    "carbs": 46.0,
+    "fats": 29.3,
+    "fiber": 8.2
+  },
+  {
+    "code": "090308",
+    "name": "Turrón de Jijona",
+    "kcal": 488.0,
+    "proteins": 13.2,
+    "carbs": 34.7,
+    "fats": 31.1,
+    "fiber": 8.2
+  },
+  {
+    "code": "090401",
+    "name": "Bizcocho",
+    "kcal": 377.0,
+    "proteins": 6.0,
+    "carbs": 54.0,
+    "fats": 15.0,
+    "fiber": 1.0
+  },
+  {
+    "code": "090402",
+    "name": "Bizcocho de chocolate",
+    "kcal": 365.0,
+    "proteins": 6.6,
+    "carbs": 45.0,
+    "fats": 17.0,
+    "fiber": 2.9
+  },
+  {
+    "code": "090403",
+    "name": "Bizcocho de soletilla",
+    "kcal": 298.0,
+    "proteins": 6.4,
+    "carbs": 61.3,
+    "fats": 2.7,
+    "fiber": 1.5
+  },
+  {
+    "code": "090404",
+    "name": "Bollo",
+    "kcal": 443.0,
+    "proteins": 6.6,
+    "carbs": 50.8,
+    "fats": 23.0,
+    "fiber": 3.0
+  },
+  {
+    "code": "090405",
+    "name": "Bollo de leche",
+    "kcal": 346.0,
+    "proteins": 9.7,
+    "carbs": 46.5,
+    "fats": 13.2,
+    "fiber": 1.4
+  },
+  {
+    "code": "090406",
+    "name": "Bollo relleno de chocolate",
+    "kcal": 403.0,
+    "proteins": 3.9,
+    "carbs": 50.6,
+    "fats": 20.1,
+    "fiber": 2.2
+  },
+  {
+    "code": "090407",
+    "name": "Bollo tipo donette",
+    "kcal": 457.0,
+    "proteins": 5.7,
+    "carbs": 49.0,
+    "fats": 26.0,
+    "fiber": 2.0
+  },
+  {
+    "code": "090408",
+    "name": "Bollo tipo donut",
+    "kcal": 419.0,
+    "proteins": 6.0,
+    "carbs": 46.0,
+    "fats": 23.0,
+    "fiber": 2.2
+  },
+  {
+    "code": "090409",
+    "name": "Bollo tipo donut de chocolate",
+    "kcal": 435.0,
+    "proteins": 5.4,
+    "carbs": 46.0,
+    "fats": 25.0,
+    "fiber": 2.2
+  },
+  {
+    "code": "090410",
+    "name": "Bollo tipo donut sin gluten",
+    "kcal": 468.0,
+    "proteins": 2.0,
+    "carbs": 52.0,
+    "fats": 28.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "090411",
+    "name": "Churro",
+    "kcal": 361.0,
+    "proteins": 4.6,
+    "carbs": 40.0,
+    "fats": 20.0,
+    "fiber": 1.2
+  },
+  {
+    "code": "090412",
+    "name": "Croissant",
+    "kcal": 444.0,
+    "proteins": 7.0,
+    "carbs": 52.6,
+    "fats": 22.4,
+    "fiber": 2.1
+  },
+  {
+    "code": "090413",
+    "name": "Croissant de chocolate",
+    "kcal": 437.0,
+    "proteins": 8.7,
+    "carbs": 44.2,
+    "fats": 24.1,
+    "fiber": 4.0
+  },
+  {
+    "code": "090414",
+    "name": "Ensaimada",
+    "kcal": 474.0,
+    "proteins": 8.1,
+    "carbs": 48.4,
+    "fats": 27.0,
+    "fiber": 2.4
+  },
+  {
+    "code": "090415",
+    "name": "Magdalena",
+    "kcal": 441.0,
+    "proteins": 4.4,
+    "carbs": 51.7,
+    "fats": 23.9,
+    "fiber": 1.0
+  },
+  {
+    "code": "090416",
+    "name": "Medias noches",
+    "kcal": 354.0,
+    "proteins": 8.4,
+    "carbs": 52.0,
+    "fats": 12.0,
+    "fiber": 2.2
+  },
+  {
+    "code": "090417",
+    "name": "Palmera",
+    "kcal": 539.0,
+    "proteins": 5.0,
+    "carbs": 61.0,
+    "fats": 30.0,
+    "fiber": 2.4
+  },
+  {
+    "code": "090418",
+    "name": "Sobao",
+    "kcal": 465.0,
+    "proteins": 6.5,
+    "carbs": 53.0,
+    "fats": 25.0,
+    "fiber": 1.0
+  },
+  {
+    "code": "090419",
+    "name": "Suizo",
+    "kcal": 401.0,
+    "proteins": 5.5,
+    "carbs": 48.4,
+    "fats": 20.1,
+    "fiber": 2.5
+  },
+  {
+    "code": "090420",
+    "name": "Torta de aceite",
+    "kcal": 511.0,
+    "proteins": 6.5,
+    "carbs": 66.8,
+    "fats": 23.5,
+    "fiber": 2.9
+  },
+  {
+    "code": "090421",
+    "name": "Valenciana",
+    "kcal": 430.0,
+    "proteins": 5.1,
+    "carbs": 53.1,
+    "fats": 20.9,
+    "fiber": 4.4
+  },
+  {
+    "code": "090501",
+    "name": "Barquillo",
+    "kcal": 427.0,
+    "proteins": 8.1,
+    "carbs": 81.5,
+    "fats": 6.9,
+    "fiber": 3.0
+  },
+  {
+    "code": "090502",
+    "name": "Galleta cubierta de chocolate",
+    "kcal": 491.0,
+    "proteins": 6.9,
+    "carbs": 60.4,
+    "fats": 24.0,
+    "fiber": 3.1
+  },
+  {
+    "code": "090503",
+    "name": "Galleta doble rellena de chocolate",
+    "kcal": 487.0,
+    "proteins": 6.9,
+    "carbs": 60.4,
+    "fats": 23.5,
+    "fiber": 3.1
+  },
+  {
+    "code": "090504",
+    "name": "Galleta integral",
+    "kcal": 427.0,
+    "proteins": 10.0,
+    "carbs": 42.9,
+    "fats": 21.2,
+    "fiber": 12.5
+  },
+  {
+    "code": "090505",
+    "name": "Galleta tipo cookie",
+    "kcal": 476.0,
+    "proteins": 6.2,
+    "carbs": 64.0,
+    "fats": 21.0,
+    "fiber": 3.3
+  },
+  {
+    "code": "090506",
+    "name": "Galleta tipo digestive",
+    "kcal": 469.0,
+    "proteins": 6.3,
+    "carbs": 63.0,
+    "fats": 20.3,
+    "fiber": 4.6
+  },
+  {
+    "code": "090507",
+    "name": "Galleta tipo digestive con chocolate",
+    "kcal": 501.0,
+    "proteins": 6.8,
+    "carbs": 62.6,
+    "fats": 24.1,
+    "fiber": 3.1
+  },
+  {
+    "code": "090508",
+    "name": "Galleta tipo Maria",
+    "kcal": 482.0,
+    "proteins": 7.1,
+    "carbs": 69.0,
+    "fats": 19.0,
+    "fiber": 3.1
+  },
+  {
+    "code": "090509",
+    "name": "Galleta tipo sandwich",
+    "kcal": 447.0,
+    "proteins": 2.9,
+    "carbs": 67.7,
+    "fats": 17.7,
+    "fiber": 2.9
+  },
+  {
+    "code": "090601",
+    "name": "Almendrado",
+    "kcal": 431.0,
+    "proteins": 9.0,
+    "carbs": 57.0,
+    "fats": 18.1,
+    "fiber": 2.0
+  },
+  {
+    "code": "090602",
+    "name": "Buñuelo",
+    "kcal": 266.0,
+    "proteins": 6.0,
+    "carbs": 26.3,
+    "fats": 14.8,
+    "fiber": 1.6
+  },
+  {
+    "code": "090603",
+    "name": "Crema pastelera",
+    "kcal": 158.0,
+    "proteins": 4.9,
+    "carbs": 22.3,
+    "fats": 5.4,
+    "fiber": 0.3
+  },
+  {
+    "code": "090604",
+    "name": "Gofre",
+    "kcal": 225.0,
+    "proteins": 4.8,
+    "carbs": 23.9,
+    "fats": 12.0,
+    "fiber": 0.97
+  },
+  {
+    "code": "090605",
+    "name": "Milhoja con nata y crema",
+    "kcal": 281.0,
+    "proteins": 4.5,
+    "carbs": 33.0,
+    "fats": 14.3,
+    "fiber": 1.0
+  },
+  {
+    "code": "090606",
+    "name": "Pasta de te",
+    "kcal": 446.0,
+    "proteins": 6.9,
+    "carbs": 73.0,
+    "fats": 13.8,
+    "fiber": 1.1
+  },
+  {
+    "code": "090607",
+    "name": "Pastel de chocolate",
+    "kcal": 443.0,
+    "proteins": 5.2,
+    "carbs": 41.8,
+    "fats": 27.9,
+    "fiber": 1.8
+  },
+  {
+    "code": "090608",
+    "name": "Pastel relleno de crema",
+    "kcal": 370.0,
+    "proteins": 3.1,
+    "carbs": 63.5,
+    "fats": 11.4,
+    "fiber": 0.4
+  },
+  {
+    "code": "090609",
+    "name": "Profiteroles con chocolate",
+    "kcal": 302.0,
+    "proteins": 5.5,
+    "carbs": 42.0,
+    "fats": 12.0,
+    "fiber": 2.0
+  },
+  {
+    "code": "090610",
+    "name": "Profiteroles sin chocolate",
+    "kcal": 374.0,
+    "proteins": 6.0,
+    "carbs": 20.0,
+    "fats": 29.5,
+    "fiber": 2.0
+  },
+  {
+    "code": "090611",
+    "name": "Pudin de pasas",
+    "kcal": 211.0,
+    "proteins": 4.6,
+    "carbs": 24.7,
+    "fats": 9.7,
+    "fiber": 3.0
+  },
+  {
+    "code": "090612",
+    "name": "Tarta de crema pastelera y manzana",
+    "kcal": 208.0,
+    "proteins": 1.8,
+    "carbs": 28.7,
+    "fats": 9.2,
+    "fiber": 1.3
+  },
+  {
+    "code": "090613",
+    "name": "Tarta de frutas",
+    "kcal": 332.0,
+    "proteins": 2.9,
+    "carbs": 57.9,
+    "fats": 9.1,
+    "fiber": 3.7
+  },
+  {
+    "code": "090614",
+    "name": "Tortita sin nata",
+    "kcal": 297.0,
+    "proteins": 5.8,
+    "carbs": 43.0,
+    "fats": 11.0,
+    "fiber": 1.3
+  },
+  {
+    "code": "090701",
+    "name": "Caramelo",
+    "kcal": 382.0,
+    "proteins": 0.4,
+    "carbs": 95.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "090702",
+    "name": "Chicle",
+    "kcal": 390.0,
+    "proteins": 0.0,
+    "carbs": 96.7,
+    "fats": 0.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "090703",
+    "name": "Chicle sin azúcar",
+    "kcal": 2.7,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 0.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "090704",
+    "name": "Polo de hielo",
+    "kcal": 134.0,
+    "proteins": 1.0,
+    "carbs": 29.5,
+    "fats": 1.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "090705",
+    "name": "Regaliz",
+    "kcal": 323.0,
+    "proteins": 3.9,
+    "carbs": 71.5,
+    "fats": 1.9,
+    "fiber": 2.0
+  },
+  {
+    "code": "100101",
+    "name": "Aceite de cacahuete",
+    "kcal": 900.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 100.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "100102",
+    "name": "Aceite de coco",
+    "kcal": 900.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 100.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "100103",
+    "name": "Aceite de colza",
+    "kcal": 900.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 100.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "100104",
+    "name": "Aceite de germen de trigo",
+    "kcal": 899.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 99.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "100105",
+    "name": "Aceite de girasol",
+    "kcal": 899.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 99.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "100106",
+    "name": "Aceite de Hígado de bacalao",
+    "kcal": 899.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 99.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "100107",
+    "name": "Aceite de lino",
+    "kcal": 900.0,
+    "proteins": 0.11,
+    "carbs": 0.0,
+    "fats": 100.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "100108",
+    "name": "Aceite de maíz",
+    "kcal": 899.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 99.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "100109",
+    "name": "Aceite de nuez",
+    "kcal": 898.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 99.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "100110",
+    "name": "Aceite de oliva",
+    "kcal": 899.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 99.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "100111",
+    "name": "Aceite de oliva virgen",
+    "kcal": 899.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 99.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "100112",
+    "name": "Aceite de oliva virgen extra",
+    "kcal": 899.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 99.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "100113",
+    "name": "Aceite de oliva virgen extra ecológico",
+    "kcal": 899.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 99.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "100114",
+    "name": "Aceite de palma",
+    "kcal": 899.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 99.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "100115",
+    "name": "Aceite de semilla de uva",
+    "kcal": 899.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 99.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "100116",
+    "name": "Aceite de sésamo",
+    "kcal": 900.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 100.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "100117",
+    "name": "Aceite de soja",
+    "kcal": 900.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 100.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "100201",
+    "name": "Mantequilla",
+    "kcal": 734.0,
+    "proteins": 0.85,
+    "carbs": 0.06,
+    "fats": 81.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "100202",
+    "name": "Mantequilla ligera",
+    "kcal": 517.0,
+    "proteins": 3.3,
+    "carbs": 1.9,
+    "fats": 55.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "100203",
+    "name": "Mantequilla salada",
+    "kcal": 736.0,
+    "proteins": 0.89,
+    "carbs": 0.7,
+    "fats": 81.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "100204",
+    "name": "Margarina",
+    "kcal": 722.0,
+    "proteins": 0.2,
+    "carbs": 0.4,
+    "fats": 80.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "100205",
+    "name": "Margarina con esteroles",
+    "kcal": 387.0,
+    "proteins": 0.1,
+    "carbs": 0.95,
+    "fats": 42.5,
+    "fiber": 0.3
+  },
+  {
+    "code": "100206",
+    "name": "Margarina de maíz",
+    "kcal": 740.0,
+    "proteins": 0.9,
+    "carbs": 4.0,
+    "fats": 80.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "100207",
+    "name": "Margarina ligera",
+    "kcal": 371.0,
+    "proteins": 1.6,
+    "carbs": 1.1,
+    "fats": 40.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "100208",
+    "name": "Margarina salada",
+    "kcal": 730.0,
+    "proteins": 0.9,
+    "carbs": 0.5,
+    "fats": 80.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "100209",
+    "name": "Margarina vegetal enriquecida",
+    "kcal": 731.0,
+    "proteins": 0.5,
+    "carbs": 0.4,
+    "fats": 80.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "100301",
+    "name": "Manteca de cacao",
+    "kcal": 900.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 100.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "100302",
+    "name": "Manteca de cerdo",
+    "kcal": 891.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 99.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110101",
+    "name": "Agua con gas embotellada",
+    "kcal": 0.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110102",
+    "name": "Agua corriente",
+    "kcal": 0.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110103",
+    "name": "Agua de mineralización débil",
+    "kcal": 0.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110104",
+    "name": "Agua sin gas embotellada",
+    "kcal": 0.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110105",
+    "name": "Bíter sin alcohol",
+    "kcal": 42.0,
+    "proteins": 0.0,
+    "carbs": 10.5,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110106",
+    "name": "Gaseosa",
+    "kcal": 21.6,
+    "proteins": 0.0,
+    "carbs": 5.4,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110107",
+    "name": "Gaseosa sin calorías",
+    "kcal": 0.32,
+    "proteins": 0.01,
+    "carbs": 0.07,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110108",
+    "name": "Limonada",
+    "kcal": 17.0,
+    "proteins": 0.5,
+    "carbs": 1.9,
+    "fats": 0.2,
+    "fiber": 2.8
+  },
+  {
+    "code": "110109",
+    "name": "Refresco aroma lima- limón",
+    "kcal": 58.4,
+    "proteins": 0.0,
+    "carbs": 14.6,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110110",
+    "name": "Refresco de té",
+    "kcal": 36.4,
+    "proteins": 0.0,
+    "carbs": 9.1,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110111",
+    "name": "Refresco de té bajo en calorías",
+    "kcal": 0.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110112",
+    "name": "Refresco sabor cola",
+    "kcal": 43.6,
+    "proteins": 0.0,
+    "carbs": 10.9,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110113",
+    "name": "Refresco sabor cola bajo en calorías",
+    "kcal": 0.4,
+    "proteins": 0.0,
+    "carbs": 0.1,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110114",
+    "name": "Refresco sabor cola sin cafeína",
+    "kcal": 43.2,
+    "proteins": 0.0,
+    "carbs": 10.8,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110115",
+    "name": "Refresco sabor cola sin cafeína bajo en calorías",
+    "kcal": 0.8,
+    "proteins": 0.1,
+    "carbs": 0.1,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110116",
+    "name": "Refresco sabor limón",
+    "kcal": 45.6,
+    "proteins": 0.0,
+    "carbs": 11.4,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110117",
+    "name": "Refresco sabor naranja",
+    "kcal": 42.0,
+    "proteins": 0.0,
+    "carbs": 10.5,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110118",
+    "name": "Soda sifón",
+    "kcal": 35.2,
+    "proteins": 0.0,
+    "carbs": 8.8,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110119",
+    "name": "Tónica",
+    "kcal": 36.8,
+    "proteins": 0.0,
+    "carbs": 9.2,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110201",
+    "name": "Achicoria",
+    "kcal": 10.6,
+    "proteins": 0.5,
+    "carbs": 2.4,
+    "fats": 0.6,
+    "fiber": 1.3
+  },
+  {
+    "code": "110202",
+    "name": "Café capuccino en polvo soluble",
+    "kcal": 396.0,
+    "proteins": 10.6,
+    "carbs": 60.8,
+    "fats": 11.4,
+    "fiber": 3.9
+  },
+  {
+    "code": "110203",
+    "name": "Café descafeinado en grano",
+    "kcal": 315.0,
+    "proteins": 13.5,
+    "carbs": 6.7,
+    "fats": 13.1,
+    "fiber": 58.2
+  },
+  {
+    "code": "110204",
+    "name": "Café descafeinado en polvo soluble",
+    "kcal": 228.0,
+    "proteins": 13.9,
+    "carbs": 42.6,
+    "fats": 0.22,
+    "fiber": 0.0
+  },
+  {
+    "code": "110205",
+    "name": "Café descafeinado liquido",
+    "kcal": 12.2,
+    "proteins": 0.52,
+    "carbs": 0.25,
+    "fats": 0.5,
+    "fiber": 2.3
+  },
+  {
+    "code": "110206",
+    "name": "Café en grano",
+    "kcal": 315.0,
+    "proteins": 13.5,
+    "carbs": 6.7,
+    "fats": 13.1,
+    "fiber": 58.2
+  },
+  {
+    "code": "110207",
+    "name": "Café en polvo soluble",
+    "kcal": 227.0,
+    "proteins": 14.6,
+    "carbs": 41.1,
+    "fats": 0.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "110208",
+    "name": "Café liquido",
+    "kcal": 12.2,
+    "proteins": 0.52,
+    "carbs": 0.25,
+    "fats": 0.5,
+    "fiber": 2.3
+  },
+  {
+    "code": "110209",
+    "name": "Infusión de manzanilla",
+    "kcal": 1.0,
+    "proteins": 0.0,
+    "carbs": 0.2,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110210",
+    "name": "Infusión genérica",
+    "kcal": 0.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110211",
+    "name": "Sucedáneo de café soluble",
+    "kcal": 404.0,
+    "proteins": 12.3,
+    "carbs": 80.9,
+    "fats": 3.4,
+    "fiber": 0.1
+  },
+  {
+    "code": "110212",
+    "name": "Té",
+    "kcal": 220.0,
+    "proteins": 19.6,
+    "carbs": 3.0,
+    "fats": 2.0,
+    "fiber": 55.8
+  },
+  {
+    "code": "110213",
+    "name": "Té con agua",
+    "kcal": 1.9,
+    "proteins": 0.17,
+    "carbs": 0.026,
+    "fats": 0.017,
+    "fiber": 0.49
+  },
+  {
+    "code": "110301",
+    "name": "Bebida isotónica",
+    "kcal": 28.4,
+    "proteins": 0.0,
+    "carbs": 7.1,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110401",
+    "name": "Néctar de frutas envasado",
+    "kcal": 54.4,
+    "proteins": 0.4,
+    "carbs": 13.2,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110402",
+    "name": "Sorbete de limón",
+    "kcal": 140.0,
+    "proteins": 0.9,
+    "carbs": 34.2,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110403",
+    "name": "Zumo comercial de naranja",
+    "kcal": 43.3,
+    "proteins": 0.63,
+    "carbs": 9.4,
+    "fats": 0.2,
+    "fiber": 0.7
+  },
+  {
+    "code": "110404",
+    "name": "Zumo comercial sabor frutas tropicales",
+    "kcal": 60.8,
+    "proteins": 0.3,
+    "carbs": 14.9,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110405",
+    "name": "Zumo de mango",
+    "kcal": 42.0,
+    "proteins": 0.1,
+    "carbs": 9.8,
+    "fats": 0.2,
+    "fiber": 0.3
+  },
+  {
+    "code": "110406",
+    "name": "Zumo de manzana",
+    "kcal": 48.9,
+    "proteins": 0.063,
+    "carbs": 11.9,
+    "fats": 0.11,
+    "fiber": 0.01
+  },
+  {
+    "code": "110407",
+    "name": "Zumo de melocotón",
+    "kcal": 47.1,
+    "proteins": 0.63,
+    "carbs": 10.5,
+    "fats": 0.22,
+    "fiber": 0.3
+  },
+  {
+    "code": "110408",
+    "name": "Zumo de piña",
+    "kcal": 41.4,
+    "proteins": 0.38,
+    "carbs": 9.7,
+    "fats": 0.08,
+    "fiber": 0.2
+  },
+  {
+    "code": "110409",
+    "name": "Zumo de pomelo",
+    "kcal": 43.6,
+    "proteins": 0.53,
+    "carbs": 10.1,
+    "fats": 0.1,
+    "fiber": 0.1
+  },
+  {
+    "code": "110410",
+    "name": "Zumo de tomate comercial",
+    "kcal": 14.1,
+    "proteins": 0.63,
+    "carbs": 2.6,
+    "fats": 0.06,
+    "fiber": 0.3
+  },
+  {
+    "code": "110411",
+    "name": "Zumo de uva",
+    "kcal": 68.1,
+    "proteins": 0.21,
+    "carbs": 16.6,
+    "fats": 0.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "110412",
+    "name": "Zumo de zanahoria",
+    "kcal": 24.2,
+    "proteins": 0.63,
+    "carbs": 4.8,
+    "fats": 0.1,
+    "fiber": 0.8
+  },
+  {
+    "code": "110413",
+    "name": "Zumo uva y melocotón",
+    "kcal": 52.8,
+    "proteins": 0.6,
+    "carbs": 12.0,
+    "fats": 0.23,
+    "fiber": 0.15
+  },
+  {
+    "code": "110501",
+    "name": "Agua de coco",
+    "kcal": 17.2,
+    "proteins": 0.7,
+    "carbs": 2.6,
+    "fats": 0.2,
+    "fiber": 1.1
+  },
+  {
+    "code": "110502",
+    "name": "Bebida de almendras",
+    "kcal": 24.3,
+    "proteins": 0.5,
+    "carbs": 3.0,
+    "fats": 1.1,
+    "fiber": 0.2
+  },
+  {
+    "code": "110503",
+    "name": "Bebida de alpiste",
+    "kcal": 45.0,
+    "proteins": 1.2,
+    "carbs": 7.1,
+    "fats": 1.0,
+    "fiber": 0.39
+  },
+  {
+    "code": "110504",
+    "name": "Bebida de avena",
+    "kcal": 46.7,
+    "proteins": 1.0,
+    "carbs": 8.7,
+    "fats": 0.7,
+    "fiber": 0.8
+  },
+  {
+    "code": "110505",
+    "name": "Horchata",
+    "kcal": 97.3,
+    "proteins": 1.2,
+    "carbs": 17.0,
+    "fats": 2.7,
+    "fiber": 0.1
+  },
+  {
+    "code": "110507",
+    "name": "Leche de coco",
+    "kcal": 241.0,
+    "proteins": 2.3,
+    "carbs": 3.3,
+    "fats": 23.8,
+    "fiber": 2.2
+  },
+  {
+    "code": "110601",
+    "name": "Aguardiente",
+    "kcal": 222.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110602",
+    "name": "anís",
+    "kcal": 267.0,
+    "proteins": 0.0,
+    "carbs": 1.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110603",
+    "name": "Bíter con alcohol",
+    "kcal": 152.0,
+    "proteins": 0.0,
+    "carbs": 16.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110604",
+    "name": "Cava",
+    "kcal": 70.5,
+    "proteins": 0.2,
+    "carbs": 1.5,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110605",
+    "name": "Cerveza",
+    "kcal": 42.4,
+    "proteins": 0.5,
+    "carbs": 3.1,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110606",
+    "name": "Cerveza baja en alcohol",
+    "kcal": 38.1,
+    "proteins": 0.5,
+    "carbs": 2.9,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110607",
+    "name": "Cerveza sin alcohol",
+    "kcal": 25.4,
+    "proteins": 0.38,
+    "carbs": 5.4,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110608",
+    "name": "Champagne",
+    "kcal": 67.6,
+    "proteins": 0.18,
+    "carbs": 1.5,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110609",
+    "name": "Coñac",
+    "kcal": 240.0,
+    "proteins": 0.0,
+    "carbs": 2.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110610",
+    "name": "Crema de whisky",
+    "kcal": 324.0,
+    "proteins": 3.0,
+    "carbs": 25.0,
+    "fats": 13.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110611",
+    "name": "Cubata de ron",
+    "kcal": 109.0,
+    "proteins": 0.0,
+    "carbs": 7.4,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110612",
+    "name": "Ginebra",
+    "kcal": 221.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110613",
+    "name": "Licor dulce",
+    "kcal": 224.0,
+    "proteins": 0.1,
+    "carbs": 35.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110614",
+    "name": "Ron",
+    "kcal": 234.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110615",
+    "name": "Sangría",
+    "kcal": 95.9,
+    "proteins": 0.12,
+    "carbs": 9.9,
+    "fats": 0.03,
+    "fiber": 0.1
+  },
+  {
+    "code": "110616",
+    "name": "Sidra",
+    "kcal": 49.9,
+    "proteins": 0.0,
+    "carbs": 6.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110617",
+    "name": "Tequila",
+    "kcal": 266.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110618",
+    "name": "Vermut",
+    "kcal": 145.0,
+    "proteins": 0.1,
+    "carbs": 13.5,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110619",
+    "name": "Vino blanco",
+    "kcal": 61.0,
+    "proteins": 0.1,
+    "carbs": 0.1,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110620",
+    "name": "Vino dulce (Málaga, Oporto)",
+    "kcal": 161.0,
+    "proteins": 0.2,
+    "carbs": 13.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110621",
+    "name": "Vino fino (Jerez, Manzanilla)",
+    "kcal": 127.0,
+    "proteins": 0.2,
+    "carbs": 10.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110622",
+    "name": "Vino rosado",
+    "kcal": 66.9,
+    "proteins": 0.1,
+    "carbs": 1.4,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110623",
+    "name": "Vino tinto",
+    "kcal": 70.7,
+    "proteins": 0.23,
+    "carbs": 0.3,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110624",
+    "name": "Vodka",
+    "kcal": 235.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "110625",
+    "name": "Whisky",
+    "kcal": 247.0,
+    "proteins": 0.0,
+    "carbs": 0.11,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "120101",
+    "name": "Albóndigas en conserva",
+    "kcal": 148.0,
+    "proteins": 6.8,
+    "carbs": 5.9,
+    "fats": 9.7,
+    "fiber": 5.1
+  },
+  {
+    "code": "120102",
+    "name": "Arroz tres delicias congelado",
+    "kcal": 115.0,
+    "proteins": 3.4,
+    "carbs": 20.0,
+    "fats": 1.6,
+    "fiber": 3.5
+  },
+  {
+    "code": "120103",
+    "name": "Base de pizza",
+    "kcal": 273.0,
+    "proteins": 6.7,
+    "carbs": 43.9,
+    "fats": 7.4,
+    "fiber": 2.2
+  },
+  {
+    "code": "120104",
+    "name": "Calamares a la romana congelados",
+    "kcal": 189.0,
+    "proteins": 5.7,
+    "carbs": 23.7,
+    "fats": 7.8,
+    "fiber": 0.6
+  },
+  {
+    "code": "120105",
+    "name": "Calamares fritos",
+    "kcal": 172.0,
+    "proteins": 22.0,
+    "carbs": 4.0,
+    "fats": 7.5,
+    "fiber": 0.1
+  },
+  {
+    "code": "120106",
+    "name": "Caldo de carne",
+    "kcal": 6.5,
+    "proteins": 1.1,
+    "carbs": 0.04,
+    "fats": 0.22,
+    "fiber": 0.0
+  },
+  {
+    "code": "120107",
+    "name": "Caldo de pescado",
+    "kcal": 15.0,
+    "proteins": 2.0,
+    "carbs": 0.4,
+    "fats": 0.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "120108",
+    "name": "Caldo de pollo",
+    "kcal": 5.0,
+    "proteins": 0.4,
+    "carbs": 0.4,
+    "fats": 0.21,
+    "fiber": 0.0
+  },
+  {
+    "code": "120109",
+    "name": "Caldo de verdura",
+    "kcal": 30.9,
+    "proteins": 0.9,
+    "carbs": 4.9,
+    "fats": 0.79,
+    "fiber": 0.3
+  },
+  {
+    "code": "120110",
+    "name": "Caldo en cubitos de carne",
+    "kcal": 252.0,
+    "proteins": 15.7,
+    "carbs": 5.0,
+    "fats": 18.7,
+    "fiber": 0.2
+  },
+  {
+    "code": "120111",
+    "name": "Callos a la madrileña",
+    "kcal": 109.0,
+    "proteins": 6.8,
+    "carbs": 2.5,
+    "fats": 5.8,
+    "fiber": 10.0
+  },
+  {
+    "code": "120112",
+    "name": "Canelones de carne congelados",
+    "kcal": 129.0,
+    "proteins": 6.2,
+    "carbs": 12.8,
+    "fats": 5.4,
+    "fiber": 2.2
+  },
+  {
+    "code": "120113",
+    "name": "Carne empanada, pasteles de carne (congelados)",
+    "kcal": 299.0,
+    "proteins": 21.9,
+    "carbs": 12.0,
+    "fats": 18.1,
+    "fiber": 0.13
+  },
+  {
+    "code": "120114",
+    "name": "Crema desecada de champiñón",
+    "kcal": 361.0,
+    "proteins": 9.6,
+    "carbs": 61.9,
+    "fats": 7.7,
+    "fiber": 3.0
+  },
+  {
+    "code": "120115",
+    "name": "Crema desecada de espárragos",
+    "kcal": 392.0,
+    "proteins": 8.0,
+    "carbs": 54.0,
+    "fats": 15.5,
+    "fiber": 2.4
+  },
+  {
+    "code": "120116",
+    "name": "Croquetas de bacalao congelada",
+    "kcal": 154.0,
+    "proteins": 3.8,
+    "carbs": 25.0,
+    "fats": 4.2,
+    "fiber": 0.6
+  },
+  {
+    "code": "120117",
+    "name": "Croquetas de jamón congelada",
+    "kcal": 153.0,
+    "proteins": 3.8,
+    "carbs": 23.0,
+    "fats": 4.6,
+    "fiber": 2.0
+  },
+  {
+    "code": "120118",
+    "name": "Croquetas de marisco congelada",
+    "kcal": 136.0,
+    "proteins": 5.6,
+    "carbs": 21.9,
+    "fats": 2.7,
+    "fiber": 0.6
+  },
+  {
+    "code": "120119",
+    "name": "Croquetas de merluza congelada",
+    "kcal": 140.0,
+    "proteins": 3.5,
+    "carbs": 21.3,
+    "fats": 3.8,
+    "fiber": 1.2
+  },
+  {
+    "code": "120121",
+    "name": "Croquetas de pollo congeladas",
+    "kcal": 160.0,
+    "proteins": 5.8,
+    "carbs": 21.0,
+    "fats": 5.3,
+    "fiber": 2.5
+  },
+  {
+    "code": "120120",
+    "name": "Croquetas de queso congelada",
+    "kcal": 131.0,
+    "proteins": 4.3,
+    "carbs": 20.6,
+    "fats": 3.3,
+    "fiber": 0.6
+  },
+  {
+    "code": "120122",
+    "name": "Delicias de jamón y queso congeladas",
+    "kcal": 207.0,
+    "proteins": 5.1,
+    "carbs": 24.9,
+    "fats": 9.1,
+    "fiber": 2.6
+  },
+  {
+    "code": "120123",
+    "name": "Empanadilla de atún congelada",
+    "kcal": 265.0,
+    "proteins": 4.8,
+    "carbs": 31.7,
+    "fats": 12.0,
+    "fiber": 5.4
+  },
+  {
+    "code": "120124",
+    "name": "Espinacas a la crema congeladas",
+    "kcal": 65.1,
+    "proteins": 2.8,
+    "carbs": 4.7,
+    "fats": 3.5,
+    "fiber": 1.8
+  },
+  {
+    "code": "120125",
+    "name": "Fabada en conserva",
+    "kcal": 156.0,
+    "proteins": 6.1,
+    "carbs": 9.3,
+    "fats": 8.8,
+    "fiber": 7.8
+  },
+  {
+    "code": "120126",
+    "name": "Gazpacho en conserva",
+    "kcal": 39.8,
+    "proteins": 0.6,
+    "carbs": 3.0,
+    "fats": 2.8,
+    "fiber": 0.2
+  },
+  {
+    "code": "120127",
+    "name": "Hummus",
+    "kcal": 174.0,
+    "proteins": 7.9,
+    "carbs": 11.0,
+    "fats": 9.6,
+    "fiber": 6.0
+  },
+  {
+    "code": "120128",
+    "name": "Kebab",
+    "kcal": 341.0,
+    "proteins": 17.1,
+    "carbs": 25.9,
+    "fats": 18.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "120129",
+    "name": "Lasaña de carne y besamel congelada",
+    "kcal": 150.0,
+    "proteins": 6.3,
+    "carbs": 13.0,
+    "fats": 7.9,
+    "fiber": 0.8
+  },
+  {
+    "code": "120130",
+    "name": "Paella de marisco congelada",
+    "kcal": 125.0,
+    "proteins": 3.6,
+    "carbs": 25.2,
+    "fats": 0.62,
+    "fiber": 2.0
+  },
+  {
+    "code": "120131",
+    "name": "Patatas prefritas congeladas",
+    "kcal": 115.0,
+    "proteins": 2.1,
+    "carbs": 20.0,
+    "fats": 2.4,
+    "fiber": 2.7
+  },
+  {
+    "code": "120133",
+    "name": "Pisto de verduras congelado",
+    "kcal": 57.0,
+    "proteins": 2.9,
+    "carbs": 8.8,
+    "fats": 0.15,
+    "fiber": 4.4
+  },
+  {
+    "code": "120134",
+    "name": "Pizza de atún congelada",
+    "kcal": 219.0,
+    "proteins": 8.0,
+    "carbs": 23.0,
+    "fats": 9.8,
+    "fiber": 3.4
+  },
+  {
+    "code": "120135",
+    "name": "Pizza margarita congelada",
+    "kcal": 237.0,
+    "proteins": 8.2,
+    "carbs": 32.6,
+    "fats": 7.8,
+    "fiber": 1.7
+  },
+  {
+    "code": "120136",
+    "name": "Pizza romana congelada",
+    "kcal": 177.0,
+    "proteins": 7.3,
+    "carbs": 26.5,
+    "fats": 3.8,
+    "fiber": 3.8
+  },
+  {
+    "code": "120137",
+    "name": "Pollo empanado congelado",
+    "kcal": 242.0,
+    "proteins": 18.0,
+    "carbs": 13.5,
+    "fats": 12.7,
+    "fiber": 0.7
+  },
+  {
+    "code": "120138",
+    "name": "Pure de patatas para reconstituir",
+    "kcal": 353.0,
+    "proteins": 6.5,
+    "carbs": 76.0,
+    "fats": 1.0,
+    "fiber": 7.0
+  },
+  {
+    "code": "120139",
+    "name": "San Jacobo congelado",
+    "kcal": 252.0,
+    "proteins": 4.1,
+    "carbs": 26.7,
+    "fats": 13.3,
+    "fiber": 4.5
+  },
+  {
+    "code": "120140",
+    "name": "Sopa de ave con fideos para reconstituir",
+    "kcal": 326.0,
+    "proteins": 11.0,
+    "carbs": 66.0,
+    "fats": 1.5,
+    "fiber": 2.2
+  },
+  {
+    "code": "120141",
+    "name": "Sopa jardinera para reconstituir",
+    "kcal": 270.0,
+    "proteins": 0.0,
+    "carbs": 59.0,
+    "fats": 1.5,
+    "fiber": 10.0
+  },
+  {
+    "code": "130101",
+    "name": "Aceituna negra con hueso",
+    "kcal": 156.0,
+    "proteins": 0.5,
+    "carbs": 0.0,
+    "fats": 16.0,
+    "fiber": 4.8
+  },
+  {
+    "code": "130102",
+    "name": "Aceituna negra sin hueso",
+    "kcal": 156.0,
+    "proteins": 0.5,
+    "carbs": 0.0,
+    "fats": 16.0,
+    "fiber": 4.8
+  },
+  {
+    "code": "130103",
+    "name": "Aceituna rellena de anchoa",
+    "kcal": 121.0,
+    "proteins": 1.3,
+    "carbs": 0.0,
+    "fats": 12.3,
+    "fiber": 2.5
+  },
+  {
+    "code": "130104",
+    "name": "Aceituna rellena de pimiento",
+    "kcal": 169.0,
+    "proteins": 1.2,
+    "carbs": 3.8,
+    "fats": 16.0,
+    "fiber": 2.5
+  },
+  {
+    "code": "130105",
+    "name": "Aceituna verde con hueso",
+    "kcal": 167.0,
+    "proteins": 0.8,
+    "carbs": 1.0,
+    "fats": 16.7,
+    "fiber": 4.8
+  },
+  {
+    "code": "130106",
+    "name": "Aceituna verde sin hueso",
+    "kcal": 167.0,
+    "proteins": 0.8,
+    "carbs": 1.0,
+    "fats": 16.7,
+    "fiber": 4.8
+  },
+  {
+    "code": "130107",
+    "name": "Alcaparra",
+    "kcal": 28.7,
+    "proteins": 2.4,
+    "carbs": 2.1,
+    "fats": 0.86,
+    "fiber": 1.5
+  },
+  {
+    "code": "130108",
+    "name": "Berenjenas encurtidas",
+    "kcal": 27.0,
+    "proteins": 0.7,
+    "carbs": 2.8,
+    "fats": 1.0,
+    "fiber": 2.0
+  },
+  {
+    "code": "130109",
+    "name": "Chips de verduras",
+    "kcal": 468.0,
+    "proteins": 3.2,
+    "carbs": 67.3,
+    "fats": 19.8,
+    "fiber": 4.4
+  },
+  {
+    "code": "130110",
+    "name": "Corteza de trigo",
+    "kcal": 521.0,
+    "proteins": 9.1,
+    "carbs": 57.0,
+    "fats": 28.0,
+    "fiber": 2.1
+  },
+  {
+    "code": "130111",
+    "name": "Fritos de maíz sabor barbacoa",
+    "kcal": 539.0,
+    "proteins": 7.0,
+    "carbs": 55.0,
+    "fats": 31.0,
+    "fiber": 5.9
+  },
+  {
+    "code": "130112",
+    "name": "Galleta salada",
+    "kcal": 466.0,
+    "proteins": 6.2,
+    "carbs": 64.0,
+    "fats": 20.0,
+    "fiber": 2.5
+  },
+  {
+    "code": "130113",
+    "name": "Ganchitos",
+    "kcal": 470.0,
+    "proteins": 6.6,
+    "carbs": 71.1,
+    "fats": 17.4,
+    "fiber": 1.4
+  },
+  {
+    "code": "130114",
+    "name": "Gusanitos con queso",
+    "kcal": 520.0,
+    "proteins": 5.6,
+    "carbs": 58.0,
+    "fats": 29.0,
+    "fiber": 2.5
+  },
+  {
+    "code": "130115",
+    "name": "Nachos con queso",
+    "kcal": 357.0,
+    "proteins": 4.3,
+    "carbs": 34.9,
+    "fats": 21.5,
+    "fiber": 3.2
+  },
+  {
+    "code": "130116",
+    "name": "Palomitas de maíz",
+    "kcal": 494.0,
+    "proteins": 6.2,
+    "carbs": 44.3,
+    "fats": 30.2,
+    "fiber": 10.0
+  },
+  {
+    "code": "130117",
+    "name": "Pan de gambas",
+    "kcal": 349.0,
+    "proteins": 1.6,
+    "carbs": 85.5,
+    "fats": 0.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "130118",
+    "name": "Patatas fritas de bolsa",
+    "kcal": 531.0,
+    "proteins": 6.5,
+    "carbs": 47.5,
+    "fats": 34.2,
+    "fiber": 3.6
+  },
+  {
+    "code": "130119",
+    "name": "Patatas fritas de bolsa bajas en calorías",
+    "kcal": 462.0,
+    "proteins": 6.6,
+    "carbs": 57.4,
+    "fats": 21.5,
+    "fiber": 6.3
+  },
+  {
+    "code": "130120",
+    "name": "Pepinillos en vinagre en conserva",
+    "kcal": 10.5,
+    "proteins": 1.3,
+    "carbs": 1.1,
+    "fats": 0.1,
+    "fiber": 0.0
+  },
+  {
+    "code": "130121",
+    "name": "Triángulos maíz",
+    "kcal": 503.0,
+    "proteins": 6.5,
+    "carbs": 56.3,
+    "fats": 27.7,
+    "fiber": 1.0
+  },
+  {
+    "code": "140101",
+    "name": "Ajo en polvo",
+    "kcal": 346.0,
+    "proteins": 16.6,
+    "carbs": 63.7,
+    "fats": 0.73,
+    "fiber": 9.0
+  },
+  {
+    "code": "140102",
+    "name": "Albahaca fresca",
+    "kcal": 26.2,
+    "proteins": 3.2,
+    "carbs": 1.1,
+    "fats": 0.64,
+    "fiber": 1.6
+  },
+  {
+    "code": "140103",
+    "name": "Albahaca seca",
+    "kcal": 255.0,
+    "proteins": 14.0,
+    "carbs": 20.5,
+    "fats": 4.0,
+    "fiber": 40.5
+  },
+  {
+    "code": "140104",
+    "name": "Azafrán",
+    "kcal": 353.0,
+    "proteins": 11.4,
+    "carbs": 61.5,
+    "fats": 5.9,
+    "fiber": 3.9
+  },
+  {
+    "code": "140105",
+    "name": "Canela",
+    "kcal": 255.0,
+    "proteins": 3.9,
+    "carbs": 25.6,
+    "fats": 3.2,
+    "fiber": 54.3
+  },
+  {
+    "code": "140106",
+    "name": "Cardamomo, semillas",
+    "kcal": 344.0,
+    "proteins": 10.8,
+    "carbs": 46.2,
+    "fats": 6.7,
+    "fiber": 28.0
+  },
+  {
+    "code": "140107",
+    "name": "Cebolla deshidratada en copos",
+    "kcal": 355.0,
+    "proteins": 9.0,
+    "carbs": 74.1,
+    "fats": 0.45,
+    "fiber": 9.2
+  },
+  {
+    "code": "140108",
+    "name": "Cebollino",
+    "kcal": 29.0,
+    "proteins": 3.0,
+    "carbs": 1.9,
+    "fats": 0.53,
+    "fiber": 2.3
+  },
+  {
+    "code": "140109",
+    "name": "Cilantro",
+    "kcal": 22.1,
+    "proteins": 2.1,
+    "carbs": 0.9,
+    "fats": 0.5,
+    "fiber": 2.8
+  },
+  {
+    "code": "140110",
+    "name": "Clavo",
+    "kcal": 335.0,
+    "proteins": 6.0,
+    "carbs": 31.6,
+    "fats": 13.0,
+    "fiber": 33.9
+  },
+  {
+    "code": "140111",
+    "name": "Comino",
+    "kcal": 391.0,
+    "proteins": 17.8,
+    "carbs": 33.7,
+    "fats": 18.2,
+    "fiber": 10.5
+  },
+  {
+    "code": "140112",
+    "name": "Cúrcuma",
+    "kcal": 291.0,
+    "proteins": 9.7,
+    "carbs": 44.4,
+    "fats": 3.3,
+    "fiber": 22.7
+  },
+  {
+    "code": "140113",
+    "name": "Eneldo seco",
+    "kcal": 316.0,
+    "proteins": 20.0,
+    "carbs": 42.2,
+    "fats": 4.4,
+    "fiber": 13.6
+  },
+  {
+    "code": "140114",
+    "name": "Gomasio",
+    "kcal": 89.7,
+    "proteins": 2.7,
+    "carbs": 0.14,
+    "fats": 8.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "140115",
+    "name": "Guindilla picante",
+    "kcal": 47.3,
+    "proteins": 1.9,
+    "carbs": 6.7,
+    "fats": 1.1,
+    "fiber": 1.5
+  },
+  {
+    "code": "140116",
+    "name": "Hinojo",
+    "kcal": 20.2,
+    "proteins": 1.1,
+    "carbs": 2.3,
+    "fats": 0.0,
+    "fiber": 3.3
+  },
+  {
+    "code": "140117",
+    "name": "Jengibre crudo",
+    "kcal": 32.9,
+    "proteins": 1.1,
+    "carbs": 3.4,
+    "fats": 1.1,
+    "fiber": 2.7
+  },
+  {
+    "code": "140118",
+    "name": "Jengibre en polvo",
+    "kcal": 336.0,
+    "proteins": 9.1,
+    "carbs": 58.3,
+    "fats": 4.2,
+    "fiber": 14.1
+  },
+  {
+    "code": "140119",
+    "name": "Laurel",
+    "kcal": 353.0,
+    "proteins": 7.6,
+    "carbs": 48.7,
+    "fats": 8.4,
+    "fiber": 26.3
+  },
+  {
+    "code": "140120",
+    "name": "Levadura",
+    "kcal": 164.0,
+    "proteins": 27.8,
+    "carbs": 11.8,
+    "fats": 0.0,
+    "fiber": 3.0
+  },
+  {
+    "code": "140121",
+    "name": "Levadura de panadería fresca",
+    "kcal": 73.0,
+    "proteins": 16.0,
+    "carbs": 0.0,
+    "fats": 1.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "140122",
+    "name": "Mejorana seca",
+    "kcal": 324.0,
+    "proteins": 12.7,
+    "carbs": 32.4,
+    "fats": 7.0,
+    "fiber": 40.3
+  },
+  {
+    "code": "140123",
+    "name": "Menta fresca",
+    "kcal": 67.3,
+    "proteins": 3.8,
+    "carbs": 6.9,
+    "fats": 0.94,
+    "fiber": 8.0
+  },
+  {
+    "code": "140124",
+    "name": "Nuez moscada",
+    "kcal": 506.0,
+    "proteins": 5.8,
+    "carbs": 28.5,
+    "fats": 36.3,
+    "fiber": 20.8
+  },
+  {
+    "code": "140125",
+    "name": "Orégano fresco",
+    "kcal": 65.6,
+    "proteins": 2.2,
+    "carbs": 9.7,
+    "fats": 2.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "140126",
+    "name": "Orégano seco",
+    "kcal": 309.0,
+    "proteins": 11.0,
+    "carbs": 21.6,
+    "fats": 10.3,
+    "fiber": 42.8
+  },
+  {
+    "code": "140127",
+    "name": "Perejil",
+    "kcal": 59.0,
+    "proteins": 4.4,
+    "carbs": 7.4,
+    "fats": 0.36,
+    "fiber": 4.3
+  },
+  {
+    "code": "140128",
+    "name": "Pimentón",
+    "kcal": 357.0,
+    "proteins": 14.8,
+    "carbs": 34.8,
+    "fats": 13.0,
+    "fiber": 20.9
+  },
+  {
+    "code": "140129",
+    "name": "Pimienta blanca",
+    "kcal": 283.0,
+    "proteins": 10.4,
+    "carbs": 42.4,
+    "fats": 2.1,
+    "fiber": 26.2
+  },
+  {
+    "code": "140130",
+    "name": "Pimienta negra",
+    "kcal": 280.0,
+    "proteins": 10.9,
+    "carbs": 38.3,
+    "fats": 3.3,
+    "fiber": 26.5
+  },
+  {
+    "code": "140131",
+    "name": "Sal común",
+    "kcal": 0.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "140132",
+    "name": "Sal fluorada",
+    "kcal": 0.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "140133",
+    "name": "Sal hiposódica",
+    "kcal": 0.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "140134",
+    "name": "Sal yodada",
+    "kcal": 0.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "140135",
+    "name": "Sal yodada fluorada",
+    "kcal": 0.0,
+    "proteins": 0.0,
+    "carbs": 0.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "140136",
+    "name": "Semilla de anís",
+    "kcal": 443.0,
+    "proteins": 17.6,
+    "carbs": 50.0,
+    "fats": 15.9,
+    "fiber": 14.6
+  },
+  {
+    "code": "140137",
+    "name": "Semillas de alcaravea",
+    "kcal": 334.0,
+    "proteins": 19.8,
+    "carbs": 11.9,
+    "fats": 14.6,
+    "fiber": 38.0
+  },
+  {
+    "code": "140138",
+    "name": "Tomillo seco",
+    "kcal": 369.0,
+    "proteins": 9.1,
+    "carbs": 57.1,
+    "fats": 7.4,
+    "fiber": 18.6
+  },
+  {
+    "code": "140139",
+    "name": "Vainilla",
+    "kcal": 51.6,
+    "proteins": 0.06,
+    "carbs": 12.7,
+    "fats": 0.06,
+    "fiber": 0.0
+  },
+  {
+    "code": "140140",
+    "name": "Vinagre",
+    "kcal": 4.0,
+    "proteins": 0.4,
+    "carbs": 0.6,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "140141",
+    "name": "Vinagre balsámico",
+    "kcal": 70.0,
+    "proteins": 0.49,
+    "carbs": 17.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "140142",
+    "name": "Vinagre de manzana",
+    "kcal": 2.4,
+    "proteins": 0.4,
+    "carbs": 0.2,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "140143",
+    "name": "Vinagre de vino",
+    "kcal": 4.0,
+    "proteins": 0.4,
+    "carbs": 0.6,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "140201",
+    "name": "Alioli",
+    "kcal": 796.0,
+    "proteins": 0.5,
+    "carbs": 2.8,
+    "fats": 86.9,
+    "fiber": 0.1
+  },
+  {
+    "code": "140202",
+    "name": "Gelatina",
+    "kcal": 338.0,
+    "proteins": 84.4,
+    "carbs": 0.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "140203",
+    "name": "Kétchup",
+    "kcal": 117.0,
+    "proteins": 2.0,
+    "carbs": 26.0,
+    "fats": 0.4,
+    "fiber": 0.9
+  },
+  {
+    "code": "140204",
+    "name": "Mayonesa comercial",
+    "kcal": 709.0,
+    "proteins": 1.3,
+    "carbs": 5.8,
+    "fats": 75.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "140205",
+    "name": "Mayonesa ligera",
+    "kcal": 272.0,
+    "proteins": 0.7,
+    "carbs": 8.8,
+    "fats": 26.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "140206",
+    "name": "Mostaza",
+    "kcal": 125.0,
+    "proteins": 7.1,
+    "carbs": 5.0,
+    "fats": 8.2,
+    "fiber": 1.3
+  },
+  {
+    "code": "140207",
+    "name": "Salsa agridulce",
+    "kcal": 121.0,
+    "proteins": 0.48,
+    "carbs": 24.0,
+    "fats": 2.4,
+    "fiber": 0.8
+  },
+  {
+    "code": "140208",
+    "name": "Salsa al curry",
+    "kcal": 78.2,
+    "proteins": 1.5,
+    "carbs": 6.8,
+    "fats": 5.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "140209",
+    "name": "Salsa barbacoa",
+    "kcal": 71.0,
+    "proteins": 1.8,
+    "carbs": 11.6,
+    "fats": 1.8,
+    "fiber": 0.6
+  },
+  {
+    "code": "140210",
+    "name": "Salsa bechamel",
+    "kcal": 153.0,
+    "proteins": 4.1,
+    "carbs": 10.8,
+    "fats": 10.3,
+    "fiber": 0.3
+  },
+  {
+    "code": "140211",
+    "name": "Salsa boloñesa",
+    "kcal": 163.0,
+    "proteins": 8.0,
+    "carbs": 7.2,
+    "fats": 11.1,
+    "fiber": 1.1
+  },
+  {
+    "code": "140212",
+    "name": "Salsa brava",
+    "kcal": 186.0,
+    "proteins": 2.0,
+    "carbs": 12.3,
+    "fats": 14.3,
+    "fiber": 1.3
+  },
+  {
+    "code": "140213",
+    "name": "Salsa carbonara",
+    "kcal": 307.0,
+    "proteins": 7.5,
+    "carbs": 2.0,
+    "fats": 29.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "140214",
+    "name": "Salsa cesar",
+    "kcal": 543.0,
+    "proteins": 2.2,
+    "carbs": 3.3,
+    "fats": 57.9,
+    "fiber": 0.0
+  },
+  {
+    "code": "140215",
+    "name": "Salsa de queso",
+    "kcal": 111.0,
+    "proteins": 5.3,
+    "carbs": 8.4,
+    "fats": 6.1,
+    "fiber": 0.5
+  },
+  {
+    "code": "140216",
+    "name": "Salsa de soja",
+    "kcal": 65.7,
+    "proteins": 8.7,
+    "carbs": 6.7,
+    "fats": 0.1,
+    "fiber": 1.6
+  },
+  {
+    "code": "140217",
+    "name": "Salsa holandesa",
+    "kcal": 289.0,
+    "proteins": 2.7,
+    "carbs": 0.6,
+    "fats": 30.6,
+    "fiber": 0.0
+  },
+  {
+    "code": "140218",
+    "name": "Salsa inglesa",
+    "kcal": 78.0,
+    "proteins": 0.0,
+    "carbs": 19.5,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "140219",
+    "name": "Salsa picante",
+    "kcal": 13.1,
+    "proteins": 0.5,
+    "carbs": 1.8,
+    "fats": 0.37,
+    "fiber": 0.3
+  },
+  {
+    "code": "140220",
+    "name": "Salsa roquefort",
+    "kcal": 480.0,
+    "proteins": 7.2,
+    "carbs": 6.0,
+    "fats": 47.5,
+    "fiber": 0.0
+  },
+  {
+    "code": "140221",
+    "name": "Salsa tabasco",
+    "kcal": 12.0,
+    "proteins": 1.3,
+    "carbs": 0.8,
+    "fats": 0.76,
+    "fiber": 0.6
+  },
+  {
+    "code": "140222",
+    "name": "Salsa tamari",
+    "kcal": 66.9,
+    "proteins": 10.5,
+    "carbs": 5.6,
+    "fats": 0.1,
+    "fiber": 0.8
+  },
+  {
+    "code": "140223",
+    "name": "Salsa tartara",
+    "kcal": 209.0,
+    "proteins": 1.0,
+    "carbs": 13.3,
+    "fats": 16.7,
+    "fiber": 0.5
+  },
+  {
+    "code": "140224",
+    "name": "Salsa vinagreta",
+    "kcal": 648.0,
+    "proteins": 0.2,
+    "carbs": 0.2,
+    "fats": 71.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "140225",
+    "name": "Sofrito",
+    "kcal": 215.0,
+    "proteins": 1.1,
+    "carbs": 4.7,
+    "fats": 21.0,
+    "fiber": 1.4
+  },
+  {
+    "code": "150101",
+    "name": "Aspartamo",
+    "kcal": 365.0,
+    "proteins": 1.4,
+    "carbs": 93.7,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "150102",
+    "name": "Barrita hipocalórica",
+    "kcal": 473.0,
+    "proteins": 22.0,
+    "carbs": 42.0,
+    "fats": 22.9,
+    "fiber": 5.4
+  },
+  {
+    "code": "150103",
+    "name": "Batido hipocalórico",
+    "kcal": 322.0,
+    "proteins": 26.9,
+    "carbs": 37.0,
+    "fats": 4.6,
+    "fiber": 12.3
+  },
+  {
+    "code": "150104",
+    "name": "Crema hipocalórica",
+    "kcal": 262.0,
+    "proteins": 23.0,
+    "carbs": 30.0,
+    "fats": 3.8,
+    "fiber": 7.8
+  },
+  {
+    "code": "150105",
+    "name": "Edulcorante liquido",
+    "kcal": 4.0,
+    "proteins": 0.0,
+    "carbs": 1.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "150126",
+    "name": "Sacarina",
+    "kcal": 364.0,
+    "proteins": 2.0,
+    "carbs": 89.1,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "150127",
+    "name": "Stevia",
+    "kcal": 0.0,
+    "proteins": 0.0,
+    "carbs": 100.0,
+    "fats": 0.0,
+    "fiber": 0.0
+  },
+  {
+    "code": "150201",
+    "name": "Leche de continuación (polvo)",
+    "kcal": 511.0,
+    "proteins": 12.9,
+    "carbs": 60.1,
+    "fats": 24.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "150202",
+    "name": "Leche de inicio (polvo)",
+    "kcal": 522.0,
+    "proteins": 11.4,
+    "carbs": 58.9,
+    "fats": 26.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "150203",
+    "name": "Papilla de cereales con leche (polvo)",
+    "kcal": 419.0,
+    "proteins": 15.5,
+    "carbs": 68.0,
+    "fats": 9.0,
+    "fiber": 1.8
+  },
+  {
+    "code": "150204",
+    "name": "Papilla de cereales y frutas (polvo)",
+    "kcal": 379.0,
+    "proteins": 6.0,
+    "carbs": 85.8,
+    "fats": 1.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "150205",
+    "name": "Papilla de cereales y miel con leche (polvo)",
+    "kcal": 421.0,
+    "proteins": 13.0,
+    "carbs": 72.4,
+    "fats": 8.8,
+    "fiber": 0.0
+  },
+  {
+    "code": "150207",
+    "name": "Papilla sin gluten con leche (polvo)",
+    "kcal": 403.0,
+    "proteins": 15.3,
+    "carbs": 66.8,
+    "fats": 8.3,
+    "fiber": 0.0
+  },
+  {
+    "code": "150208",
+    "name": "Papilla sin gluten y frutas con leche (polvo)",
+    "kcal": 422.0,
+    "proteins": 15.2,
+    "carbs": 70.8,
+    "fats": 8.7,
+    "fiber": 0.0
+  },
+  {
+    "code": "150209",
+    "name": "Potito de fruta variada",
+    "kcal": 73.5,
+    "proteins": 0.6,
+    "carbs": 17.0,
+    "fats": 0.1,
+    "fiber": 1.1
+  },
+  {
+    "code": "150210",
+    "name": "Potito de pescado",
+    "kcal": 74.6,
+    "proteins": 3.6,
+    "carbs": 6.0,
+    "fats": 3.8,
+    "fiber": 1.0
+  },
+  {
+    "code": "150211",
+    "name": "Potito de pollo",
+    "kcal": 78.5,
+    "proteins": 5.2,
+    "carbs": 5.8,
+    "fats": 3.7,
+    "fiber": 0.6
+  },
+  {
+    "code": "150212",
+    "name": "Potito de ternera",
+    "kcal": 64.8,
+    "proteins": 3.6,
+    "carbs": 6.0,
+    "fats": 2.6,
+    "fiber": 1.5
+  }
+]

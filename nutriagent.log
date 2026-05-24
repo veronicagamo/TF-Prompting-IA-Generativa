@@ -1,0 +1,773 @@
+2026-05-24 18:25:03,289 [INFO] numexpr.utils: Note: NumExpr detected 24 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2026-05-24 18:25:03,290 [INFO] numexpr.utils: NumExpr defaulting to 16 threads.
+2026-05-24 18:25:19,285 [INFO] datasets: TensorFlow version 2.21.0 available.
+2026-05-24 18:25:40,744 [INFO] numexpr.utils: Note: NumExpr detected 24 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2026-05-24 18:25:40,744 [INFO] numexpr.utils: NumExpr defaulting to 16 threads.
+2026-05-24 18:25:56,080 [INFO] datasets: TensorFlow version 2.21.0 available.
+2026-05-24 18:25:58,240 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 18:25:58,357 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 18:28:19,023 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 18:28:19,123 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 18:33:33,304 [ERROR] NutriAgent: Error durante el procesamiento del agente: Server disconnected without sending a response.
+2026-05-24 18:33:33,334 [ERROR] NutriAgent: Traceback (most recent call last):
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/httpcore/_sync/http11.py", line 231, in _receive_event
+    raise RemoteProtocolError(msg)
+httpcore.RemoteProtocolError: Server disconnected without sending a response.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/veronica/Descargas/Propmting/Trabajo Final/app.py", line 317, in <module>
+    for chunk in agent_executor.stream({
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/langchain_classic/agents/agent.py", line 1760, in stream
+    yield from iterator
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/langchain_classic/agents/agent_iterator.py", line 200, in __iter__
+    for chunk in self.agent_executor._iter_next_step(  # noqa: SLF001
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/langchain_classic/agents/agent.py", line 1317, in _iter_next_step
+    output = self._action_agent.plan(
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/langchain_classic/agents/agent.py", line 557, in plan
+    for chunk in self.runnable.stream(inputs, config={"callbacks": callbacks}):
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/langchain_core/runnables/base.py", line 3712, in stream
+    yield from self.transform(iter([input]), config, **kwargs)
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/langchain_core/runnables/base.py", line 3698, in transform
+    yield from self._transform_stream_with_config(
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/langchain_core/runnables/base.py", line 2504, in _transform_stream_with_config
+    chunk: Output = context.run(next, iterator)
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/langchain_core/runnables/base.py", line 3664, in _transform
+    yield from final_pipeline
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/langchain_core/runnables/base.py", line 1722, in transform
+    for ichunk in input:
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/langchain_core/runnables/base.py", line 6224, in transform
+    yield from self.bound.transform(
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/langchain_core/runnables/base.py", line 1740, in transform
+    yield from self.stream(final, config, **kwargs)
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/langchain_core/language_models/chat_models.py", line 776, in stream
+    for chunk in self._stream(input_messages, stop=stop, **kwargs):
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/langchain_ollama/chat_models.py", line 1291, in _stream
+    for chunk in self._iterate_over_stream(messages, stop, **kwargs):
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/langchain_ollama/chat_models.py", line 1224, in _iterate_over_stream
+    for stream_resp in self._create_chat_stream(messages, stop, **kwargs):
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/langchain_ollama/chat_models.py", line 1122, in _create_chat_stream
+    yield from self._client.chat(**chat_params)
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/ollama/_client.py", line 184, in inner
+    with self._client.stream(*args, **kwargs) as r:
+  File "/home/veronica/miniforge3/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/httpx/_client.py", line 868, in stream
+    response = self.send(
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/home/veronica/miniforge3/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/veronica/miniforge3/lib/python3.10/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.RemoteProtocolError: Server disconnected without sending a response.
+
+2026-05-24 18:46:56,792 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 18:46:56,793 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 18:46:56,845 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 18:46:56,845 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 18:46:56,848 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 18:46:56,852 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 18:46:56,853 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de menú diario adaptada a requerimientos y preferencias...
+2026-05-24 18:46:56,853 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes'}
+2026-05-24 18:50:25,986 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 18:50:25,986 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 18:50:26,042 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 18:50:26,042 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 18:50:26,045 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 18:50:26,047 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 18:50:26,053 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de menú diario adaptada a requerimientos y preferencias...
+2026-05-24 18:50:26,054 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes'}
+2026-05-24 18:50:50,419 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 18:50:50,419 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Recomposición corporal
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 18:50:50,472 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 18:50:50,472 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Recomposición corporal'}
+2026-05-24 18:50:50,475 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 18:50:50,476 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 150.0, 'grasas': 75.0, 'carbohidratos': 343.4}
+2026-05-24 18:50:50,481 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de menú diario adaptada a requerimientos y preferencias...
+2026-05-24 18:50:50,484 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2648.6, 'macros': {'proteinas': 150.0, 'grasas': 75.0, 'carbohidratos': 343.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes'}
+2026-05-24 18:58:13,173 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 18:58:13,188 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 1911 alimentos.
+2026-05-24 18:58:13,189 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 18:58:13,241 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 18:58:13,241 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 18:58:13,243 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 18:58:13,246 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 18:58:13,249 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 18:58:13,249 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Menú Diario (1 día)'}
+2026-05-24 18:58:37,622 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 18:58:37,635 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 1911 alimentos.
+2026-05-24 18:58:37,635 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 18:58:37,689 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 18:58:37,690 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 18:58:37,692 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 18:58:37,694 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 18:58:37,699 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 18:58:37,700 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Menú Diario (1 día)'}
+2026-05-24 18:59:03,068 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 18:59:03,080 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 1911 alimentos.
+2026-05-24 18:59:03,081 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 18:59:03,134 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 18:59:03,134 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 18:59:03,136 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 18:59:03,137 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 18:59:03,142 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 18:59:03,142 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Menú Diario (1 día)'}
+2026-05-24 19:01:47,211 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:01:47,228 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 1911 alimentos.
+2026-05-24 19:01:47,229 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:01:47,282 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:01:47,283 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:01:47,286 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:01:47,289 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:01:47,296 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:01:47,296 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Menú Diario (1 día)'}
+2026-05-24 19:02:17,747 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:02:17,763 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 1911 alimentos.
+2026-05-24 19:02:17,763 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:02:17,817 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:02:17,817 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:02:17,821 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:02:17,822 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:02:17,831 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:02:17,832 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Menú Diario (1 día)'}
+2026-05-24 19:03:18,958 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:03:18,972 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 1911 alimentos.
+2026-05-24 19:03:18,973 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:03:19,027 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:03:19,027 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:03:19,029 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:03:19,032 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:03:19,036 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:03:19,036 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Menú Diario (1 día)'}
+2026-05-24 19:03:30,630 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:03:30,645 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 1911 alimentos.
+2026-05-24 19:03:30,647 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:03:30,700 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:03:30,701 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:03:30,704 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:03:30,707 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:03:30,711 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:03:30,712 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Plan Semanal (7 días)'}
+2026-05-24 19:03:42,348 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:03:42,364 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 1911 alimentos.
+2026-05-24 19:03:42,365 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:03:42,419 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:03:42,419 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:03:42,422 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:03:42,424 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:03:42,430 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:03:42,431 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Plan Semanal (7 días)'}
+2026-05-24 19:05:17,611 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:05:17,627 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 1911 alimentos.
+2026-05-24 19:05:17,627 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:05:17,681 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:05:17,681 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:05:17,683 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:05:17,687 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:05:17,695 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:05:17,696 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Plan Semanal (7 días)'}
+2026-05-24 19:05:54,760 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:05:54,780 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 1911 alimentos.
+2026-05-24 19:05:54,781 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:05:54,833 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:05:54,834 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:05:54,836 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:05:54,842 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:05:54,848 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:05:54,850 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Plan Semanal (7 días)'}
+2026-05-24 19:09:48,464 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:09:48,486 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 1911 alimentos.
+2026-05-24 19:09:48,488 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:09:48,541 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:09:48,543 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:09:48,547 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:09:48,550 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:09:48,558 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:09:48,562 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Plan Semanal (7 días)'}
+2026-05-24 19:09:49,269 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:09:49,293 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 1911 alimentos.
+2026-05-24 19:09:49,294 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:09:49,348 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:09:49,352 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:09:49,357 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:09:49,361 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:09:49,370 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:09:49,374 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Plan Semanal (7 días)'}
+2026-05-24 19:17:01,047 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:17:01,061 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos.
+2026-05-24 19:17:01,062 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:17:01,118 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:17:01,120 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:17:01,126 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:17:01,130 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:17:01,147 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:17:01,152 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Menú Diario (1 día)'}
+2026-05-24 19:17:11,586 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:17:11,601 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos.
+2026-05-24 19:17:11,602 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:17:11,659 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:17:11,661 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:17:11,668 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:17:11,674 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:17:11,683 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:17:11,684 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Menú Diario (1 día)'}
+2026-05-24 19:23:13,080 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:23:13,093 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-24 19:23:13,095 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:23:13,148 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:23:13,149 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:23:13,151 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:23:13,152 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:23:13,159 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:23:13,161 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Menú Diario (1 día)'}
+2026-05-24 19:23:13,535 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-24 19:23:13,535 [INFO] NutriAgent: [VALOR DE RETORNO] generar_dieta_tool completada.
+2026-05-24 19:23:13,536 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-24 19:23:52,223 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:23:52,237 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-24 19:23:52,239 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:23:52,291 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:23:52,292 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:23:52,297 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:23:52,300 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:23:52,307 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:23:52,312 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Plan Semanal (7 días)'}
+2026-05-24 19:23:53,327 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-24 19:23:53,329 [INFO] NutriAgent: [VALOR DE RETORNO] generar_dieta_tool completada.
+2026-05-24 19:23:53,333 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-24 19:23:54,326 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:23:54,336 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-24 19:23:54,337 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:23:54,390 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:23:54,391 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:23:54,396 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:23:54,398 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:23:54,406 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:23:54,408 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Plan Semanal (7 días)'}
+2026-05-24 19:23:55,466 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-24 19:23:55,467 [INFO] NutriAgent: [VALOR DE RETORNO] generar_dieta_tool completada.
+2026-05-24 19:23:55,468 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-24 19:26:47,742 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:26:47,760 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-24 19:26:47,760 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Agua
+- Alimentos Excluidos: Pollo, arroz, avena, huevos
+2026-05-24 19:26:47,813 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:26:47,813 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:26:47,817 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:26:47,821 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:26:47,841 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:26:47,842 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Agua', 'alimentos_excluidos': 'Pollo, arroz, avena, huevos', 'tipo_plan': 'Plan Semanal (7 días)'}
+2026-05-24 19:26:48,891 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-24 19:26:48,891 [INFO] NutriAgent: [VALOR DE RETORNO] generar_dieta_tool completada.
+2026-05-24 19:26:48,893 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-24 19:27:10,234 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:27:10,250 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-24 19:27:10,253 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: 
+- Alimentos Excluidos: Pollo, arroz, avena, huevos
+2026-05-24 19:27:10,307 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:27:10,308 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:27:10,312 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:27:10,315 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:27:10,323 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:27:10,325 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': '', 'alimentos_excluidos': 'Pollo, arroz, avena, huevos', 'tipo_plan': 'Menú Diario (1 día)'}
+2026-05-24 19:27:10,670 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-24 19:27:10,671 [INFO] NutriAgent: [VALOR DE RETORNO] generar_dieta_tool completada.
+2026-05-24 19:27:10,674 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-24 19:27:17,784 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:27:17,796 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-24 19:27:17,798 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: 
+- Alimentos Excluidos: Pollo, arroz, avena, huevos
+2026-05-24 19:27:17,851 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:27:17,852 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:27:17,856 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:27:17,861 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:27:17,868 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:27:17,872 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': '', 'alimentos_excluidos': 'Pollo, arroz, avena, huevos', 'tipo_plan': 'Plan Semanal (7 días)'}
+2026-05-24 19:27:18,863 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-24 19:27:18,864 [INFO] NutriAgent: [VALOR DE RETORNO] generar_dieta_tool completada.
+2026-05-24 19:27:18,865 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-24 19:27:49,485 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:27:49,499 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-24 19:27:49,500 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: 
+- Alimentos Excluidos: Pollo, arroz, avena, huevos, aguacate
+2026-05-24 19:27:49,553 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:27:49,556 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:27:49,561 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:27:49,565 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:27:49,581 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:27:49,583 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': '', 'alimentos_excluidos': 'Pollo, arroz, avena, huevos, aguacate', 'tipo_plan': 'Plan Semanal (7 días)'}
+2026-05-24 19:27:50,639 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-24 19:27:50,640 [INFO] NutriAgent: [VALOR DE RETORNO] generar_dieta_tool completada.
+2026-05-24 19:27:50,641 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-24 19:29:26,148 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:29:26,155 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-24 19:29:26,156 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:29:26,208 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:29:26,209 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:29:26,211 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:29:26,215 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:29:26,225 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:29:26,227 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Plan Semanal (7 días)'}
+2026-05-24 19:29:27,254 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-24 19:29:27,254 [INFO] NutriAgent: [VALOR DE RETORNO] generar_dieta_tool completada.
+2026-05-24 19:29:27,256 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-24 19:31:07,294 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:31:07,311 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-24 19:31:07,312 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:31:07,370 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:31:07,372 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:31:07,374 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:31:07,376 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:31:07,393 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:31:07,395 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Plan Semanal (7 días)'}
+2026-05-24 19:31:08,236 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-24 19:31:08,236 [INFO] NutriAgent: [VALOR DE RETORNO] generar_dieta_tool completada.
+2026-05-24 19:31:08,238 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-24 19:31:21,906 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:31:21,923 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-24 19:31:21,924 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:31:21,976 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:31:21,978 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:31:21,981 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:31:21,984 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:31:21,992 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:31:21,993 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Plan Semanal (7 días)'}
+2026-05-24 19:31:22,822 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-24 19:31:22,822 [INFO] NutriAgent: [VALOR DE RETORNO] generar_dieta_tool completada.
+2026-05-24 19:31:22,824 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-24 19:31:36,819 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:31:36,832 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-24 19:31:36,832 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:31:36,885 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:31:36,892 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:31:36,894 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:31:36,896 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:31:36,903 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:31:36,904 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Plan Semanal (7 días)'}
+2026-05-24 19:31:37,704 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-24 19:31:37,707 [INFO] NutriAgent: [VALOR DE RETORNO] generar_dieta_tool completada.
+2026-05-24 19:31:37,708 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-24 19:31:46,809 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:31:46,823 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-24 19:31:46,824 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:31:46,881 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:31:46,882 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:31:46,887 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:31:46,892 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:31:46,910 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:31:46,912 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Plan Semanal (7 días)'}
+2026-05-24 19:31:47,718 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-24 19:31:47,718 [INFO] NutriAgent: [VALOR DE RETORNO] generar_dieta_tool completada.
+2026-05-24 19:31:47,719 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-24 19:31:57,207 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:31:57,217 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-24 19:31:57,219 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:31:57,274 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:31:57,274 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:31:57,277 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:31:57,287 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:31:57,293 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:31:57,293 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Plan Semanal (7 días)'}
+2026-05-24 19:31:58,097 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-24 19:31:58,098 [INFO] NutriAgent: [VALOR DE RETORNO] generar_dieta_tool completada.
+2026-05-24 19:31:58,103 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-24 19:33:02,620 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:33:02,630 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-24 19:33:02,632 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:33:02,686 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:33:02,691 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `calcular_macros_tool` con parámetros: {'edad': 28, 'sexo': 'Masculino', 'peso': 75.0, 'altura': 175, 'nivel_actividad': 'Moderado (Ejercicio moderado 3-5 días/semana)', 'objetivo': 'Pérdida de grasa'}
+2026-05-24 19:33:02,701 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:33:02,712 [INFO] NutriAgent: [VALOR DE RETORNO] calcular_macros_tool: {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}
+2026-05-24 19:33:02,728 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:33:02,735 [INFO] NutriAgent: [INVOCANDO HERRAMIENTA] `generar_dieta_tool` con parámetros: {'calorias': 2148.6, 'macros': {'proteinas': 165.0, 'grasas': 75.0, 'carbohidratos': 203.4}, 'alimentos_incluidos': 'Pollo, arroz, avena, huevos, aguacate', 'alimentos_excluidos': 'Pescado, cacahuetes', 'tipo_plan': 'Plan Semanal (7 días)'}
+2026-05-24 19:33:03,561 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-24 19:33:03,563 [INFO] NutriAgent: [VALOR DE RETORNO] generar_dieta_tool completada.
+2026-05-24 19:33:03,568 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-24 19:35:00,836 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:35:00,850 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-24 19:35:00,854 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:35:00,909 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:35:00,911 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:35:00,915 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:35:02,019 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-24 19:35:02,020 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-24 19:35:11,200 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-24 19:35:11,215 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-24 19:35:11,216 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pollo, arroz, avena, huevos, aguacate
+- Alimentos Excluidos: Pescado, cacahuetes
+2026-05-24 19:35:11,268 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-24 19:35:11,271 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-24 19:35:11,274 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
+2026-05-24 19:35:12,342 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-24 19:35:12,344 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
