@@ -1473,93 +1473,39 @@ Hola, soy un usuario con el siguiente perfil:
 2026-05-25 19:27:56,591 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
 2026-05-25 19:27:57,704 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
 2026-05-25 19:27:57,706 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
-2026-05-25 19:37:57,822 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
-2026-05-25 19:37:57,837 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
-2026-05-25 19:37:57,837 [INFO] NutriAgent: Datos recibidos del usuario:
+2026-05-25 19:43:03,731 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-25 19:43:03,740 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-25 19:43:03,741 [INFO] NutriAgent: Datos recibidos del usuario:
 Hola, soy un usuario con el siguiente perfil:
 - Edad: 28 años
-- Sexo: Masculino
+- Sexo: Femenino
 - Peso: 75.0 kg
 - Altura: 175 cm
 - Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
 - Objetivo: Pérdida de grasa
 - Horizonte: 12 semanas
-- Alimentos Preferidos: Pechuga de pollo, Arroz integral, Avena, Huevo de gallina, Aguacate
-- Alimentos Excluidos: Cacahuete sin cascara
-2026-05-25 19:37:57,889 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
-2026-05-25 19:37:57,894 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
-2026-05-25 19:37:57,896 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
-2026-05-25 19:37:58,264 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
-2026-05-25 19:37:58,266 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
-2026-05-25 19:38:24,698 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
-2026-05-25 19:38:24,710 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
-2026-05-25 19:38:24,710 [INFO] NutriAgent: Datos recibidos del usuario:
+- Alimentos Preferidos: Alcachofa, Bacalao fresco, Caballa
+- Alimentos Excluidos: Arroz, Pan blanco, Pechuga de pollo, Ternera magra, Vino blanco
+2026-05-25 19:43:03,793 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-25 19:43:03,796 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-25 19:43:03,799 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
+2026-05-25 19:43:05,005 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-25 19:43:05,016 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-25 19:43:16,485 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-25 19:43:16,492 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-25 19:43:16,492 [INFO] NutriAgent: Datos recibidos del usuario:
 Hola, soy un usuario con el siguiente perfil:
 - Edad: 28 años
-- Sexo: Masculino
+- Sexo: Femenino
 - Peso: 75.0 kg
 - Altura: 175 cm
 - Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
 - Objetivo: Pérdida de grasa
 - Horizonte: 12 semanas
-- Alimentos Preferidos: 
-- Alimentos Excluidos: Pollo entero, Arroz, Acelga, Avena
-2026-05-25 19:38:24,762 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
-2026-05-25 19:38:24,764 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
-2026-05-25 19:38:24,766 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
-2026-05-25 19:38:25,109 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
-2026-05-25 19:38:25,111 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
-2026-05-25 19:38:32,627 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
-2026-05-25 19:38:32,637 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
-2026-05-25 19:38:32,638 [INFO] NutriAgent: Datos recibidos del usuario:
-Hola, soy un usuario con el siguiente perfil:
-- Edad: 28 años
-- Sexo: Masculino
-- Peso: 75.0 kg
-- Altura: 175 cm
-- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
-- Objetivo: Pérdida de grasa
-- Horizonte: 12 semanas
-- Alimentos Preferidos: 
-- Alimentos Excluidos: Pollo entero, Arroz, Acelga, Avena
-2026-05-25 19:38:32,690 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
-2026-05-25 19:38:32,692 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
-2026-05-25 19:38:32,697 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
-2026-05-25 19:38:33,844 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
-2026-05-25 19:38:33,846 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
-2026-05-25 19:39:05,872 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
-2026-05-25 19:39:05,884 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
-2026-05-25 19:39:05,884 [INFO] NutriAgent: Datos recibidos del usuario:
-Hola, soy un usuario con el siguiente perfil:
-- Edad: 28 años
-- Sexo: Masculino
-- Peso: 75.0 kg
-- Altura: 175 cm
-- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
-- Objetivo: Pérdida de grasa
-- Horizonte: 12 semanas
-- Alimentos Preferidos: 
-- Alimentos Excluidos: Pollo entero, Pechuga de pollo, Avena
-2026-05-25 19:39:05,937 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
-2026-05-25 19:39:05,941 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
-2026-05-25 19:39:05,942 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
-2026-05-25 19:39:06,346 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
-2026-05-25 19:39:06,349 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
-2026-05-25 19:39:15,812 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
-2026-05-25 19:39:15,845 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
-2026-05-25 19:39:15,849 [INFO] NutriAgent: Datos recibidos del usuario:
-Hola, soy un usuario con el siguiente perfil:
-- Edad: 28 años
-- Sexo: Masculino
-- Peso: 75.0 kg
-- Altura: 175 cm
-- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
-- Objetivo: Pérdida de grasa
-- Horizonte: 12 semanas
-- Alimentos Preferidos: 
-- Alimentos Excluidos: Pollo entero, Pechuga de pollo, Avena
-2026-05-25 19:39:15,905 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
-2026-05-25 19:39:15,918 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
-2026-05-25 19:39:15,928 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
-2026-05-25 19:39:17,128 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
-2026-05-25 19:39:17,130 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+- Alimentos Preferidos: Alcachofa, Bacalao fresco, Caballa, Alga Wakame cruda
+- Alimentos Excluidos: Arroz, Pan blanco, Pechuga de pollo, Ternera magra, Vino blanco
+2026-05-25 19:43:16,543 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-25 19:43:16,551 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-25 19:43:16,553 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
+2026-05-25 19:43:17,781 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-25 19:43:17,784 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
