@@ -9,6 +9,7 @@ import json
 import logging
 import os
 import time
+import re
 from langchain_core.agents import AgentAction
 
 logger = logging.getLogger("NutriAgent.AgentExecutor")
@@ -31,6 +32,7 @@ class SequentialNutritionAgentExecutor:
         self.url = url
         self.model = model
         self.tools = tools
+        self.active_replacements = {}
         
         # Cargar base de datos de alimentos de la UCM si existe
         self.food_db = {}
@@ -48,6 +50,15 @@ class SequentialNutritionAgentExecutor:
     def get_food(self, name: str):
         """ Retorna los aportes nutricionales del alimento o un valor por defecto si no existe. """
         name_lower = name.lower().strip()
+        
+        # Resolver reemplazos de exclusiones de alimentos recursivamente
+        visited = set()
+        while name_lower in self.active_replacements:
+            if name_lower in visited:
+                break
+            visited.add(name_lower)
+            name_lower = self.active_replacements[name_lower].lower().strip()
+            
         if name_lower in self.food_db:
             return self.food_db[name_lower]
         elif name_lower == "whey":
@@ -243,17 +254,369 @@ class SequentialNutritionAgentExecutor:
         }
 
         # Filtrar qué días procesar según el tipo de plan
+        import random
         if tipo_plan == "Menú Diario (1 día)":
-            dias_a_procesar = ["Lunes"]
-            output_header = "### 📋 Menú Diario Detallado\n\n"
+            # Para no hacer siempre el mismo menú, seleccionamos un día aleatorio de la semana
+            dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+            dia_elegido = random.choice(dias)
+            dias_a_procesar = [dia_elegido]
+            output_header = f"### 📋 Menú Diario Detallado ({dia_elegido.upper()})\n\n"
         else:
             dias_a_procesar = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
             output_header = "### 📋 Plan Semanal Detallado (Lunes a Domingo)\n\n"
 
+        # Mapeo de nombres comunes en español para comprobación robusta
+        common_names = {
+            "avena": "avena",
+            "clara": "clara de huevo",
+            "huevo": "huevo de gallina entero",
+            "pechuga_pollo": "pechuga de pollo",
+            "arroz_integral": "arroz integral",
+            "aceite": "aceite de oliva",
+            "pan_integral": "pan integral",
+            "platano": "plátano",
+            "ternera_magra": "ternera magra",
+            "pasta_integral": "pasta integral",
+            "nuez": "nueces sin cáscara",
+            "patata_nueva": "patata nueva",
+            "whey": "proteína whey"
+        }
+
+        # 1. Parsear inclusiones y exclusiones del usuario
+        preferred_items = [x.strip() for x in re.split(r'[,;]', alimentos_preferidos) if x.strip()]
+        excluded_items = [x.strip() for x in re.split(r'[,;]', alimentos_excluidos) if x.strip()]
+
+        # Encontrar los nombres exactos en la base de datos para los alimentos preferidos y excluidos
+        preferred_matched = []
+        for item in preferred_items:
+            item_lower = item.lower().strip()
+            matched_name = None
+            if item_lower in self.food_db:
+                matched_name = self.food_db[item_lower]["name"]
+            else:
+                for db_key, db_item in self.food_db.items():
+                    if item_lower in db_key:
+                        matched_name = db_item["name"]
+                        break
+            if matched_name and matched_name not in preferred_matched:
+                preferred_matched.append(matched_name)
+
+        excluded_matched = []
+        for item in excluded_items:
+            item_lower = item.lower().strip()
+            matched_name = None
+            if item_lower in self.food_db:
+                matched_name = self.food_db[item_lower]["name"]
+            else:
+                for db_key, db_item in self.food_db.items():
+                    if item_lower in db_key:
+                        matched_name = db_item["name"]
+                        break
+            if matched_name and matched_name not in excluded_matched:
+                excluded_matched.append(matched_name)
+
+        # Helper para verificar si un alimento está excluido
+        def is_excluded(db_name: str) -> bool:
+            db_name_lower = db_name.lower().strip()
+            for excl in excluded_matched:
+                if excl.lower().strip() in db_name_lower:
+                    return True
+            # Comprobar también con el identificador del ingrediente si aplica
+            common = common_names.get(db_name, db_name_lower)
+            for excl in excluded_matched:
+                if excl.lower().strip() in common:
+                    return True
+            return False
+
+        # Helper para clasificar alimentos en las 4 categorías principales (usado en la tabla)
+        def classify_food(food_name: str) -> str:
+            food_name_lower = food_name.lower().strip()
+            food_item = self.food_db.get(food_name_lower)
+            if not food_item:
+                return "carbohidratos"
+            name_lower = food_item["name"].lower()
+            if any(x in name_lower for x in ["aceite", "mantequilla", "margarina", "nuez", "nueces", "almendra", "pistacho", "avellana", "cacahuete", "anacardo", "semilla", "aguacate"]):
+                return "grasas"
+            if any(x in name_lower for x in ["plátano", "platano", "manzana", "pera", "naranja", "fresa", "fruta", "uva", "piña", "kiwi", "limón", "limon", "mandarina", "melocotón", "melocoton", "cereza", "ciruela", "higo", "dátil", "datil", "mango"]):
+                return "frutas"
+            if any(x in name_lower for x in ["pollo", "pavo", "ternera", "cerdo", "vaca", "buey", "atún", "atun", "salmón", "salmon", "merluza", "bacalao", "pescado", "marisco", "pulpo", "calamar", "clara", "huevo", "queso", "yogur", "leche", "suero", "whey"]):
+                return "proteinas"
+            p = food_item.get("proteins", 0)
+            c = food_item.get("carbs", 0)
+            g = food_item.get("fats", 0)
+            if g > p and g > c:
+                return "grasas"
+            if p > c and p > g:
+                return "proteinas"
+            return "carbohidratos"
+
+        # Helper para clasificar alimentos en categorías culinarias detalladas (para evitar alcachofas de desayuno)
+        def classify_food_detailed(food_name: str) -> str:
+            food_name_lower = food_name.lower().strip()
+            food_item = self.food_db.get(food_name_lower)
+            if not food_item:
+                return "desconocido"
+            
+            name_lower = food_item["name"].lower()
+            
+            # 1. Frutas
+            if any(x in name_lower for x in ["plátano", "platano", "manzana", "pera", "naranja", "fresa", "fruta", "uva", "piña", "kiwi", "limón", "limon", "mandarina", "melocotón", "melocoton", "cereza", "ciruela", "higo", "dátil", "datil", "mango", "arándano", "arandano", "melón", "melon", "sandía", "sandia", "albaricoque", "pomelo"]):
+                return "frutas"
+                
+            # 2. Cereales de desayuno / Avena
+            if any(x in name_lower for x in ["avena", "gofio", "muesli", "cereal de desayuno", "salvado de avena"]):
+                return "cereales_desayuno"
+                
+            # 3. Panes
+            if any(x in name_lower for x in ["pan integral", "pan de avena", "pan de centeno", "pan de trigo", "tostas", "biscote"]):
+                return "panes"
+                
+            # 4. Grasas saludables (frutos secos, semillas, aguacate)
+            if any(x in name_lower for x in ["nuez", "nueces", "almendra", "pistacho", "avellana", "cacahuete", "anacardo", "semilla", "aguacate", "pipas"]):
+                return "frutos_secos"
+                
+            # 5. Grasas aderezo (aceites)
+            if any(x in name_lower for x in ["aceite", "mantequilla", "margarina"]):
+                return "grasas_aderezo"
+                
+            # 6. Proteínas suplemento / desayuno
+            if any(x in name_lower for x in ["suero", "whey", "proteína de suero", "clara de huevo", "clara", "requesón", "requeson", "queso fresco batido", "yogur griego"]):
+                return "proteinas_desayuno"
+                
+            # 7. Proteínas comida principal
+            if any(x in name_lower for x in ["pollo", "pavo", "ternera", "cerdo", "vaca", "buey", "atún", "atun", "salmón", "salmon", "merluza", "bacalao", "pescado", "marisco", "pulpo", "calamar", "huevo", "queso", "jamón", "jamon", "lomo", "emperador", "trucha"]):
+                return "proteinas_comida"
+                
+            # 8. Carbohidratos salados / legumbres / verduras
+            if any(x in name_lower for x in ["arroz", "pasta", "patata", "boniato", "batata", "lenteja", "garbanzo", "alubia", "judía", "judia", "alcachofa", "esparrago", "verdura", "brócoli", "brocoli", "coliflor", "espinaca", "acelga", "calabacín", "calabacin", "zanahoria", "guisante", "maíz", "maiz", "quinoa", "cuscús", "cuscus"]):
+                return "carbos_salados"
+                
+            p = food_item.get("proteins", 0)
+            c = food_item.get("carbs", 0)
+            g = food_item.get("fats", 0)
+            
+            if g > p and g > c:
+                return "frutos_secos"
+            if p > c and p > g:
+                return "proteinas_comida"
+            return "carbos_salados"
+
+        # Clasificar los alimentos preferidos no excluidos por categoría detallada
+        pref_by_detailed_cat = {
+            "cereales_desayuno": [],
+            "frutas": [],
+            "panes": [],
+            "frutos_secos": [],
+            "grasas_aderezo": [],
+            "proteinas_desayuno": [],
+            "proteinas_comida": [],
+            "carbos_salados": []
+        }
+        for item in preferred_matched:
+            if not is_excluded(item):
+                cat = classify_food_detailed(item)
+                if cat in pref_by_detailed_cat:
+                    pref_by_detailed_cat[cat].append(item)
+
+        # Nombre oficial de base de datos por defecto para cada identificador base
+        default_db_names = {
+            "avena": "Avena",
+            "clara": "Clara de huevo",
+            "huevo": "Huevo de gallina",
+            "pechuga_pollo": "Pechuga de pollo",
+            "arroz_integral": "Arroz integral",
+            "aceite": "Aceite de oliva",
+            "pan_integral": "Pan integral",
+            "platano": "Plátano",
+            "ternera_magra": "Ternera magra",
+            "pasta_integral": "Pasta integral",
+            "nuez": "Nuez sin cascara",
+            "patata_nueva": "Patata nueva",
+            "whey": "whey"
+        }
+
+        # Mapear cada base_id a su categoría detallada
+        slot_categories = {
+            "avena": "cereales_desayuno",
+            "platano": "frutas",
+            "pan_integral": "panes",
+            "nuez": "frutos_secos",
+            "aceite": "grasas_aderezo",
+            "clara": "proteinas_desayuno",
+            "whey": "proteinas_desayuno",
+            "pechuga_pollo": "proteinas_comida",
+            "ternera_magra": "proteinas_comida",
+            "arroz_integral": "carbos_salados",
+            "pasta_integral": "carbos_salados",
+            "patata_nueva": "carbos_salados"
+        }
+
+        # Agrupaciones por defecto de los identificadores para fallbacks cuando no hay preferidos
+        default_alternatives = {
+            "cereales_desayuno": ["avena"],
+            "frutas": ["platano"],
+            "panes": ["pan_integral"],
+            "frutos_secos": ["nuez"],
+            "grasas_aderezo": ["aceite"],
+            "proteinas_desayuno": ["clara", "whey"],
+            "proteinas_comida": ["pechuga_pollo", "ternera_magra"],
+            "carbos_salados": ["arroz_integral", "pasta_integral", "patata_nueva"]
+        }
+
+        self.active_replacements = {}
+        category_indices = {cat: 0 for cat in pref_by_detailed_cat.keys()}
+
+        # 2. Asignar reemplazos para cada categoría detallada de manera inteligente
+        for base_id, cat in slot_categories.items():
+            prefs = pref_by_detailed_cat[cat]
+            if prefs:
+                idx = category_indices[cat]
+                repl = prefs[idx % len(prefs)]
+                category_indices[cat] += 1
+                # Solo lo agregamos si difiere del valor por defecto, o si el por defecto está excluido
+                if repl.lower().strip() != default_db_names[base_id].lower().strip() or is_excluded(default_db_names[base_id]):
+                    self.active_replacements[base_id] = repl
+            else:
+                # Si no hay preferidos en esta categoría detailed, gestionamos únicamente las exclusiones
+                if is_excluded(default_db_names[base_id]):
+                    # Buscar un ingrediente alternativo de la misma categoría que no esté excluido
+                    repl = base_id
+                    for alt in default_alternatives[cat]:
+                        if not is_excluded(default_db_names[alt]):
+                            repl = default_db_names[alt]
+                            break
+                    if repl != base_id:
+                        self.active_replacements[base_id] = repl
+
+        # Manejo especial para Huevo Mixto si está excluido
+        if is_excluded("Huevo de gallina"):
+            if not is_excluded("Clara de huevo"):
+                self.active_replacements["huevo"] = "Clara de huevo"
+            else:
+                if pref_by_detailed_cat["proteinas_comida"]:
+                    self.active_replacements["huevo"] = pref_by_detailed_cat["proteinas_comida"][0]
+                else:
+                    for alt in default_alternatives["proteinas_comida"]:
+                        if not is_excluded(default_db_names[alt]):
+                            self.active_replacements["huevo"] = default_db_names[alt]
+                            break
+
+        friendly_names = {
+            "avena": "Avena cocida",
+            "clara": "Clara de Huevo",
+            "huevo": "Huevo entero",
+            "pechuga_pollo": "Pechuga de Pollo a la plancha",
+            "arroz_integral": "Arroz Integral cocido",
+            "aceite": "Aceite de Oliva en crudo",
+            "pan_integral": "Pan Integral",
+            "platano": "Plátano",
+            "ternera_magra": "Ternera Magra a la plancha",
+            "pasta_integral": "Pasta Integral cocida",
+            "nuez": "Nueces sin Cáscara",
+            "patata_nueva": "Patata Nueva cocida",
+            "whey": "Proteína de Suero (Whey)"
+        }
+
+        text_replacements = {
+            "avena": {
+                "patterns": ["Avena batida", "Avena cocida", "Avena"]
+            },
+            "clara": {
+                "patterns": ["Clara de Huevo cocidas a fuego lento", "Clara de Huevo en tortilla", "Clara de Huevo a la sartén", "Clara de Huevo revueltas", "Clara de Huevo cocidas con canela", "Clara de Huevo cocidas en agua", "Clara de Huevo"]
+            },
+            "huevo": {
+                "patterns": [
+                    "Huevo de Gallina entero (2 huevos medianos)",
+                    "Huevo de Gallina entero (2 huevos cocidos)",
+                    "Huevo de Gallina entero (2 huevos)",
+                    "Huevo de Gallina entero (2 huevos poché)",
+                    "Huevo de Gallina entero (2 huevos fritos con poco aceite)",
+                    "Huevo de Gallina entero (2 huevos duros)",
+                    "Huevo de Gallina entero (2 huevos pasados por agua)",
+                    "Huevo de Gallina entero"
+                ]
+            },
+            "pechuga_pollo": {
+                "patterns": ["Pechuga de Pollo a la plancha con finas hierbas", "Pechuga de Pollo deshebrada", "Pechuga de Pollo troceada y salteada", "Pechuga de Pollo a la plancha con verduras al vapor", "Pechuga de Pollo a la plancha", "Pechuga de Pollo"]
+            },
+            "arroz_integral": {
+                "patterns": ["Arroz Integral cocido (pesado en seco)", "Arroz Integral cocido", "Arroz Integral"]
+            },
+            "aceite": {
+                "patterns": ["Aceite de Oliva en crudo para aderezar", "Aceite de Oliva para cocinar", "Aceite de Oliva para la sartén", "Aceite de Oliva en crudo", "Aceite de Oliva"]
+            },
+            "pan_integral": {
+                "patterns": ["Pan Integral", "Pan integral"]
+            },
+            "platano": {
+                "patterns": ["Plátano en rodajas por encima", "Plátano maduro", "Plátano"]
+            },
+            "ternera_magra": {
+                "patterns": ["Ternera Magra picada y hecha a la plancha", "Ternera Magra con ensalada verde libre de aderezo", "Ternera Magra al horno con especificaciones", "Ternera Magra a la plancha", "Ternera Magra a la parrilla", "Ternera Magra salteada con calabacín libre", "Ternera Magra"]
+            },
+            "pasta_integral": {
+                "patterns": ["Pasta Integral (en seco) salteada", "Pasta Integral en seco", "Pasta Integral"]
+            },
+            "nuez": {
+                "patterns": ["Nueces sin Cáscara", "Nueces"]
+            },
+            "patata_nueva": {
+                "patterns": ["Patata Nueva cocida o al vapor con su piel", "Patata Nueva asada al horno", "Patata Nueva"]
+            },
+            "whey": {
+                "patterns": ["Proteína de Suero (Whey) disuelta en agua", "Proteína de Suero (Whey)", "Proteína Whey"]
+            }
+        }
+
+        # Generar menús activos con sustituciones de texto aplicadas
+        import copy
+        active_menus = copy.deepcopy(base_menus)
+        for day, menu in active_menus.items():
+            for ing, repl in self.active_replacements.items():
+                friendly_repl = friendly_names.get(repl, repl.replace("_", " "))
+                for meal_name, template in list(menu["meals"].items()):
+                    # Conservar marcadores de posición usando tokens temporales
+                    placeholders = re.findall(r"\{[a-zA-Z0-9_]+\}", template)
+                    temp_template = template
+                    for idx, ph in enumerate(placeholders):
+                        temp_template = temp_template.replace(ph, f"__PH_{idx}__")
+                    
+                    new_template = temp_template
+                    patterns = text_replacements.get(ing, {}).get("patterns", [ing])
+                    for pattern in patterns:
+                        new_template = new_template.replace(pattern, friendly_repl)
+                        new_template = new_template.replace(pattern.lower(), friendly_repl.lower())
+                        new_template = new_template.replace(pattern.capitalize(), friendly_repl.capitalize())
+                    if ing == "huevo":
+                        new_template = new_template.replace("Tortilla: ", "Plato: ").replace("Revuelto: ", "Plato: ")
+                    if ing == "pan_integral":
+                        new_template = new_template.replace("Sándwich: ", "Tostas: ")
+                    
+                    # Restaurar marcadores de posición originales
+                    for idx, ph in enumerate(placeholders):
+                        new_template = new_template.replace(f"__PH_{idx}__", ph)
+                    menu["meals"][meal_name] = new_template
+
+                title = menu["title"]
+                placeholders_title = re.findall(r"\{[a-zA-Z0-9_]+\}", title)
+                temp_title = title
+                for idx, ph in enumerate(placeholders_title):
+                    temp_title = temp_title.replace(ph, f"__PH_{idx}__")
+                
+                patterns = text_replacements.get(ing, {}).get("patterns", [ing])
+                for pattern in patterns:
+                    temp_title = temp_title.replace(pattern, friendly_repl)
+                    temp_title = temp_title.replace(pattern.lower(), friendly_repl.lower())
+                    temp_title = temp_title.replace(pattern.capitalize(), friendly_repl.capitalize())
+                
+                for idx, ph in enumerate(placeholders_title):
+                    temp_title = temp_title.replace(f"__PH_{idx}__", ph)
+                menu["title"] = temp_title
+
         # Construir estructura de menú para renderizado de alta fidelidad
         menu_structure = {}
         for day in dias_a_procesar:
-            menu_data = base_menus[day]
+            menu_data = active_menus[day]
             portions = menu_data["portions"]
             
             scaled = {}
@@ -322,7 +685,7 @@ class SequentialNutritionAgentExecutor:
         diet_plan_text = output_header
 
         for day in dias_a_procesar:
-            menu_data = base_menus[day]
+            menu_data = active_menus[day]
             portions = menu_data["portions"]
             
             # Escalar porciones individualmente según macro predominante
@@ -395,17 +758,87 @@ class SequentialNutritionAgentExecutor:
             )
             diet_plan_text += day_text
 
-        # Añadir la sección de Justificación obligatoria solicitada
+        # Añadir la sección de Justificación obligatoria en formato tabla (UCM)
+        def get_food_justification(food_item: dict) -> tuple:
+            name = food_item["name"]
+            cat = classify_food(name)
+            
+            # Valores por defecto para mantener consistencia académica
+            original_justifications = {
+                "avena": ("*Densidad de Fibra*", "Mantiene la saciedad y energía estable."),
+                "pechuga de pollo": ("*Proteína Magra*", "Ideal para requerimiento proteico sin exceder calorías."),
+                "clara de huevo": ("*Albúmina Pura*", "Eleva la proteína libre de grasas."),
+                "huevo de gallina": ("*Valor Biológico*", "Esencial para el perfil lipídico e inmunológico."),
+                "aceite de oliva": ("*Ácidos Grasos Saludables*", "Crucial para regular el entorno hormonal durante la pérdida de grasa."),
+                "pan integral": ("*Carbohidrato Complejo*", "Carbohidrato de absorción lenta que mejora la sensibilidad a la insulina."),
+                "ternera magra": ("*Proteína de Reemplazo*", "Excelente alternativa rica en hierro y zinc (en lugar de pollo)."),
+                "nuez sin cascara": ("*Grasas de Reemplazo*", "Excelente fuente de Omega-3 vegetal (en lugar de aceite)."),
+                "patata nueva": ("*Carbohidrato de Fácil Digestión*", "Excelente fuente de energía post-entrenamiento."),
+                "pasta integral": ("*Carbohidrato de Rendimiento*", "Energía sostenida y recarga de glucógeno muscular."),
+                "plátano": ("*Fructosa y Potasio*", "Aporte rápido de glucógeno y prevención de calambres.")
+            }
+            
+            name_lower = name.lower()
+            for key, val in original_justifications.items():
+                if key in name_lower or name_lower in key:
+                    return val
+            
+            p = food_item.get("proteins", 0)
+            c = food_item.get("carbs", 0)
+            g = food_item.get("fats", 0)
+            f = food_item.get("fiber", 0)
+            
+            if cat == "proteinas":
+                return (f"*Fuente de Proteína ({p}g)*", f"Aporte de aminoácidos esenciales para la síntesis de tejido muscular ({name}).")
+            elif cat == "grasas":
+                return (f"*Aporte de Lípidos ({g}g)*", f"Ácidos grasos esenciales para la síntesis hormonal y absorción de vitaminas ({name}).")
+            elif cat == "frutas":
+                return (f"*Vitaminas y Fibra*", f"Aporte de micronutrientes, hidratación y carbohidratos de asimilación natural ({name}).")
+            else:
+                if f > 3:
+                    return (f"*Carbohidrato Alto en Fibra ({f}g)*", f"Energía sostenida, control glucémico y mejora del tránsito digestivo ({name}).")
+                return (f"*Fuente de Energía Líquida/Compleja*", f"Aporte energético principal para el mantenimiento del glucógeno ({name}).")
+
         justificacion = (
             f"### 📚 Justificación de la Elección de Alimentos (UCM)\n\n"
             f"Las elecciones de alimentos del plan se basan rigurosamente en la densidad y calidad de los macronutrientes oficiales de la guía de la Universidad Complutense de Madrid:\n\n"
-            f"1. **Avena (cód. 010105) - *Densidad de Fibra*:** Aporta {self.get_food('avena')['kcal']} kcal, {self.get_food('avena')['proteins']}g P y {self.get_food('avena')['fiber']}g de fibra por 100g. Mantiene la saciedad y energía estable.\n"
-            f"2. **Pechuga de Pollo (cód. 060414) - *Proteína Magra*:** Aporta {self.get_food('pechuga_pollo')['kcal']} kcal y {self.get_food('pechuga_pollo')['proteins']}g P por 100g, ideal para el requerimiento proteico sin exceder calorías.\n"
-            f"3. **Clara de Huevo (cód. 080101) - *Albúmina Pura*:** Con sólo {self.get_food('clara')['kcal']} kcal y {self.get_food('clara')['proteins']}g P por 100g, eleva la proteína libre de grasas.\n"
-            f"4. **Huevo de Gallina entero (cód. 080103) - *Valor Biológico*:** Aporta {self.get_food('huevo')['kcal']} kcal y {self.get_food('huevo')['fats']}g de grasas por 100g, esencial para el perfil lipídico e inmunológico.\n"
-            f"5. **Aceite de Oliva (cód. 100110) - *Ácidos Grasos Saludables*:** Proporciona {self.get_food('aceite')['fats']}g de grasas monoinsaturadas por 100g, crucial para regular el entorno hormonal durante la pérdida de grasa.\n"
-            f"6. **Pan Integral (cód. 010320) - *Carbohidrato Complejo*:** Aporta {self.get_food('pan_integral')['carbs']}g de carbohidratos de absorción lenta y {self.get_food('pan_integral')['fiber']}g de fibra, mejorando la sensibilidad a la insulina.\n"
+            f"| Alimento | Código UCM | Parámetro Destacado | Aporte por 100g | Función en el Plan |\n"
+            f"| :--- | :--- | :--- | :--- | :--- |\n"
         )
+        
+        # Recopilar alimentos activos de forma ordenada y sin duplicados
+        active_foods = {}
+        for day in dias_a_procesar:
+            menu_data = active_menus[day]
+            portions = menu_data["portions"]
+            for ing, base_g in portions.items():
+                if base_g > 0:
+                    db_item = self.get_food(ing)
+                    if db_item and "name" in db_item:
+                        active_foods[db_item["name"].lower().strip()] = db_item
+                        
+        for db_name, item in sorted(active_foods.items()):
+            param, funcion = get_food_justification(item)
+            code = item.get("code", "N/A")
+            kcal = item.get("kcal", 0)
+            p = item.get("proteins", 0)
+            c = item.get("carbs", 0)
+            g = item.get("fats", 0)
+            f = item.get("fiber", 0)
+            
+            cat = classify_food(item["name"])
+            if cat == "proteinas":
+                aportes = f"{kcal} kcal, {p}g P"
+            elif cat == "carbohidratos":
+                aportes = f"{kcal} kcal, {c}g C, {f}g F"
+            elif cat == "grasas":
+                aportes = f"{kcal} kcal, {g}g G"
+            else:
+                aportes = f"{kcal} kcal, {c}g C"
+                
+            justificacion += f"| **{item['name']}** | `{code}` | {param} | {aportes} | {funcion} |\n"
+            
+        justificacion += "\n"
         diet_plan_text += justificacion
 
         # Simular streaming para mantener el renderizado progresivo token por token en Streamlit

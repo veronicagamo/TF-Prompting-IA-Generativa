@@ -435,16 +435,41 @@ with st.form("nutrition_form"):
         
     with col3:
         horizonte_semanas = st.slider("Horizonte temporal (semanas)", min_value=4, max_value=24, value=12, step=1)
-        alimentos_preferidos = st.text_input(
-            "Alimentos preferidos / a incluir", 
-            value="Pollo, arroz, avena, huevos, aguacate",
-            placeholder="Ej: pollo, arroz, avena, plátanos..."
+        # Cargar base de datos de la UCM para obtener todos los nombres de alimentos
+        ucm_foods = []
+        db_path = "/home/veronica/Descargas/Propmting/Trabajo Final/ucm_food_database.json"
+        if os.path.exists(db_path):
+            try:
+                with open(db_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                    ucm_foods = sorted(list(set(item["name"].strip() for item in data)))
+            except Exception as e:
+                logger.error(f"Error al cargar alimentos UCM en app.py: {e}")
+
+        # Establecer alimentos predeterminados en caso de que existan en la base de datos
+        default_preferidos = [
+            f for f in ["Pechuga de pollo", "Arroz integral", "Avena", "Huevo de gallina", "Aguacate"] 
+            if f in ucm_foods
+        ]
+        default_excluidos = [
+            f for f in ["Cacahuete sin cascara"] 
+            if f in ucm_foods
+        ]
+
+        alimentos_preferidos_list = st.multiselect(
+            "Alimentos preferidos / a incluir (UCM)",
+            options=ucm_foods,
+            default=default_preferidos,
+            help="Selecciona los alimentos que deseas priorizar en tu plan alimentario."
         )
-        alimentos_excluidos = st.text_input(
-            "Alimentos a evitar / excluir", 
-            value="Pescado, cacahuetes",
-            placeholder="Ej: pescado, lácteos, gluten, lentejas..."
+        alimentos_excluidos_list = st.multiselect(
+            "Alimentos a evitar / excluir (UCM)",
+            options=ucm_foods,
+            default=default_excluidos,
+            help="Selecciona los alimentos que deseas excluir del menú generado."
         )
+        alimentos_preferidos = ", ".join(alimentos_preferidos_list)
+        alimentos_excluidos = ", ".join(alimentos_excluidos_list)
         tipo_plan = st.selectbox(
             "Duración del Plan",
             ["Menú Diario (1 día)", "Plan Semanal (7 días)"],
