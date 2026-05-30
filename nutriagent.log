@@ -1509,3 +1509,361 @@ Hola, soy un usuario con el siguiente perfil:
 2026-05-25 19:43:16,553 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Plan Semanal (7 días) adaptada a requerimientos y preferencias alimentarias...
 2026-05-25 19:43:17,781 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
 2026-05-25 19:43:17,784 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-30 10:14:51,048 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-30 10:14:51,051 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-30 10:14:51,051 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pechuga de pollo, Arroz integral, Avena, Huevo de gallina, Aguacate
+- Alimentos Excluidos: Cacahuete sin cascara
+2026-05-30 10:14:51,102 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-30 10:14:51,115 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-30 10:14:51,122 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-30 10:14:51,289 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-30 10:14:51,292 [ERROR] NutriAgent.AgentExecutor: No se pudo construir menu_data desde LLM JSON: El LLM no devolvio dias validos
+2026-05-30 10:14:51,416 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-30 10:16:57,147 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-30 10:16:57,149 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-30 10:16:57,150 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pechuga de pollo, Arroz integral, Avena, Huevo de gallina, Aguacate
+- Alimentos Excluidos: Cacahuete sin cascara
+2026-05-30 10:16:57,206 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-30 10:16:57,210 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-30 10:16:57,217 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-30 10:16:57,301 [WARNING] NutriAgent.AgentExecutor: JSON LLM invalido en intento 1/3: faltan dias o estructura de meals.
+2026-05-30 10:16:57,332 [WARNING] NutriAgent.AgentExecutor: JSON LLM invalido en intento 2/3: faltan dias o estructura de meals.
+2026-05-30 10:16:57,365 [WARNING] NutriAgent.AgentExecutor: JSON LLM invalido en intento 3/3: faltan dias o estructura de meals.
+2026-05-30 10:16:57,365 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-30 10:16:57,366 [ERROR] NutriAgent.AgentExecutor: No se pudo construir menu_data desde LLM JSON: El LLM no devolvio dias validos
+2026-05-30 10:16:57,483 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-30 10:18:29,986 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-30 10:18:29,989 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-30 10:18:29,989 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pechuga de pollo, Arroz integral, Avena, Huevo de gallina, Aguacate
+- Alimentos Excluidos: Cacahuete sin cascara
+2026-05-30 10:18:30,045 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-30 10:18:30,047 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-30 10:18:30,051 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-30 10:18:30,109 [WARNING] NutriAgent.AgentExecutor: JSON LLM invalido en intento 1/3: faltan dias o estructura de meals.
+2026-05-30 10:18:30,146 [WARNING] NutriAgent.AgentExecutor: JSON LLM invalido en intento 2/3: faltan dias o estructura de meals.
+2026-05-30 10:18:30,179 [WARNING] NutriAgent.AgentExecutor: JSON LLM invalido en intento 3/3: faltan dias o estructura de meals.
+2026-05-30 10:18:30,180 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-30 10:18:30,181 [ERROR] NutriAgent.AgentExecutor: No se pudo construir menu_data desde LLM JSON: Payload LLM no cumple schema Pydantic: 3 validation errors for LLMMenuPayload
+plan_type
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+days
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+justification
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-05-30 10:18:30,298 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-30 10:18:57,821 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-30 10:18:57,824 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-30 10:18:57,824 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pechuga de pollo, Arroz integral, Avena, Huevo de gallina, Aguacate
+- Alimentos Excluidos: Cacahuete sin cascara
+2026-05-30 10:18:57,879 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-30 10:18:57,880 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-30 10:18:57,886 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-30 10:18:57,958 [WARNING] NutriAgent.AgentExecutor: JSON LLM invalido en intento 1/3: Schema Pydantic inválido: 3 validation errors for LLMMenuPayload
+plan_type
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+days
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+justification
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-05-30 10:18:57,988 [WARNING] NutriAgent.AgentExecutor: JSON LLM invalido en intento 2/3: Schema Pydantic inválido: 3 validation errors for LLMMenuPayload
+plan_type
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+days
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+justification
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-05-30 10:18:58,020 [WARNING] NutriAgent.AgentExecutor: JSON LLM invalido en intento 3/3: Schema Pydantic inválido: 3 validation errors for LLMMenuPayload
+plan_type
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+days
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+justification
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-05-30 10:18:58,020 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-30 10:18:58,021 [ERROR] NutriAgent.AgentExecutor: No se pudo construir menu_data desde LLM JSON: Payload LLM no cumple schema Pydantic: 3 validation errors for LLMMenuPayload
+plan_type
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+days
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+justification
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-05-30 10:18:58,139 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-30 10:19:34,383 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-30 10:19:34,385 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-30 10:19:34,386 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pechuga de pollo, Arroz integral, Avena, Huevo de gallina, Aguacate
+- Alimentos Excluidos: Cacahuete sin cascara
+2026-05-30 10:19:34,441 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-30 10:19:34,474 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-30 10:19:34,486 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-30 10:19:34,559 [WARNING] NutriAgent.AgentExecutor: JSON LLM invalido en intento 1/3: Schema Pydantic inválido: 3 validation errors for LLMMenuPayload
+plan_type
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+days
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+justification
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-05-30 10:19:34,593 [WARNING] NutriAgent.AgentExecutor: JSON LLM invalido en intento 2/3: Schema Pydantic inválido: 3 validation errors for LLMMenuPayload
+plan_type
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+days
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+justification
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-05-30 10:19:34,624 [WARNING] NutriAgent.AgentExecutor: JSON LLM invalido en intento 3/3: Schema Pydantic inválido: 3 validation errors for LLMMenuPayload
+plan_type
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+days
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+justification
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-05-30 10:19:34,624 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-30 10:19:34,625 [ERROR] NutriAgent.AgentExecutor: No se pudo construir menu_data desde LLM JSON: Payload LLM no cumple schema Pydantic: 3 validation errors for LLMMenuPayload
+plan_type
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+days
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+justification
+  Field required [type=missing, input_value={'error': "Error al gener...und (status code: 404)"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-05-30 10:19:34,740 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-30 10:20:54,228 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-30 10:20:54,233 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-30 10:20:54,233 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pechuga de pollo, Arroz integral, Avena, Huevo de gallina, Aguacate
+- Alimentos Excluidos: Cacahuete sin cascara
+2026-05-30 10:20:54,289 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-30 10:20:54,291 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-30 10:20:54,298 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-30 10:25:20,765 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-30 10:25:20,772 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-30 10:25:20,773 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pechuga de pollo, Arroz integral, Avena, Huevo de gallina, Aguacate
+- Alimentos Excluidos: Cacahuete sin cascara
+2026-05-30 10:25:20,827 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-30 10:25:20,865 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-30 10:25:20,879 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-30 10:30:53,783 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-30 10:30:53,786 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-30 10:30:53,786 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pechuga de pollo, Arroz integral, Avena, Huevo de gallina, Aguacate
+- Alimentos Excluidos: Cacahuete sin cascara
+2026-05-30 10:30:53,839 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-30 10:30:53,849 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-30 10:30:53,875 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-30 10:31:45,709 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-30 10:31:45,713 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-30 10:31:45,714 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pechuga de pollo, Arroz integral, Avena, Huevo de gallina, Aguacate
+- Alimentos Excluidos: Cacahuete sin cascara
+2026-05-30 10:31:45,778 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-30 10:31:45,791 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-30 10:31:45,824 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-30 10:33:14,956 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-30 10:33:14,961 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-30 10:33:14,961 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pechuga de pollo, Arroz integral, Avena, Huevo de gallina, Aguacate
+- Alimentos Excluidos: Cacahuete sin cascara
+2026-05-30 10:33:15,018 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-30 10:33:15,033 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-30 10:33:15,069 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-30 10:35:45,582 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-30 10:35:45,587 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-30 10:35:45,587 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pechuga de pollo, Arroz integral, Avena, Huevo de gallina, Aguacate
+- Alimentos Excluidos: Cacahuete sin cascara
+2026-05-30 10:35:45,642 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-30 10:35:45,652 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-30 10:35:45,665 [INFO] NutriAgent.AgentExecutor: Catálogo compacto para LLM: 5 alimentos.
+2026-05-30 10:35:45,667 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-30 10:37:18,232 [ERROR] NutriAgent.AgentExecutor: Error invocando LLM: Error al generar la dieta con el modelo 'qwen2.5:3b': Server disconnected without sending a response.
+2026-05-30 10:37:18,232 [ERROR] NutriAgent.AgentExecutor: Error invocando LLM: Error al generar la dieta con el modelo 'qwen2.5:3b': Server disconnected without sending a response.
+2026-05-30 10:37:18,233 [ERROR] NutriAgent.AgentExecutor: Error invocando LLM: Error al generar la dieta con el modelo 'gpt-oss:20b': Server disconnected without sending a response.
+2026-05-30 10:37:18,234 [ERROR] NutriAgent.AgentExecutor: Error invocando LLM: Error al generar la dieta con el modelo 'llama3.1:latest': Server disconnected without sending a response.
+2026-05-30 10:37:18,234 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-30 10:37:18,234 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-30 10:37:18,234 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-30 10:37:18,234 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-30 10:37:18,252 [ERROR] NutriAgent.AgentExecutor: No se pudo construir menu_data desde LLM JSON: Payload LLM no cumple schema Pydantic: 3 validation errors for LLMMenuPayload
+plan_type
+  Field required [type=missing, input_value={'error': "Error al gener...ut sending a response."}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+days
+  Field required [type=missing, input_value={'error': "Error al gener...ut sending a response."}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+justification
+  Field required [type=missing, input_value={'error': "Error al gener...ut sending a response."}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-05-30 10:37:18,253 [ERROR] NutriAgent.AgentExecutor: Error invocando LLM: Error al generar la dieta con el modelo 'gpt-oss:20b': Server disconnected without sending a response.
+2026-05-30 10:37:18,260 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-30 10:37:18,260 [ERROR] NutriAgent.AgentExecutor: Error invocando LLM: Error al generar la dieta con el modelo 'gpt-oss:20b': peer closed connection without sending complete message body (incomplete chunked read)
+2026-05-30 10:37:18,273 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-30 10:37:18,370 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-30 10:37:38,751 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-30 10:37:38,753 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-30 10:37:38,753 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pechuga de pollo, Arroz integral, Avena, Huevo de gallina, Aguacate
+- Alimentos Excluidos: Cacahuete sin cascara
+2026-05-30 10:37:38,807 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-30 10:37:38,812 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-30 10:37:38,817 [INFO] NutriAgent.AgentExecutor: Catálogo compacto para LLM: 5 alimentos.
+2026-05-30 10:37:38,818 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-30 10:37:47,989 [WARNING] NutriAgent.AgentExecutor: JSON LLM invalido en intento 1/2: Schema Pydantic inválido: 1 validation error for LLMMenuPayload
+days.0.meals.Cena
+  List should have at least 1 item after validation, not 0 [type=too_short, input_value=[], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.12/v/too_short
+2026-05-30 10:37:55,444 [WARNING] NutriAgent.AgentExecutor: JSON LLM invalido en intento 2/2: Schema Pydantic inválido: 1 validation error for LLMMenuPayload
+days.0.meals.Cena
+  List should have at least 1 item after validation, not 0 [type=too_short, input_value=[], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.12/v/too_short
+2026-05-30 10:37:55,445 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-30 10:37:55,445 [ERROR] NutriAgent.AgentExecutor: No se pudo construir menu_data desde LLM JSON: Payload LLM no cumple schema Pydantic: 1 validation error for LLMMenuPayload
+days.0.meals.Cena
+  List should have at least 1 item after validation, not 0 [type=too_short, input_value=[], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.12/v/too_short
+2026-05-30 10:37:55,563 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.
+2026-05-30 10:38:40,467 [INFO] NutriAgent: Iniciando flujo de generación del Agente Nutricional...
+2026-05-30 10:38:40,470 [INFO] NutriAgent.AgentExecutor: Base de datos de alimentos UCM cargada con 954 alimentos para el escalador.
+2026-05-30 10:38:40,471 [INFO] NutriAgent: Datos recibidos del usuario:
+Hola, soy un usuario con el siguiente perfil:
+- Edad: 28 años
+- Sexo: Masculino
+- Peso: 75.0 kg
+- Altura: 175 cm
+- Nivel de Actividad: Moderado (Ejercicio moderado 3-5 días/semana)
+- Objetivo: Pérdida de grasa
+- Horizonte: 12 semanas
+- Alimentos Preferidos: Pechuga de pollo, Arroz integral, Avena, Huevo de gallina, Aguacate
+- Alimentos Excluidos: Cacahuete sin cascara
+2026-05-30 10:38:40,522 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Calculando requerimientos calóricos y macronutrientes basados en Mifflin-St Jeor...
+2026-05-30 10:38:40,524 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `calcular_macros_tool` ejecutada con éxito.
+2026-05-30 10:38:40,529 [INFO] NutriAgent.AgentExecutor: Catálogo compacto para LLM: 5 alimentos.
+2026-05-30 10:38:40,529 [INFO] NutriAgent: [PENSAMIENTO AGENTE] Generando propuesta de Menú Diario (1 día) adaptada a requerimientos y preferencias alimentarias...
+2026-05-30 10:38:48,380 [INFO] NutriAgent: [HERRAMIENTA COMPLETADA] `generar_dieta_tool` ejecutada con éxito.
+2026-05-30 10:38:48,519 [INFO] NutriAgent: Planificación y generación del informe final completada con éxito.

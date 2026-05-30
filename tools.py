@@ -124,49 +124,94 @@ def calcular_macros_tool(edad: int, sexo: str, peso: float, altura: float, nivel
 
 
 @tool
-def generar_dieta_tool(calorias: float, macros: dict, alimentos_incluidos: str, alimentos_excluidos: str) -> str:
+def generar_dieta_tool(
+    calorias: float,
+    macros: dict,
+    alimentos_incluidos: str,
+    alimentos_excluidos: str,
+    tipo_plan: str,
+    contexto_alimentos_json: str,
+    repair_instruction: str = ""
+) -> str:
     """
-    Usa el modelo de lenguaje (LLM) para generar una propuesta detallada de menú diario completo
-    (Desayuno, Almuerzo, Merienda y Cena) adaptada a los requerimientos energéticos y respetando
-    estrictamente los alimentos preferidos y excluidos.
+    Usa el modelo de lenguaje (LLM) para generar un menú en formato JSON estricto
+    (sin texto adicional) usando el contexto de alimentos de la base UCM.
     
     Parámetros:
     - calorias (float): Calorías diarias objetivo del plan.
     - macros (dict): Diccionario con los gramos de 'proteinas', 'grasas' y 'carbohidratos'.
     - alimentos_incluidos (str): Alimentos preferidos a incluir en las comidas.
     - alimentos_excluidos (str): Restricciones, alergias o alimentos a evitar obligatoriamente.
+    - tipo_plan (str): 'Menú Diario (1 día)' o 'Plan Semanal (7 días)'.
+    - contexto_alimentos_json (str): Catálogo de alimentos permitidos (subconjunto UCM) en JSON.
+    - repair_instruction (str): Instrucción extra para corregir formato tras un intento inválido.
     """
     url = st.session_state.get("ollama_url", "http://localhost:11434")
     model = st.session_state.get("model_name", "qwen2.5:3b")
     
-    # Instanciar ChatOllama con los parámetros actuales
+    expected_days = 7 if tipo_plan == "Plan Semanal (7 días)" else 1
+
+    # Instanciar ChatOllama con salida JSON forzada
     llm = ChatOllama(
         base_url=url,
         model=model,
-        temperature=0.2,
+        temperature=0.0,
+        format="json",
+        num_ctx=2048,
+        num_predict=320,
     )
     
     prompt = f"""
-    Eres un Nutricionista Deportivo de élite. Diseña un ejemplo de menú diario simplificado y estructurado que cumpla con:
-    - Calorías: {calorias} kcal
-    - Proteínas: {macros.get('proteinas', 0)}g
-    - Grasas: {macros.get('grasas', 0)}g
-    - Carbohidratos: {macros.get('carbohidratos', 0)}g
-    
-    Preferencias alimentarias:
-    - Incluir: {alimentos_incluidos if alimentos_incluidos else 'Ninguno en particular'}
-    - Excluir: {alimentos_excluidos if alimentos_excluidos else 'Ninguno'}
-    
-    REGLAS IMPORTANTES:
-    1. Sé extremadamente conciso y directo para ahorrar tiempo de procesamiento en CPU.
-    2. Divide en: Desayuno, Almuerzo, Merienda y Cena.
-    3. Detalla únicamente el nombre del plato, ingredientes con sus pesos (g), preparación básica (1 frase) y estimación de macros.
-    4. Al final, muestra una tabla simple comparando el Total consumido vs Objetivo.
-    5. Escribe todo en español. No agregues introducciones largas ni textos complementarios.
-    """
+Devuelve SOLO JSON válido. Crea un menú deportivo usando únicamente alimentos del catálogo.
+
+DATOS DEL USUARIO
+- kcal_objetivo: {calorias}
+- proteinas_objetivo_g: {macros.get('proteinas', 0)}
+- grasas_objetivo_g: {macros.get('grasas', 0)}
+- carbohidratos_objetivo_g: {macros.get('carbohidratos', 0)}
+- incluir: {alimentos_incluidos if alimentos_incluidos else 'Ninguno en particular'}
+- excluir: {alimentos_excluidos if alimentos_excluidos else 'Ninguno'}
+- tipo_plan: {tipo_plan}
+
+ALIMENTOS PERMITIDOS UCM (usa exactamente estos "name"):
+{contexto_alimentos_json}
+
+JSON obligatorio:
+{{
+  "plan_type": "{tipo_plan}",
+  "days": [
+    {{
+      "day": "Lunes",
+      "title": "Menú rápido",
+      "meals": {{
+        "Desayuno": [{{"food": "Avena", "grams": 80, "preparation": "cocida"}}],
+        "Almuerzo": [{{"food": "Pechuga de pollo", "grams": 180, "preparation": "a la plancha"}}],
+        "Merienda": [{{"food": "Aguacate", "grams": 80, "preparation": "en crudo"}}],
+        "Cena": [{{"food": "Huevo de gallina", "grams": 120, "preparation": "cocido"}}]
+      }}
+    }}
+  ],
+  "justification": "string breve"
+}}
+
+RESTRICCIONES
+1) "days" debe tener exactamente {expected_days} elementos.
+2) Si {expected_days} es 7, usa en orden: Lunes, Martes, Miércoles, Jueves, Viernes, Sábado, Domingo.
+3) Cada dia debe incluir SIEMPRE Desayuno, Almuerzo, Merienda y Cena.
+4) Cada comida debe tener 1 o 2 items. Nunca devuelvas listas vacías.
+5) "grams" debe ser entero positivo.
+6) Usa solo alimentos del catalogo UCM dado. No uses alimentos fuera de esa lista.
+7) No uses alimentos excluidos.
+8) Devuelve solo JSON valido y breve.
+
+INSTRUCCION DE REPARACION (si existe):
+{repair_instruction if repair_instruction else "Ninguna"}
+"""
     
     try:
         res = llm.invoke(prompt)
-        return res.content
+        return res.content if isinstance(res.content, str) else json.dumps(res.content, ensure_ascii=False)
     except Exception as e:
-        return f"Error al generar la dieta: {str(e)}"
+        return json.dumps({
+            "error": f"Error al generar la dieta con el modelo '{model}': {str(e)}"
+        }, ensure_ascii=False)

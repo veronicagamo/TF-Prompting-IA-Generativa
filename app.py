@@ -18,6 +18,7 @@ import requests
 import json
 import traceback
 import logging
+from pathlib import Path
 
 # Configurar logging principal a nivel WARNING para evitar spam de librerías
 logging.basicConfig(
@@ -301,6 +302,10 @@ if "diet_streamed" not in st.session_state:
     st.session_state["diet_streamed"] = ""
 if "macros_preview" not in st.session_state:
     st.session_state["macros_preview"] = None
+if "llm_menu_json" not in st.session_state:
+    st.session_state["llm_menu_json"] = None
+if "llm_raw_attempts" not in st.session_state:
+    st.session_state["llm_raw_attempts"] = []
 
 
 # ==========================================
@@ -319,13 +324,27 @@ def test_ollama_connection(url: str) -> bool:
         pass
     return False
 
+def get_ollama_models(url: str) -> list[str]:
+    """
+    Recupera los modelos instalados en Ollama para evitar seleccionar modelos inexistentes.
+    """
+    try:
+        response = requests.get(f"{url.rstrip('/')}/api/tags", timeout=2)
+        response.raise_for_status()
+        data = response.json()
+        models = [item.get("name") for item in data.get("models", []) if item.get("name")]
+        return sorted(models)
+    except Exception as e:
+        logger.warning(f"No se pudieron recuperar modelos de Ollama: {e}")
+        return []
+
 # ==========================================
 # INTERFAZ DE STREAMLIT (SIDEBAR)
 # ==========================================
 
 # Cargar base de datos de alimentos de la UCM si existe
 food_db = []
-db_path = "/home/veronica/Descargas/Propmting/Trabajo Final/ucm_food_database.json"
+db_path = str(Path(__file__).resolve().parent / "ucm_food_database.json")
 if os.path.exists(db_path):
     try:
         with open(db_path, "r", encoding="utf-8") as f:
@@ -342,22 +361,17 @@ ollama_url = st.sidebar.text_input(
 )
 st.session_state["ollama_url"] = ollama_url
 
-model_name = st.sidebar.selectbox(
-    "Modelo LLM",
-    options=["qwen2.5:3b", "qwen2.5:1.5b"],
-    index=0,
-    help="Selecciona el modelo de lenguaje instalado en tu servidor Ollama."
-)
-st.session_state["model_name"] = model_name
-
 # Comprobar estado de conexión
 is_ollama_connected = test_ollama_connection(ollama_url)
+model_name = "qwen2.5:3b"
+st.session_state["model_name"] = model_name
 
 if is_ollama_connected:
     st.sidebar.markdown(
         '**Estado del Servidor:** <span class="badge badge-online">ONLINE</span>', 
         unsafe_allow_html=True
     )
+    st.sidebar.caption(f"Modelo LLM fijado: `{model_name}`")
 else:
     st.sidebar.markdown(
         '**Estado del Servidor:** <span class="badge badge-offline">OFFLINE</span>', 
@@ -437,7 +451,7 @@ with st.form("nutrition_form"):
         horizonte_semanas = st.slider("Horizonte temporal (semanas)", min_value=4, max_value=24, value=12, step=1)
         # Cargar base de datos de la UCM para obtener todos los nombres de alimentos
         ucm_foods = []
-        db_path = "/home/veronica/Descargas/Propmting/Trabajo Final/ucm_food_database.json"
+        db_path = str(Path(__file__).resolve().parent / "ucm_food_database.json")
         if os.path.exists(db_path):
             try:
                 with open(db_path, "r", encoding="utf-8") as f:
@@ -489,6 +503,8 @@ if submit_button:
     st.session_state["menu_data"] = None
     st.session_state["diet_streamed"] = ""
     st.session_state["macros_preview"] = None
+    st.session_state["llm_menu_json"] = None
+    st.session_state["llm_raw_attempts"] = []
     
     if not is_ollama_connected:
         st.error(
@@ -786,6 +802,23 @@ if st.session_state.get("macros_preview") or st.session_state.get("menu_data") o
         just_idx = diet_streamed.find("### 📚 Justificación")
         if just_idx != -1:
             st.markdown(diet_streamed[just_idx:])
+        
+        llm_menu_json = st.session_state.get("llm_menu_json")
+        if llm_menu_json:
+            with st.expander("🧪 JSON crudo devuelto por el LLM", expanded=False):
+                st.json(llm_menu_json)
+        
+        llm_raw_attempts = st.session_state.get("llm_raw_attempts", [])
+        if llm_raw_attempts:
+            with st.expander("🔍 Respuesta cruda del LLM por intento", expanded=False):
+                for attempt_data in llm_raw_attempts:
+                    attempt_id = attempt_data.get("attempt", "?")
+                    valid = attempt_data.get("valid", False)
+                    reason = attempt_data.get("reason", "")
+                    st.markdown(f"**Intento {attempt_id}** - {'✅ Válido' if valid else '❌ Inválido'}")
+                    if reason:
+                        st.caption(reason)
+                    st.code(attempt_data.get("raw_response", ""), language="json")
             
     elif st.session_state.get("diet_streamed"):
         # Mostrar el texto intermedio mientras se genera
