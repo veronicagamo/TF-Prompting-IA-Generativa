@@ -18,6 +18,7 @@ import requests
 import json
 import traceback
 import logging
+from pathlib import Path
 
 # Configurar logging principal a nivel WARNING para evitar spam de librerías
 logging.basicConfig(
@@ -56,72 +57,90 @@ st.markdown("""
     html, body, [class*="css"] {
         font-family: 'Plus Jakarta Sans', sans-serif;
     }
+
+    .stApp {
+        background:
+            radial-gradient(circle at 8% 8%, rgba(255, 107, 107, 0.22) 0, transparent 30%),
+            radial-gradient(circle at 92% 12%, rgba(96, 165, 250, 0.24) 0, transparent 32%),
+            radial-gradient(circle at 50% 95%, rgba(74, 222, 128, 0.18) 0, transparent 34%),
+            linear-gradient(135deg, #FFF7ED 0%, #EFF6FF 42%, #F5F3FF 100%) !important;
+        color: #172033 !important;
+    }
+
+    .block-container {
+        padding-top: 2rem !important;
+        padding-bottom: 3rem !important;
+    }
+
+    div[data-testid="stVerticalBlock"] > div:has(.title-gradient) {
+        position: relative;
+    }
     
     /* Degradados en títulos */
     .title-gradient {
         font-family: 'Outfit', sans-serif;
         font-weight: 800;
-        background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 50%, #FF4D4D 100%);
+        background: linear-gradient(135deg, #FF6B6B 0%, #FBBF24 38%, #4ADE80 72%, #60A5FA 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 3.2rem;
         margin-bottom: 0.2rem;
-        text-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        filter: drop-shadow(0 10px 24px rgba(255, 107, 107, 0.18));
     }
     
     .subtitle-gradient {
         font-family: 'Outfit', sans-serif;
         font-weight: 600;
-        background: linear-gradient(135deg, #7C3AED 0%, #4F46E5 100%);
+        background: linear-gradient(135deg, #A78BFA 0%, #60A5FA 45%, #4ADE80 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 1.8rem;
         margin-top: 1.5rem;
         margin-bottom: 1rem;
-        border-bottom: 2px solid rgba(124, 58, 237, 0.1);
+        border-bottom: 2px solid rgba(96, 165, 250, 0.22);
         padding-bottom: 5px;
     }
     
     /* Tarjetas y Contenedores */
     .card {
-        background: rgba(30, 41, 59, 0.4) !important;
-        border: 1px solid rgba(255, 255, 255, 0.08) !important;
-        border-radius: 16px !important;
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(248, 250, 252, 0.72)) !important;
+        border: 1px solid rgba(148, 163, 184, 0.28) !important;
+        border-radius: 20px !important;
         padding: 24px !important;
         margin-bottom: 20px !important;
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25) !important;
+        box-shadow: 0 18px 50px rgba(71, 85, 105, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.7) !important;
         backdrop-filter: blur(12px) !important;
         -webkit-backdrop-filter: blur(12px) !important;
         transition: all 0.3s ease !important;
     }
     
     .card:hover {
-        border-color: rgba(239, 68, 68, 0.2) !important;
-        box-shadow: 0 12px 40px 0 rgba(239, 68, 68, 0.08) !important;
+        border-color: rgba(251, 191, 36, 0.32) !important;
+        box-shadow: 0 22px 60px rgba(96, 165, 250, 0.20), 0 0 0 1px rgba(251, 191, 36, 0.12) !important;
         transform: translateY(-2px) !important;
     }
     
     /* Colores personalizados para tarjetas de métricas */
     .metric-card-kcal {
-        background: linear-gradient(135deg, rgba(239, 68, 68, 0.05) 0%, rgba(239, 68, 68, 0.15) 100%) !important;
-        border: 1px solid rgba(239, 68, 68, 0.2) !important;
+        background: linear-gradient(135deg, rgba(254, 226, 226, 0.92) 0%, rgba(255, 237, 213, 0.88) 100%) !important;
+        border: 1px solid rgba(248, 113, 113, 0.34) !important;
     }
     .metric-card-proteins {
-        background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(16, 185, 129, 0.15) 100%) !important;
-        border: 1px solid rgba(16, 185, 129, 0.2) !important;
+        background: linear-gradient(135deg, rgba(220, 252, 231, 0.92) 0%, rgba(236, 253, 245, 0.88) 100%) !important;
+        border: 1px solid rgba(74, 222, 128, 0.34) !important;
     }
     .metric-card-fats {
-        background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(245, 158, 11, 0.15) 100%) !important;
-        border: 1px solid rgba(245, 158, 11, 0.2) !important;
+        background: linear-gradient(135deg, rgba(254, 243, 199, 0.95) 0%, rgba(255, 251, 235, 0.88) 100%) !important;
+        border: 1px solid rgba(251, 191, 36, 0.34) !important;
     }
     .metric-card-carbs {
-        background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(59, 130, 246, 0.15) 100%) !important;
-        border: 1px solid rgba(59, 130, 246, 0.2) !important;
+        background: linear-gradient(135deg, rgba(219, 234, 254, 0.95) 0%, rgba(239, 246, 255, 0.88) 100%) !important;
+        border: 1px solid rgba(96, 165, 250, 0.34) !important;
     }
     
     .metric-label {
         font-size: 0.95rem !important;
-        color: #9CA3AF !important;
+        color: #475569 !important;
         font-weight: 600 !important;
         margin-bottom: 8px !important;
         text-transform: uppercase !important;
@@ -137,26 +156,35 @@ st.markdown("""
     
     /* Sidebar Styling */
     section[data-testid="stSidebar"] {
-        background-color: #0F172A !important;
-        border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
+        background:
+            linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(239, 246, 255, 0.92) 48%, rgba(255, 247, 237, 0.92) 100%) !important;
+        border-right: 1px solid rgba(148, 163, 184, 0.25) !important;
+        box-shadow: 18px 0 42px rgba(71, 85, 105, 0.14) !important;
     }
     section[data-testid="stSidebar"] h3 {
         font-family: 'Outfit', sans-serif !important;
-        color: #F8FAFC !important;
+        color: #172033 !important;
         font-weight: 700 !important;
     }
     
     /* Input and form styling */
     div[data-testid="stForm"] {
-        border: 1px solid rgba(255, 255, 255, 0.05) !important;
-        border-radius: 16px !important;
-        background-color: rgba(15, 23, 42, 0.4) !important;
-        padding: 20px !important;
+        border: 1px solid rgba(96, 165, 250, 0.24) !important;
+        border-radius: 22px !important;
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.82), rgba(239, 246, 255, 0.64)) !important;
+        padding: 24px !important;
+        box-shadow: 0 18px 50px rgba(71, 85, 105, 0.14) !important;
+    }
+
+    div[data-baseweb="input"], div[data-baseweb="select"] > div, div[data-baseweb="textarea"] {
+        background-color: rgba(255, 255, 255, 0.82) !important;
+        border-color: rgba(148, 163, 184, 0.30) !important;
+        border-radius: 12px !important;
     }
     
     /* Estilo del botón principal */
     .stButton>button {
-        background: linear-gradient(135deg, #E02424 0%, #FF8E53 100%) !important;
+        background: linear-gradient(135deg, #FF5A5A 0%, #FBBF24 48%, #4ADE80 100%) !important;
         color: white !important;
         border-radius: 12px !important;
         border: none !important;
@@ -164,14 +192,14 @@ st.markdown("""
         font-size: 1.1rem !important;
         font-weight: 700 !important;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        box-shadow: 0 4px 15px rgba(224, 36, 36, 0.3) !important;
+        box-shadow: 0 10px 28px rgba(251, 191, 36, 0.22), 0 4px 18px rgba(239, 68, 68, 0.18) !important;
         width: 100% !important;
     }
     
     .stButton>button:hover {
         transform: translateY(-2px) !important;
-        box-shadow: 0 6px 22px rgba(224, 36, 36, 0.4) !important;
-        background: linear-gradient(135deg, #FF8E53 0%, #E02424 100%) !important;
+        box-shadow: 0 14px 34px rgba(74, 222, 128, 0.20), 0 8px 28px rgba(251, 191, 36, 0.22) !important;
+        background: linear-gradient(135deg, #60A5FA 0%, #A78BFA 48%, #FF6B6B 100%) !important;
     }
     
     /* Barra de progreso de Macros */
@@ -186,7 +214,8 @@ st.markdown("""
         font-weight: 600;
     }
     .macro-bar-outer {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(226, 232, 240, 0.95);
+        border: 1px solid rgba(148, 163, 184, 0.26);
         border-radius: 10px;
         height: 12px;
         width: 100%;
@@ -218,52 +247,61 @@ st.markdown("""
     
     /* Estilos de tarjetas de comidas */
     .meal-card {
-        background: rgba(30, 41, 59, 0.45) !important;
-        border: 1px solid rgba(255, 255, 255, 0.08) !important;
-        border-radius: 12px !important;
+        background: linear-gradient(155deg, rgba(255, 255, 255, 0.92), rgba(248, 250, 252, 0.76)) !important;
+        border: 1px solid rgba(148, 163, 184, 0.26) !important;
+        border-radius: 18px !important;
         padding: 18px !important;
         margin-bottom: 15px !important;
         min-height: 200px !important;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+        box-shadow: 0 14px 34px rgba(71, 85, 105, 0.14) !important;
         transition: all 0.2s ease !important;
+        position: relative !important;
+        overflow: hidden !important;
+    }
+    .meal-card::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 4px;
+        background: linear-gradient(90deg, #FF6B6B, #FBBF24, #4ADE80, #60A5FA);
     }
     .meal-card:hover {
-        border-color: rgba(239, 68, 68, 0.25) !important;
+        border-color: rgba(96, 165, 250, 0.34) !important;
         transform: translateY(-2px) !important;
-        box-shadow: 0 6px 24px rgba(239, 68, 68, 0.12) !important;
+        box-shadow: 0 16px 42px rgba(96, 165, 250, 0.14) !important;
     }
     .meal-title {
         font-family: 'Outfit', sans-serif !important;
         font-weight: 700 !important;
         font-size: 1.15rem !important;
         margin-bottom: 12px !important;
-        color: #F8FAFC !important;
+        color: #172033 !important;
         display: flex !important;
         align-items: center !important;
         gap: 8px !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.20) !important;
         padding-bottom: 6px !important;
     }
     .meal-ingredients {
         font-size: 0.88rem !important;
-        color: #D1D5DB !important;
+        color: #334155 !important;
         line-height: 1.6 !important;
     }
     .day-banner {
-        background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(255, 142, 83, 0.15) 100%) !important;
-        border: 1px solid rgba(239, 68, 68, 0.2) !important;
-        border-radius: 12px !important;
+        background: linear-gradient(135deg, rgba(254, 226, 226, 0.96) 0%, rgba(254, 243, 199, 0.92) 45%, rgba(220, 252, 231, 0.88) 100%) !important;
+        border: 1px solid rgba(251, 191, 36, 0.28) !important;
+        border-radius: 16px !important;
         padding: 12px 20px !important;
         margin-bottom: 20px !important;
         font-family: 'Outfit', sans-serif !important;
         font-weight: 700 !important;
         font-size: 1.3rem !important;
-        color: #F8FAFC !important;
+        color: #172033 !important;
     }
     .daily-totals-card {
-        background: rgba(15, 23, 42, 0.6) !important;
-        border: 1px solid rgba(255, 255, 255, 0.08) !important;
-        border-radius: 12px !important;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(219, 234, 254, 0.72)) !important;
+        border: 1px solid rgba(96, 165, 250, 0.22) !important;
+        border-radius: 18px !important;
         padding: 16px 24px !important;
         margin-top: 15px !important;
         margin-bottom: 10px !important;
@@ -280,12 +318,12 @@ st.markdown("""
     .total-val {
         font-weight: 800 !important;
         font-size: 1.25rem !important;
-        color: #F8FAFC !important;
+        color: #172033 !important;
         font-family: 'Outfit', sans-serif !important;
     }
     .total-lbl {
         font-size: 0.78rem !important;
-        color: #9CA3AF !important;
+        color: #64748B !important;
         font-weight: 600 !important;
         text-transform: uppercase !important;
         letter-spacing: 0.5px !important;
@@ -301,6 +339,10 @@ if "diet_streamed" not in st.session_state:
     st.session_state["diet_streamed"] = ""
 if "macros_preview" not in st.session_state:
     st.session_state["macros_preview"] = None
+if "llm_menu_json" not in st.session_state:
+    st.session_state["llm_menu_json"] = None
+if "llm_raw_attempts" not in st.session_state:
+    st.session_state["llm_raw_attempts"] = []
 
 
 # ==========================================
@@ -319,13 +361,27 @@ def test_ollama_connection(url: str) -> bool:
         pass
     return False
 
+def get_ollama_models(url: str) -> list[str]:
+    """
+    Recupera los modelos instalados en Ollama para evitar seleccionar modelos inexistentes.
+    """
+    try:
+        response = requests.get(f"{url.rstrip('/')}/api/tags", timeout=2)
+        response.raise_for_status()
+        data = response.json()
+        models = [item.get("name") for item in data.get("models", []) if item.get("name")]
+        return sorted(models)
+    except Exception as e:
+        logger.warning(f"No se pudieron recuperar modelos de Ollama: {e}")
+        return []
+
 # ==========================================
 # INTERFAZ DE STREAMLIT (SIDEBAR)
 # ==========================================
 
 # Cargar base de datos de alimentos de la UCM si existe
 food_db = []
-db_path = "/home/veronica/Descargas/Propmting/Trabajo Final/ucm_food_database.json"
+db_path = str(Path(__file__).resolve().parent / "ucm_food_database.json")
 if os.path.exists(db_path):
     try:
         with open(db_path, "r", encoding="utf-8") as f:
@@ -342,22 +398,17 @@ ollama_url = st.sidebar.text_input(
 )
 st.session_state["ollama_url"] = ollama_url
 
-model_name = st.sidebar.selectbox(
-    "Modelo LLM",
-    options=["qwen2.5:3b", "qwen2.5:1.5b"],
-    index=0,
-    help="Selecciona el modelo de lenguaje instalado en tu servidor Ollama."
-)
-st.session_state["model_name"] = model_name
-
 # Comprobar estado de conexión
 is_ollama_connected = test_ollama_connection(ollama_url)
+model_name = "qwen2.5:3b"
+st.session_state["model_name"] = model_name
 
 if is_ollama_connected:
     st.sidebar.markdown(
         '**Estado del Servidor:** <span class="badge badge-online">ONLINE</span>', 
         unsafe_allow_html=True
     )
+    st.sidebar.caption(f"Modelo LLM fijado: `{model_name}`")
 else:
     st.sidebar.markdown(
         '**Estado del Servidor:** <span class="badge badge-offline">OFFLINE</span>', 
@@ -437,7 +488,7 @@ with st.form("nutrition_form"):
         horizonte_semanas = st.slider("Horizonte temporal (semanas)", min_value=4, max_value=24, value=12, step=1)
         # Cargar base de datos de la UCM para obtener todos los nombres de alimentos
         ucm_foods = []
-        db_path = "/home/veronica/Descargas/Propmting/Trabajo Final/ucm_food_database.json"
+        db_path = str(Path(__file__).resolve().parent / "ucm_food_database.json")
         if os.path.exists(db_path):
             try:
                 with open(db_path, "r", encoding="utf-8") as f:
@@ -489,6 +540,8 @@ if submit_button:
     st.session_state["menu_data"] = None
     st.session_state["diet_streamed"] = ""
     st.session_state["macros_preview"] = None
+    st.session_state["llm_menu_json"] = None
+    st.session_state["llm_raw_attempts"] = []
     
     if not is_ollama_connected:
         st.error(
@@ -786,6 +839,23 @@ if st.session_state.get("macros_preview") or st.session_state.get("menu_data") o
         just_idx = diet_streamed.find("### 📚 Justificación")
         if just_idx != -1:
             st.markdown(diet_streamed[just_idx:])
+        
+        llm_menu_json = st.session_state.get("llm_menu_json")
+        if llm_menu_json:
+            with st.expander("🧪 JSON crudo devuelto por el LLM", expanded=False):
+                st.json(llm_menu_json)
+        
+        llm_raw_attempts = st.session_state.get("llm_raw_attempts", [])
+        if llm_raw_attempts:
+            with st.expander("🔍 Respuesta cruda del LLM por intento", expanded=False):
+                for attempt_data in llm_raw_attempts:
+                    attempt_id = attempt_data.get("attempt", "?")
+                    valid = attempt_data.get("valid", False)
+                    reason = attempt_data.get("reason", "")
+                    st.markdown(f"**Intento {attempt_id}** - {'✅ Válido' if valid else '❌ Inválido'}")
+                    if reason:
+                        st.caption(reason)
+                    st.code(attempt_data.get("raw_response", ""), language="json")
             
     elif st.session_state.get("diet_streamed"):
         # Mostrar el texto intermedio mientras se genera
