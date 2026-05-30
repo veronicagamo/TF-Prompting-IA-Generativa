@@ -215,6 +215,145 @@ class SequentialNutritionAgentExecutor:
 
         return llm_payload
 
+    def _expand_payload_to_requested_plan(self, llm_payload: dict, tipo_plan: str, catalog: list[dict]) -> dict:
+        """
+        Para planes semanales, evitamos pedir al LLM un JSON enorme de 7 días.
+        El LLM genera un día base y Python lo expande a la estructura semanal esperada.
+        """
+        if tipo_plan != "Plan Semanal (7 días)":
+            return llm_payload
+        if not isinstance(llm_payload, dict):
+            return llm_payload
+
+        days = llm_payload.get("days", [])
+        if not isinstance(days, list) or not days or not isinstance(days[0], dict):
+            return llm_payload
+
+        base_day = days[0]
+        week_days = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+        alternatives_by_bucket = {"proteins": [], "carbs": [], "fats": []}
+        for food in catalog:
+            name = food.get("name", "")
+            bucket = self._meal_macro_bucket(name)
+            if name and name not in alternatives_by_bucket[bucket]:
+                alternatives_by_bucket[bucket].append(name)
+
+        expanded_days = []
+        for day_index, day_name in enumerate(week_days):
+            day_copy = json.loads(json.dumps(base_day, ensure_ascii=False))
+            day_copy["day"] = day_name
+            base_title = str(day_copy.get("title", "Menú deportivo")).strip()
+            day_copy["title"] = f"{base_title} ({day_name})"
+
+            meals = day_copy.get("meals", {})
+            if isinstance(meals, dict):
+                for entries in meals.values():
+                    if not isinstance(entries, list):
+                        continue
+                    for entry_index, entry in enumerate(entries):
+                        if not isinstance(entry, dict):
+                            continue
+                        original_food = str(entry.get("food", "")).strip()
+                        bucket = self._meal_macro_bucket(original_food)
+                        alternatives = alternatives_by_bucket.get(bucket, [])
+                        if alternatives:
+                            entry["food"] = alternatives[(day_index + entry_index) % len(alternatives)]
+                            entry["preparation"] = str(entry.get("preparation", "preparación simple")).strip() or "preparación simple"
+
+            expanded_days.append(day_copy)
+
+        llm_payload["plan_type"] = tipo_plan
+        llm_payload["days"] = expanded_days
+        if not llm_payload.get("justification"):
+            llm_payload["justification"] = (
+                "El LLM genera un día base y el sistema lo expande a plan semanal "
+                "manteniendo alimentos UCM y ajuste nutricional diario."
+            )
+        return llm_payload
+
+    def _catalog_by_bucket(self, catalog: list[dict]) -> dict:
+        buckets = {"proteins": [], "carbs": [], "fats": [], "fruits": [], "vegetables": []}
+        for food in catalog:
+            name = food.get("name", "")
+            if not name:
+                continue
+            normalized = self._normalize_text(name)
+            if any(x in normalized for x in ["manzana", "pera", "naranja", "kiwi", "fresa", "plátano", "platano"]):
+                buckets["fruits"].append(name)
+            elif any(x in normalized for x in ["espinaca", "calabacín", "zanahoria", "brocoli", "brócoli", "verdura"]):
+                buckets["vegetables"].append(name)
+            else:
+                buckets[self._meal_macro_bucket(name)].append(name)
+        return buckets
+
+    def _pick_catalog_food(self, buckets: dict, bucket: str, offset: int = 0) -> str | None:
+        options = buckets.get(bucket, [])
+        if not options:
+            return None
+        return options[offset % len(options)]
+
+    def _ensure_good_meal_composition(self, llm_payload: dict, catalog: list[dict]) -> dict:
+        """
+        Completa menús demasiado simples con alimentos UCM coherentes.
+        El LLM aporta intención/estructura; esta capa asegura comidas reales con varios componentes.
+        """
+        if not isinstance(llm_payload, dict):
+            return llm_payload
+
+        buckets = self._catalog_by_bucket(catalog)
+        meal_targets = {
+            "Desayuno": [("carbs", 70, "base energética"), ("proteins", 120, "aporte proteico"), ("fruits", 120, "fruta fresca")],
+            "Almuerzo": [("proteins", 180, "a la plancha"), ("carbs", 160, "guarnición"), ("vegetables", 150, "verduras"), ("fats", 15, "aderezo")],
+            "Merienda": [("proteins", 120, "snack proteico"), ("fruits", 120, "fruta fresca"), ("fats", 25, "acompañamiento")],
+            "Cena": [("proteins", 170, "cocinado simple"), ("carbs", 120, "guarnición ligera"), ("vegetables", 180, "verduras"), ("fats", 10, "aderezo")],
+        }
+
+        for day_index, day in enumerate(llm_payload.get("days", [])):
+            if not isinstance(day, dict):
+                continue
+            meals = day.setdefault("meals", {})
+            if not isinstance(meals, dict):
+                day["meals"] = {}
+                meals = day["meals"]
+
+            for meal_name, targets in meal_targets.items():
+                entries = meals.get(meal_name)
+                if not isinstance(entries, list):
+                    entries = []
+
+                existing_foods = {
+                    self._normalize_text(str(entry.get("food", "")))
+                    for entry in entries
+                    if isinstance(entry, dict)
+                }
+                existing_buckets = {
+                    self._meal_macro_bucket(str(entry.get("food", "")))
+                    for entry in entries
+                    if isinstance(entry, dict) and entry.get("food")
+                }
+
+                for target_index, (bucket, grams, preparation) in enumerate(targets):
+                    comparable_bucket = "carbs" if bucket in ["fruits", "vegetables"] else bucket
+                    if comparable_bucket in existing_buckets and len(entries) >= 2:
+                        continue
+                    food = self._pick_catalog_food(buckets, bucket, day_index + target_index)
+                    if not food:
+                        continue
+                    normalized_food = self._normalize_text(food)
+                    if normalized_food in existing_foods:
+                        continue
+                    entries.append({
+                        "food": food,
+                        "grams": grams,
+                        "preparation": preparation
+                    })
+                    existing_foods.add(normalized_food)
+                    existing_buckets.add(comparable_bucket)
+
+                meals[meal_name] = entries[:4]
+
+        return llm_payload
+
     def _lookup_food_item(self, food_name: str) -> dict:
         if not self.food_db:
             return {"kcal": 0.0, "proteins": 0.0, "carbs": 0.0, "fats": 0.0, "fiber": 0.0, "name": food_name}
@@ -327,10 +466,43 @@ class SequentialNutritionAgentExecutor:
                 preferred_foods.append(self._compact_food(food))
 
         selected = []
-        selected.extend(preferred_foods[:5])
-        selected.extend(self._select_food_candidates(["pechuga de pollo", "pollo", "huevo", "clara"], excluded_set, preferred_set, limit=2, sort_by="proteins"))
-        selected.extend(self._select_food_candidates(["arroz integral", "avena", "patata", "pan integral"], excluded_set, preferred_set, limit=2, sort_by="carbs"))
-        selected.extend(self._select_food_candidates(["aceite de oliva", "aguacate"], excluded_set, preferred_set, limit=1, sort_by="fats"))
+        selected.extend(preferred_foods[:8])
+        selected.extend(self._select_food_candidates(
+            ["pechuga de pollo", "pollo", "huevo", "clara", "ternera", "pavo", "atun", "atún", "merluza", "salmon", "salmón", "yogur"],
+            excluded_set,
+            preferred_set,
+            limit=7,
+            sort_by="proteins"
+        ))
+        selected.extend(self._select_food_candidates(
+            ["arroz integral", "arroz", "avena", "patata", "pasta", "pan integral", "quinoa", "garbanzo", "lenteja"],
+            excluded_set,
+            preferred_set,
+            limit=7,
+            sort_by="carbs"
+        ))
+        selected.extend(self._select_food_candidates(
+            ["aceite de oliva", "aguacate", "nuez", "almendra", "pistacho", "avellana"],
+            excluded_set,
+            preferred_set,
+            limit=4,
+            sort_by="fats"
+        ))
+        selected.extend(self._select_food_candidates(
+            ["plátano", "platano", "manzana", "pera", "naranja", "kiwi", "fresa"],
+            excluded_set,
+            preferred_set,
+            limit=4,
+            sort_by="carbs"
+        ))
+        selected.extend(self._select_food_candidates(
+            ["espinaca", "calabacín", "zanahoria", "brocoli", "brócoli", "verdura"],
+            excluded_set,
+            preferred_set,
+            limit=4,
+            sort_by="fiber",
+            descending=True
+        ))
 
         unique_catalog = []
         seen = set()
@@ -339,13 +511,105 @@ class SequentialNutritionAgentExecutor:
             if normalized and normalized not in seen:
                 seen.add(normalized)
                 unique_catalog.append(food)
-            if len(unique_catalog) >= 10:
+            if len(unique_catalog) >= 28:
                 break
 
-        logger.info(f"Catálogo compacto para LLM: {len(unique_catalog)} alimentos.")
+        logger.info(f"Catálogo UCM recuperado para LLM: {len(unique_catalog)} alimentos.")
         return unique_catalog, preferred, excluded
 
-    def _to_menu_data(self, llm_payload: dict) -> tuple:
+    def _meal_macro_bucket(self, food_name: str) -> str:
+        category = self._food_category(food_name)
+        if category == "proteina":
+            return "proteins"
+        if category == "grasa":
+            return "fats"
+        return "carbs"
+
+    def _calc_meals_nutrition(self, meals: dict) -> dict:
+        grams_per_food = {}
+        for entries in meals.values():
+            if not isinstance(entries, list):
+                continue
+            for entry in entries:
+                if not isinstance(entry, dict):
+                    continue
+                food_name = str(entry.get("food", "")).strip()
+                if not food_name:
+                    continue
+                try:
+                    grams = max(1, int(float(entry.get("grams", 0))))
+                except Exception:
+                    grams = 1
+                grams_per_food[food_name] = grams_per_food.get(food_name, 0) + grams
+        return self.calc_menu_nutrition(grams_per_food)
+
+    def _scale_meals_to_targets(self, meals: dict, target_macros: dict) -> dict:
+        """
+        Usa la base UCM para ajustar las cantidades propuestas por el LLM a los macros objetivo.
+        El LLM decide alimentos/estructura; Python corrige gramos con cálculo nutricional determinista.
+        """
+        current = self._calc_meals_nutrition(meals)
+        targets = {
+            "proteins": float(target_macros.get("proteinas", 0.0)),
+            "carbs": float(target_macros.get("carbohidratos", 0.0)),
+            "fats": float(target_macros.get("grasas", 0.0)),
+        }
+        ratios = {
+            key: targets[key] / current[key]
+            for key in targets
+            if current.get(key, 0.0) > 0 and targets[key] > 0
+        }
+
+        for entries in meals.values():
+            if not isinstance(entries, list):
+                continue
+            for entry in entries:
+                if not isinstance(entry, dict):
+                    continue
+                food_name = str(entry.get("food", "")).strip()
+                bucket = self._meal_macro_bucket(food_name)
+                ratio = ratios.get(bucket, 1.0)
+                ratio = max(0.5, min(4.0, ratio))
+                try:
+                    grams = max(1, int(float(entry.get("grams", 0))))
+                except Exception:
+                    grams = 1
+                entry["grams"] = max(5, min(700, round(grams * ratio)))
+
+        # Ajuste calórico global suave tras corregir por macro dominante.
+        current_after = self._calc_meals_nutrition(meals)
+        target_kcal = targets["proteins"] * 4 + targets["carbs"] * 4 + targets["fats"] * 9
+        if current_after.get("kcal", 0.0) > 0 and target_kcal > 0:
+            kcal_ratio = max(0.75, min(1.25, target_kcal / current_after["kcal"]))
+            for entries in meals.values():
+                if not isinstance(entries, list):
+                    continue
+                for entry in entries:
+                    if isinstance(entry, dict):
+                        entry["grams"] = max(5, min(700, round(int(entry.get("grams", 1)) * kcal_ratio)))
+
+        return meals
+
+    def _calc_entry_macros(self, food_name: str, grams: int) -> dict:
+        food = self.get_food(food_name)
+        return {
+            "kcal": round(food.get("kcal", 0.0) * grams / 100.0, 1),
+            "proteins": round(food.get("proteins", 0.0) * grams / 100.0, 1),
+            "carbs": round(food.get("carbs", 0.0) * grams / 100.0, 1),
+            "fats": round(food.get("fats", 0.0) * grams / 100.0, 1),
+            "fiber": round(food.get("fiber", 0.0) * grams / 100.0, 1),
+        }
+
+    def _sum_macro_rows(self, rows: list[dict]) -> dict:
+        return {
+            "kcal": round(sum(row.get("kcal", 0.0) for row in rows), 1),
+            "proteins": round(sum(row.get("proteins", 0.0) for row in rows), 1),
+            "carbs": round(sum(row.get("carbs", 0.0) for row in rows), 1),
+            "fats": round(sum(row.get("fats", 0.0) for row in rows), 1),
+            "fiber": round(sum(row.get("fiber", 0.0) for row in rows), 1),
+        }
+
+    def _to_menu_data(self, llm_payload: dict, target_macros: dict) -> tuple:
         try:
             parsed_payload = LLMMenuPayload.model_validate(llm_payload)
         except ValidationError as exc:
@@ -354,20 +618,24 @@ class SequentialNutritionAgentExecutor:
         days = [d.model_dump() for d in parsed_payload.days]
 
         menu_data = {}
+        enriched_days = []
         for day_obj in days:
             day_name = day_obj.get("day", "Día")
             title = day_obj.get("title", "Plan nutricional")
             meals = day_obj.get("meals", {})
             if not isinstance(meals, dict):
                 continue
+            meals = self._scale_meals_to_targets(meals, target_macros)
 
             meal_lines = {}
             grams_per_food = {}
+            enriched_meals = {}
             for meal_name in ["Desayuno", "Almuerzo", "Merienda", "Cena"]:
                 entries = meals.get(meal_name, [])
                 if not isinstance(entries, list):
                     entries = []
                 lines = []
+                enriched_entries = []
                 for entry in entries:
                     if not isinstance(entry, dict):
                         continue
@@ -384,7 +652,18 @@ class SequentialNutritionAgentExecutor:
                         line += f" ({prep})"
                     lines.append(line)
                     grams_per_food[food_name] = grams_per_food.get(food_name, 0) + grams
+                    item_macros = self._calc_entry_macros(food_name, grams)
+                    enriched_entries.append({
+                        "food": food_name,
+                        "grams": grams,
+                        "preparation": prep,
+                        "ucm_macros": item_macros,
+                    })
                 meal_lines[meal_name] = "\n".join(lines) if lines else "Sin propuesta."
+                enriched_meals[meal_name] = {
+                    "items": enriched_entries,
+                    "meal_macros": self._sum_macro_rows([entry["ucm_macros"] for entry in enriched_entries]),
+                }
 
             macros = self.calc_menu_nutrition(grams_per_food)
             menu_data[day_name] = {
@@ -392,11 +671,29 @@ class SequentialNutritionAgentExecutor:
                 "meals": meal_lines,
                 "macros": macros,
             }
+            enriched_days.append({
+                "day": day_name,
+                "title": title,
+                "meals": enriched_meals,
+                "day_macros": macros,
+            })
 
         if not menu_data:
             raise ValueError("No se pudo construir menu_data a partir del JSON del LLM")
 
-        return menu_data, parsed_payload.justification
+        enriched_payload = {
+            "plan_type": parsed_payload.plan_type,
+            "macro_targets": {
+                "proteins": target_macros.get("proteinas", 0.0),
+                "carbs": target_macros.get("carbohidratos", 0.0),
+                "fats": target_macros.get("grasas", 0.0),
+            },
+            "days": enriched_days,
+            "justification": parsed_payload.justification,
+            "macro_source": "ucm_food_database.json",
+        }
+
+        return menu_data, parsed_payload.justification, enriched_payload
 
     def _build_stream_text(self, menu_data: dict, justification: str) -> str:
         lines = []
@@ -471,6 +768,7 @@ class SequentialNutritionAgentExecutor:
             alimentos_preferidos=alimentos_preferidos,
             alimentos_excluidos=alimentos_excluidos,
         )
+        llm_tipo_plan = "Menú Diario (1 día)" if tipo_plan == "Plan Semanal (7 días)" else tipo_plan
 
         action_diet = AgentAction(
             tool="generar_dieta_tool",
@@ -479,11 +777,15 @@ class SequentialNutritionAgentExecutor:
                 "macros": macros_dict,
                 "alimentos_incluidos": alimentos_preferidos,
                 "alimentos_excluidos": alimentos_excluidos,
-                "tipo_plan": tipo_plan,
+                "tipo_plan": llm_tipo_plan,
                 "contexto_alimentos_json": json.dumps(catalog, ensure_ascii=False),
                 "repair_instruction": ""
             },
-            log=f"Generando propuesta de {tipo_plan} adaptada a requerimientos y preferencias alimentarias..."
+            log=(
+                "Generando día base con LLM para expandirlo a plan semanal..."
+                if tipo_plan == "Plan Semanal (7 días)"
+                else f"Generando propuesta de {tipo_plan} adaptada a requerimientos y preferencias alimentarias..."
+            )
         )
         yield {"actions": [action_diet]}
 
@@ -502,6 +804,8 @@ class SequentialNutritionAgentExecutor:
             try:
                 llm_payload = self._extract_json_block(llm_raw)
                 llm_payload = self._repair_empty_meals(llm_payload, catalog)
+                llm_payload = self._expand_payload_to_requested_plan(llm_payload, tipo_plan, catalog)
+                llm_payload = self._ensure_good_meal_composition(llm_payload, catalog)
                 if isinstance(llm_payload, dict) and llm_payload.get("error"):
                     reason = str(llm_payload["error"])
                     valid = False
@@ -546,8 +850,9 @@ class SequentialNutritionAgentExecutor:
         observation_diet = json.dumps(llm_payload, indent=2, ensure_ascii=False)
         yield {"steps": [AgentStep(action_diet, observation_diet)]}
 
+        enriched_payload = llm_payload
         try:
-            menu_data, llm_justification = self._to_menu_data(llm_payload)
+            menu_data, llm_justification, enriched_payload = self._to_menu_data(llm_payload, macros_dict)
         except Exception as parse_error:
             logger.error(f"No se pudo construir menu_data desde LLM JSON: {parse_error}")
             fallback_day = "Lunes"
@@ -567,11 +872,12 @@ class SequentialNutritionAgentExecutor:
                 "El modelo no devolvió un JSON con el formato esperado. "
                 "Revisa la disponibilidad del modelo y vuelve a intentar."
             )
+            enriched_payload = llm_payload
         try:
             import streamlit as st
             st.session_state["menu_data"] = menu_data
             st.session_state["tipo_plan"] = tipo_plan
-            st.session_state["llm_menu_json"] = llm_payload
+            st.session_state["llm_menu_json"] = enriched_payload
             st.session_state["llm_raw_attempts"] = llm_attempts_debug
         except Exception:
             pass
@@ -582,6 +888,7 @@ class SequentialNutritionAgentExecutor:
             menu_data=menu_data,
             justification=(
                 f"{llm_justification}\n\n"
+                "- Las raciones finales se recalculan y ajustan con la base UCM para aproximarse a los macros objetivo.\n"
                 f"- Preferencias UCM detectadas: {pref_text}\n"
                 f"- Exclusiones UCM detectadas: {excl_text}"
             ).strip(),

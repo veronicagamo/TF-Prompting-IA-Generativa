@@ -198,7 +198,7 @@ RESTRICCIONES
 1) "days" debe tener exactamente {expected_days} elementos.
 2) Si {expected_days} es 7, usa en orden: Lunes, Martes, Miércoles, Jueves, Viernes, Sábado, Domingo.
 3) Cada dia debe incluir SIEMPRE Desayuno, Almuerzo, Merienda y Cena.
-4) Cada comida debe tener 1 o 2 items. Nunca devuelvas listas vacías.
+4) Cada comida debe tener 2 o 3 items. Nunca devuelvas listas vacías.
 5) "grams" debe ser entero positivo.
 6) Usa solo alimentos del catalogo UCM dado. No uses alimentos fuera de esa lista.
 7) No uses alimentos excluidos.
